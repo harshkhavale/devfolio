@@ -5,7 +5,7 @@ import RotatedText from "../widgets/RotatedText";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { motion } from "framer-motion";
-import ScrollCards from "../components/ScrollCards";
+import Certification from "../components/Certification";
 import { useMediaQuery } from "@mui/material";
 import Creative from "../components/Creative";
 import Contact from "../components/Contact";
@@ -30,6 +30,12 @@ import {
   socialanime,
   variablesanime,
   stageanime,
+  spotifylogo,
+  urbanstorelogo,
+  sociallogo,
+  stagelogo,
+  academixlogo,
+  airbnblogo,
 } from "../assets/projects";
 
 import { robox } from "../assets";
@@ -42,37 +48,37 @@ const Index = () => {
   const projects = [
     {
       title: "STAGE",
-      image: stageanime,
+      image: stagelogo,
       subtitle: "lorecdijhuoehouebvoivovbv",
       id: 4,
     },
     {
       title: "urban_store",
-      image: urbananime,
+      image: urbanstorelogo,
       subtitle: "lorecdijhuoehouebvoivovbv",
       id: 2,
     },
     {
       title: "spotify",
-      image: spotifyanime,
+      image: spotifylogo,
       subtitle: "lorecdijhuoehouebvoivovbv",
       id: 3,
     },
     {
       title: "ACADEMIX",
-      image: academixanime,
+      image: academixlogo,
       subtitle: "lorecdijhuoehouebvoivovbv",
       id: 2,
     },
     {
       title: "Airbnb",
-      image: airbnbanime,
+      image: airbnblogo,
       subtitle: "lorecdijhuoehouebvoivovbv",
       id: 3,
     },
     {
       title: "social",
-      image: socialanime,
+      image: sociallogo,
       subtitle: "lorecdijhuoehouebvoivovbv",
       id: 3,
     },
@@ -150,7 +156,10 @@ const Index = () => {
           subtitle={"KNOW-MORE-KNOW-MORE-KNOW-MORE"}
         />
       </div>
-      <div className="section2 md:flex items-center relative">
+      <section
+        id="#featured"
+        className="expertise md:flex items-center relative"
+      >
         <div className="side flex flex-col md:w-6/12 gap-8 p-4">
           <p className=" font-bold text-7xl z-50 md:text-9xl">EXPERTISE</p>
 
@@ -169,9 +178,9 @@ const Index = () => {
         <div className=" w-12/12 md:w-6/12 z-[5000]">
           <Services />
         </div>
-      </div>
+      </section>
 
-      <div className="section3  mb-16  ">
+      <div className="portfolio  mb-16  ">
         <div className="marquee-container z-50">
           <p className="marquee-text happy-font text-[12rem] md:text-[20rem] text-current ">
             portfolio.
@@ -181,8 +190,9 @@ const Index = () => {
           </p>
         </div>{" "}
       </div>
-      <div
-        className={`relative flex ${
+      <section
+        id="#work"
+        className={`work relative bg-[#191919] flex ${
           isNonMobileScreens ? "flex-row" : "flex-col"
         }`}
       >
@@ -201,9 +211,9 @@ const Index = () => {
 
           <img src={robox} alt="" className=" sticky" />
         </div>
-        <div className="md:p-8 p-2 flex-2">
-          <div className="grid gap-1 grid-rows-3 ">
-            <div className="grid gap-2 grid-rows-1 grid-cols-5 ">
+        <div className="md:p-8 p-2 flex-2 flex justify-center items-center">
+          <div className="md:grid flex flex-col gap-4 grid-rows-3 ">
+            <div className="md:grid flex flex-col gap-4 grid-rows-1 grid-cols-5 ">
               <div className=" col-span-2 h-full w-full">
                 <Project project={projects[2]} />
               </div>
@@ -212,7 +222,7 @@ const Index = () => {
                 <Project project={projects[0]} />
               </div>
             </div>
-            <div className="grid gap-2 grid-rows-1 grid-cols-5">
+            <div className="md:grid flex flex-col gap-4 grid-rows-1 grid-cols-5 ">
               <div className=" col-span-3 h-full w-full">
                 {" "}
                 <Project project={projects[1]} />
@@ -222,7 +232,7 @@ const Index = () => {
                 <Project project={projects[3]} />
               </div>
             </div>
-            <div className="grid gap-2 grid-rows-1 grid-cols-5">
+            <div className="md:grid flex flex-col gap-4 grid-rows-1 grid-cols-5 ">
               <div className=" col-span-2 ">
                 {" "}
                 <Project project={projects[5]} />
@@ -233,10 +243,13 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="about relative overflow-hidden ">
+      </section>
+      <section
+        id="#about"
+        className="about_section bg-[#191919] relative overflow-hidden "
+      >
         <p className="url fixed top-52 opacity-5 bg-transparent  left-[-250px] dark:opacity-10 font-black text-[12rem] rotate-90 ">
-          ABOUT
+          HARSH
         </p>
 
         <div className="relative w-full pt-0 md:px-20">
@@ -290,12 +303,10 @@ const Index = () => {
           </div>
           <TechSection />
         </div>
-      </div>
-      <div className="">
-        <Creative />
-        <ScrollCards />
-        <Contact />
-      </div>
+      </section>
+      <Creative />
+      <Certification />
+      <Contact />
       <div className=" h-screen w-screen p-20"></div>
     </div>
   );

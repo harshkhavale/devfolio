@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { projects, certificates, certificates2 } from "../constants";
-import Certifications from "./Certifications";
 import { useMediaQuery } from "@mui/material";
 const VerticalScrollCarousel = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
@@ -14,6 +13,7 @@ const VerticalScrollCarousel = () => {
 
   return (
     <section
+      id="#certification"
       ref={targetRef}
       className=" bg-white dark:bg-[#191919]  relative  bg-transparent "
     >
@@ -28,7 +28,16 @@ const VerticalScrollCarousel = () => {
               growth.
             </div>
           )}
-          <Certifications />
+          <div className="certificates">
+            <div className="marquee-container mt-28 md:mt-10">
+              <p className="marquee-text text-[15rem] md:text-[20rem] ">
+                CERTIFICATIONS.
+              </p>
+              <p className="marquee-text2 text-[15rem] md:text-[20rem]">
+                CERTIFICATIONS.
+              </p>
+            </div>{" "}
+          </div>
         </div>
         <div className="flex md:justify-end justify-center w-full gap-0">
           <motion.div
@@ -72,7 +81,7 @@ const VerticalScrollCarousel = () => {
   );
 };
 
-const ScrollCards = () => {
+const Certification = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   return (
@@ -90,4 +99,4 @@ const ScrollCards = () => {
   );
 };
 
-export default ScrollCards;
+export default Certification;

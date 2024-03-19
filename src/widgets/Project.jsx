@@ -5,7 +5,7 @@ const Project = ({ project }) => {
   return (
     <Link
       to={`/project?projectId=${project.id}`}
-      className=" md:h-72 h-40 border-2 border-current relative rounded-3xl overflow-hidden flex justify-center items-center"
+      className=" md:h-60 h-28 m-auto relative rounded-3xl flex justify-center items-center"
     >
       <div>
         <motion.img
@@ -16,13 +16,8 @@ const Project = ({ project }) => {
           }}
           src={project.image}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full border-2 border-current h-full object-cover"
         />
-        <div className=" absolute w-full  bottom-10 flex justify-center items-center">
-          <h1 className="md:text-[4em] text-2xl font-bold text-black ">
-            {project.title}
-          </h1>
-        </div>
       </div>
     </Link>
   );

@@ -42,10 +42,8 @@ const TechSection = () => {
     <div>
       <div className="flex flex-col md:flex-row md:gap-8 items-center justify-center w-full">
         <div className=" flex  flex-col md:flex-1">
-          <p className=" md:text-9xl text-[6rem] te font-bold">Tech</p>
-          <p className="md:text-9xl text-[6rem] -mt-16 md:mt-0 font-bold">
-            Bucket
-          </p>
+          <p className=" md:text-[12rem] text-[6rem] te font-bold">Tech</p>
+          <p className="md:text-[10rem] text-[6rem] -mt-20 font-bold">Bucket</p>
         </div>
         <div className="bucket md:flex-1 flex flex-col gap-4 text-sm">
           <div className="frontend bg-zinc-800  rounded-md p-4">

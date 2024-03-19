@@ -69,7 +69,7 @@ const Navbar = () => {
                   setActive(link.title);
                 }}
               >
-                <a href={`${link.id}`} className=" happy-font font-semibold">
+                <a href={`#${link.id}`} className="font-semibold">
                   {""}
                   {link.id}
                 </a>
@@ -111,7 +111,7 @@ const Navbar = () => {
                 }}
               >
                 <a
-                  href={`${link.id}`}
+                  href={`#${link.id}`}
                   className="text-5xl font-bold text-center hover:text-[#3c42ff]"
                 >
                   {link.title}
@@ -124,7 +124,7 @@ const Navbar = () => {
               {contacts.map((link) => (
                 <li
                   key={link.id}
-                  className={`bg-white shadow-2xl rounded-full p-1 text-black  gap-2 font-medium cursor-pointer transition-transform transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
+                  className={`bg-white shadow-2xl rounded-full p-1 text-black  gap-2 font-medium cursor-pointer`}
                 >
                   {link.icon}
                 </li>

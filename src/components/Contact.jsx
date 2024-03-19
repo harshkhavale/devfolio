@@ -56,7 +56,7 @@ const Contact = () => {
       );
   };
   return (
-    <div className=" z-10">
+    <section id="#contact">
       <div className=" shadow-2xl md:mx-20 mx-auto w-min p-6  md:p-12 h-min  rounded-2xl border-2 ">
         <p className="">get in touch</p>
         <p className=" text-5xl font-bold">CONTACT ME</p>
@@ -107,7 +107,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

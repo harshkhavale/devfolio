@@ -26,6 +26,10 @@ import academixanime from "./academix/academixanime.jpeg";
 import variablesanime from "./variables/variablesanime.jpg";
 import socialanime from "./social/socialsanime.jpeg";
 import stageanime from "./stage/stageanime.jpg";
+import academixlogo from "./academix/academixlogo.png";
+import stagelogo from "./stage/stagelogo.png";
+import airbnblogo from "./airbnb/airbnblogo.jpg";
+import sociallogo from "./social/sociallogo.png";
 export {
   urbanstorebanner,
   urbananalysis,
@@ -49,8 +53,9 @@ export {
   spotifylogo,
   spotifybanner,
 };
+
 export { variablesanime };
-export { stageanime };
-export { airbnbanime };
-export { academixanime };
-export { socialanime };
+export { stageanime, stagelogo };
+export { airbnbanime, airbnblogo };
+export { academixanime, academixlogo };
+export { socialanime, sociallogo };

@@ -69,58 +69,22 @@ const Creative = () => {
 
   return (
     <div>
-      <div className="section">
-        <p
-          className="creative -ms-10 md:ms-auto text-[6rem] md:text-[15rem] "
-          style={{
-            fontFamily: "Belgan",
-          }}
-        >
+      <div className="section font-bold">
+        <p className="creative -ms-10 md:ms-auto text-[6rem] md:text-[15rem] ">
           CREATIVE
         </p>
-        <p
-          className="developer text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32"
-          style={{
-            fontFamily: "Belgan",
-            fontStyle: "italic",
-          }}
-        >
+        <p className="developer text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32">
           developer
         </p>
-        <p
-          className="inspire text-[1.5rem] md:text-[5rem] md:-mt-16"
-          style={{
-            fontFamily: "Belgan",
-            fontStyle: "italic",
-          }}
-        >
+        <p className="inspire text-[1.5rem] md:text-[5rem] md:-mt-16">
           inspired by the
         </p>
-        <p
-          className="abstract -mb-10 text-center text-[4rem] md:text-[12rem] ms-24 md:ms-72 md:-my-20"
-          style={{
-            fontFamily: "Belgan",
-          }}
-        >
+        <p className="abstract -mb-10 text-center text-[4rem] md:text-[12rem] ms-24 md:ms-72 md:-my-20">
           ABSTRACTION
         </p>
         <div className="last my-6 md:-my-20 flex flex-col -ms-96 md:-ms-72">
-          <p
-            className="text-[2rem] md:text-[3rem] text-center"
-            style={{
-              fontFamily: "Belgan",
-              fontStyle: "italic",
-            }}
-          >
-            of
-          </p>
-          <p
-            className="-mt-6 md:-mt-28 text-[7rem] md:text-[20rem] creative"
-            style={{
-              fontFamily: "Belgan",
-              fontStyle: "italic",
-            }}
-          >
+          <p className="text-[2rem] md:text-[4rem] text-center">of</p>
+          <p className="-mt-6 md:-mt-28 text-[7rem] md:text-[20rem] creative">
             NATURE
           </p>
         </div>
