@@ -5,11 +5,14 @@ import RotatedText from "../widgets/RotatedText";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { motion } from "framer-motion";
-import StackedCards from "../components/StackedCards";
 import ScrollCards from "../components/ScrollCards";
 import { useMediaQuery } from "@mui/material";
 import Creative from "../components/Creative";
-
+import Contact from "../components/Contact";
+import Hero from "../components/Hero";
+import { ArrowBack } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
+import TechSection from "../components/TechSection";
 import {
   coder,
   gradientcolor,
@@ -18,10 +21,62 @@ import {
 } from "../assets";
 import Services from "../components/Services";
 // import { contacts, certificates } from "../constants";
+import { useScroll, useTransform } from "framer-motion";
+import {
+  urbananime,
+  spotifyanime,
+  academixanime,
+  airbnbanime,
+  socialanime,
+  variablesanime,
+  stageanime,
+} from "../assets/projects";
 
+import { robox } from "../assets";
+
+import Project from "../widgets/Project";
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
+  const navigate = useNavigate();
 
+  const projects = [
+    {
+      title: "STAGE",
+      image: stageanime,
+      subtitle: "lorecdijhuoehouebvoivovbv",
+      id: 4,
+    },
+    {
+      title: "urban_store",
+      image: urbananime,
+      subtitle: "lorecdijhuoehouebvoivovbv",
+      id: 2,
+    },
+    {
+      title: "spotify",
+      image: spotifyanime,
+      subtitle: "lorecdijhuoehouebvoivovbv",
+      id: 3,
+    },
+    {
+      title: "ACADEMIX",
+      image: academixanime,
+      subtitle: "lorecdijhuoehouebvoivovbv",
+      id: 2,
+    },
+    {
+      title: "Airbnb",
+      image: airbnbanime,
+      subtitle: "lorecdijhuoehouebvoivovbv",
+      id: 3,
+    },
+    {
+      title: "social",
+      image: socialanime,
+      subtitle: "lorecdijhuoehouebvoivovbv",
+      id: 3,
+    },
+  ];
   return (
     <div>
       <Navbar />
@@ -86,20 +141,7 @@ const Index = () => {
         <div className="right col-span-3 absolute top-0 -z-10 -mt-10 md:relative overflow-hidden">
           <SplineBox />
 
-          <div className="contact absolute  rounded-tl-3xl ps-4 bottom-0 md:bottom-16 right-0 p-2 ">
-            {/* <ul className="list-none flex my-4 justify-end items-end flex-col gap-4">
-              {contacts.map((link) => (
-                <li
-                  key={link.id}
-                  className={`bg-white shadow-2xl rounded-full p-2 md:p-4 text-black text-[18px] gap-2 font-medium cursor-pointer transition-transform transition-shadow transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
-                >
-                  <a href={link.url} target="_blank">
-                    {link.icon}
-                  </a>
-                </li>
-              ))}
-            </ul> */}
-          </div>
+          <div className="contact absolute  rounded-tl-3xl ps-4 bottom-0 md:bottom-16 right-0 p-2 "></div>
         </div>
       </div>
       <div className=" mt-4 md:-mt-36 px-20">
@@ -131,31 +173,128 @@ const Index = () => {
 
       <div className="section3  mb-16  ">
         <div className="marquee-container z-50">
-          <p
-            className="marquee-text happy-font text-[12rem] md:text-[20rem] text-current "
-            style={{
-              // fontFamily: "Belgan",
-              fontStyle: "italic",
-              fontWeight: "900",
-            }}
-          >
+          <p className="marquee-text happy-font text-[12rem] md:text-[20rem] text-current ">
             portfolio.
           </p>
-          <p
-            className="marquee-text2 happy-font  text-[12rem] md:text-[20rem]"
-            style={{
-              // fontFamily: "Belgan",
-              fontStyle: "italic",
-              fontWeight: "900",
-            }}
-          >
+          <p className="marquee-text2 happy-font  text-[12rem] md:text-[20rem]">
             portfolio.
           </p>
         </div>{" "}
       </div>
+      <div
+        className={`relative flex ${
+          isNonMobileScreens ? "flex-row" : "flex-col"
+        }`}
+      >
+        <div className=" flex-1">
+          <div className="md:px-8  px-2">
+            <p className="text-bold -my-10 happy-font font-bold">
+              Projects I have done so far..
+            </p>
+            <h1 className="md:text-9xl text-[7rem] font-bold">WORK</h1>
+            <p className=" my-4 ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fuga
+              voluptatibus quidem optio libero sed recusandae iure fugiat, ullam
+              doloribus!
+            </p>
+          </div>
+
+          <img src={robox} alt="" className=" sticky" />
+        </div>
+        <div className="md:p-8 p-2 flex-2">
+          <div className="grid gap-1 grid-rows-3 ">
+            <div className="grid gap-2 grid-rows-1 grid-cols-5 ">
+              <div className=" col-span-2 h-full w-full">
+                <Project project={projects[2]} />
+              </div>
+              <div className=" col-span-3 h-full w-full">
+                {" "}
+                <Project project={projects[0]} />
+              </div>
+            </div>
+            <div className="grid gap-2 grid-rows-1 grid-cols-5">
+              <div className=" col-span-3 h-full w-full">
+                {" "}
+                <Project project={projects[1]} />
+              </div>
+
+              <div className=" col-span-2">
+                <Project project={projects[3]} />
+              </div>
+            </div>
+            <div className="grid gap-2 grid-rows-1 grid-cols-5">
+              <div className=" col-span-2 ">
+                {" "}
+                <Project project={projects[5]} />
+              </div>
+              <div className=" col-span-3 ">
+                <Project project={projects[4]} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="about relative overflow-hidden ">
+        <p className="url fixed top-52 opacity-5 bg-transparent  left-[-250px] dark:opacity-10 font-black text-[12rem] rotate-90 ">
+          ABOUT
+        </p>
+
+        <div className="relative w-full pt-0 md:px-20">
+          <Hero />
+          <div className="difference flex flex-col p-2 ">
+            <div className="flex items-center gap-36">
+              <div className="flex">
+                <p className="md:text-[22rem] font-bold text-[10rem]">Self</p>
+                <p className="font-bold md:text-[10rem] text-[7rem] flex items-end">
+                  &
+                </p>
+              </div>
+
+              {isNonMobileScreens && (
+                <p className=" mt-20 ">
+                  My standout quality lies in my versatility across diverse
+                  fields within technology. While others may specialize in one
+                  area, I excel in web development, mobile app development,
+                  backend solutions, and UI/UX design. This versatility allows
+                  me to offer unique insights, solve complex problems
+                  creatively, and deliver innovative solutions that stand out in
+                  the competitive landscape.
+                </p>
+              )}
+            </div>
+            <div className="flex justify-between md:-mt-40 -mt-24">
+              <p className="md:text-[22rem] font-bold text-[8rem] text-left">
+                Others
+              </p>
+            </div>
+            {!isNonMobileScreens && (
+              <div className="">
+                <div className="flex justify-center">
+                  <RotatedText
+                    title={"DIFFERENCE"}
+                    subtitle={"the-difference-between-"}
+                  />
+                </div>
+
+                <p className="font-bold p-2 ">
+                  My standout quality lies in my versatility across diverse
+                  fields within technology. While others may specialize in one
+                  area, I excel in web development, mobile app development,
+                  backend solutions, and UI/UX design. This versatility allows
+                  me to offer unique insights, solve complex problems
+                  creatively, and deliver innovative solutions that stand out in
+                  the competitive landscape.
+                </p>
+              </div>
+            )}
+          </div>
+          <TechSection />
+        </div>
+      </div>
       <div className="">
         <Creative />
         <ScrollCards />
+        <Contact />
       </div>
       <div className=" h-screen w-screen p-20"></div>
     </div>

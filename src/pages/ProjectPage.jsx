@@ -43,7 +43,7 @@ const ProjectPage = () => {
     <div
       key={project.title}
       className={`aboutpage pb-48 relative overflow-y-hidden `}
-      style={{ backgroundColor: project.theme, color: project.color }}
+      // style={{ backgroundColor: project.theme, color: project.color }}
     >
       <div className="flex justify-end pt-2">
         <div className="navbar flex justify-center gap-6  rounded-3xl w-min  px-4 items-center">

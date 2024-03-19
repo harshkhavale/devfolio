@@ -12,9 +12,9 @@ import urbandetailmobile from "./urbanstore/detailmobile.jpg";
 import urbanmainmobile from "./urbanstore/mainmobile.jpg";
 import urbansearchmobile from "./urbanstore/searchmobile.jpg";
 import urbansigninmobile from "./urbanstore/signinmobile.jpg";
-import urbananime from "./urbanstore/urbanstoreanime.jpeg";
+import urbananime from "./urbanstore/urbanstoreanime.jpg";
 
-import spotifyanime from "./spotify/spotifyanimes.jpeg";
+import spotifyanime from "./spotify/spotifyanime.jpeg";
 import spotifymain from "./spotify/spotifymain.png";
 import spotifymainmobile from "./spotify/spotifymainmobile.jpg";
 import spotifydashboard from "./spotify/spotifydashboard.png";
@@ -22,9 +22,10 @@ import spotifydashboardmobile from "./spotify/spotifydashboardmobile.jpg";
 import spotifylogo from "./spotify/spotifylogo.jpg";
 import spotifybanner from "./spotify/spotifybanner.jpg";
 import airbnbanime from "./airbnb/airbnbanime.jpeg";
-import academixanime from "./academix/academixanime.jpg";
+import academixanime from "./academix/academixanime.jpeg";
 import variablesanime from "./variables/variablesanime.jpg";
 import socialanime from "./social/socialsanime.jpeg";
+import stageanime from "./stage/stageanime.jpg";
 export {
   urbanstorebanner,
   urbananalysis,
@@ -49,6 +50,7 @@ export {
   spotifybanner,
 };
 export { variablesanime };
+export { stageanime };
 export { airbnbanime };
 export { academixanime };
 export { socialanime };

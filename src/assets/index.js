@@ -1,32 +1,3 @@
-// #technologies
-import css from "./tech/css.png";
-import figma from "./tech/figma.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import react from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
-import typescript from "./tech/typescript.png";
-import github from "./tech/github.png";
-import android from "./tech/android.png";
-import asp from "./tech/asp.net.png";
-import c from "./tech/c.png";
-import cpp from "./tech/cpp.png";
-import express from "./tech/express.png";
-import firebase from "./tech/firebase.png";
-import flutter from "./tech/flutter.png";
-import java from "./tech/java.png";
-import mysql from "./tech/sql.png";
-import next from "./tech/nextjs.png";
-import php from "./tech/php.png";
-import postgre from "./tech/postgre.png";
-import postman from "./tech/postman.png";
-import python from "./tech/python.png";
-import native from "./tech/reactnative.png";
-import angular from "./tech/angular.png";
 // #resume
 import resume from "./resume/resume.pdf";
 
@@ -36,6 +7,9 @@ import profile from "./profile/profilepic.png";
 
 import robox from "./robox.jpg";
 import stripe from "./stripe.png";
+import stripe2 from "./stripe2.png";
+import stripe3 from "./stripe3.png";
+
 // #project
 import variables from "./projects/variables/variables.png";
 // #banner
@@ -80,37 +54,16 @@ export {
   dataminingcertificate,
   netfundamentalscertificate,
 };
-export { variables, logo, robox, gradientcolor, gradientcolor2, stripe };
+export {
+  variables,
+  logo,
+  robox,
+  gradientcolor,
+  gradientcolor2,
+  stripe,
+  stripe2,
+  stripe3,
+};
 export { variablesbanner, spotifybanner, socialbanner, airbnbbanner };
 export { variableslogo, browser, mobile, ui, backend };
 export { profile, roboz, coder, resume };
-export {
-  angular,
-  github,
-  css,
-  figma,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  react,
-  redux,
-  tailwind,
-  threejs,
-  typescript,
-  android,
-  asp,
-  cpp,
-  express,
-  firebase,
-  flutter,
-  java,
-  mysql,
-  postgre,
-  postman,
-  python,
-  native,
-  php,
-  next,
-  c,
-};

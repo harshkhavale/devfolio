@@ -1,8 +1,3 @@
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import DvrRoundedIcon from "@mui/icons-material/DvrRounded";
 // #animations
 import backendanimation from "../assets/animation/backend.json";
 import webanimation from "../assets/animation/web.json";
@@ -20,7 +15,6 @@ import {
   dsacertificate,
   javacertificate,
   linuxcertificate,
-  angular,
   browser,
   mobile,
   backend,
@@ -32,33 +26,7 @@ import {
   frontendcertificate,
 } from "../assets";
 import XIcon from "@mui/icons-material/X";
-import {
-  css,
-  figma,
-  github,
-  html,
-  javascript,
-  mongodb,
-  nodejs,
-  react,
-  redux,
-  tailwind,
-  threejs,
-  typescript,
-  android,
-  asp,
-  cpp,
-  express,
-  firebase,
-  flutter,
-  java,
-  mysql,
-  postgre,
-  postman,
-  python,
-  php,
-  next,
-} from "../assets";
+
 import {
   socialanime,
   spotifyanime,
@@ -98,28 +66,6 @@ export const navLinks = [
   },
 ];
 
-export const contacts = [
-  {
-    id: "linkdin",
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/harshkhavale11/",
-  },
-  {
-    id: "github",
-    title: "GitHub",
-    url: "https://github.com/harshkhavale",
-  },
-  {
-    id: "email",
-    title: "Gmail",
-    url: "harshkhavale1102@gmailcom",
-  },
-  {
-    id: "X",
-    title: "X",
-    url: "https://twitter.com/HarshKhavale",
-  },
-];
 export const services = [
   {
     title: "Web Developer",
@@ -144,127 +90,154 @@ export const services = [
 ];
 const frontend = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "HTML5",
+    color: "#E74C3C",
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "CSS3",
   },
   {
     name: "JavaScript",
-    icon: javascript,
+    color: "#FFEB3B",
   },
   {
     name: "TypeScript",
-    icon: typescript,
+    color: "#2980B9",
   },
   {
     name: "Three.Js",
-    icon: threejs,
   },
   {
     name: "Tailwind CSS",
-    icon: tailwind,
+    color: "#48C9B0",
+  },
+  {
+    name: "Shadcn UI",
+  },
+  {
+    name: "React Js",
+    color: "#2196F3",
+  },
+  {
+    name: "Next Js 14",
   },
   {
     name: "figma",
-    icon: figma,
+    color: "#EC407A",
   },
 ];
-const frameworks = [
-  {
-    name: "ReactJs",
-    icon: react,
-  },
-  {
-    name: "Next.js",
-    icon: next,
-  },
-  {
-    name: "Express js",
-    icon: express,
-  },
-  {
-    name: "Angular",
-    icon: angular,
-  },
-  {
-    name: "ASP.NET",
-    icon: asp,
-  },
-];
+
 const webtools = [
   {
     name: "Redux Toolkit",
-    icon: redux,
+    color: "#7E57C2",
   },
   {
     name: "git /GitHub",
-    icon: github,
   },
   {
     name: "postman",
-    icon: postman,
+    color: "#FB8C00",
+  },
+];
+const web3 = [
+  {
+    name: "Solidity",
+    color: "#78909C ",
+  },
+  {
+    name: "Metamask",
+    color: "#FFCA28",
+  },
+  {
+    name: "WEB3",
+    color: "#9C27B0",
   },
 ];
 const mobiletech = [
   {
     name: "Android",
-    icon: android,
+    color: "#4CAF50",
   },
   {
     name: "Flutter",
-    icon: flutter,
   },
   {
     name: "React Native",
-    icon: react,
+    color: "#2196F3",
   },
 ];
 const backendtech = [
   {
     name: "Node JS",
-    icon: nodejs,
+    color: "#4CAF50",
   },
 
   {
     name: "Java",
-    icon: java,
+    color: "#FFEB3B",
   },
   {
     name: "Python",
-    icon: python,
+    color: "#FFEB3B",
   },
   {
     name: "PHP",
-    icon: php,
   },
   {
     name: "C/C++",
-    icon: cpp,
-  },
-];
-const database = [
-  {
-    name: "MongoDB",
-    icon: mongodb,
   },
   {
-    name: "Firebase",
-    icon: firebase,
+    name: "express Js",
+    color: "#B0BEC5",
   },
   {
-    name: "MySQL",
-    icon: mysql,
-  },
-  {
-    name: "Postgre",
-    icon: postgre,
+    name: "asp.net",
   },
 ];
 
-export { frontend, database, frameworks, backendtech, webtools, mobiletech };
+const database = [
+  {
+    name: "MongoDB",
+    color: "#4CAF50",
+  },
+  {
+    name: "Firebase",
+    color: "#FFEB3B",
+  },
+  {
+    name: "MySQL",
+  },
+  {
+    name: "GraphQL",
+  },
+  {
+    name: "PostgreSQL",
+    color: "#2196F3",
+  },
+  {
+    name: "Redis",
+    color: "#F44336",
+  },
+];
+const devops = [
+  {
+    name: "Docker",
+    color: "#2196F3",
+  },
+  {
+    name: "GIT",
+    color: "#B0BEC5",
+  },
+  {
+    name: "Jenkins",
+  },
+  {
+    name: "AWS",
+  },
+];
+
+export { frontend, database, devops, backendtech, webtools, mobiletech, web3 };
 
 export const certificates = [
   {

@@ -1,41 +1,29 @@
 import React from "react";
-import { spotifyanime } from "../assets/projects";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const Project = ({ project }) => {
   return (
     <Link
       to={`/project?projectId=${project.id}`}
-      className="m-1 h-96 border-2 border-current relative rounded-3xl overflow-hidden flex justify-center items-center"
+      className=" md:h-72 h-40 border-2 border-current relative rounded-3xl overflow-hidden flex justify-center items-center"
     >
-      <motion.div
-        whileHover={{
-          scale: 1.1,
-          zIndex: 10,
-          transition: { ease: "easeInOut" },
-        }}
-      >
-        <img
+      <div>
+        <motion.img
+          whileHover={{
+            scale: 1.1,
+            zIndex: 10,
+            transition: { ease: "easeInOut" },
+          }}
           src={project.image}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-72 object-cover"
         />
-        <div className="absolute top-0 flex justify-center items-center">
-          <h1
-            className="text-[4em] font-bold "
-            style={{ fontFamily: "Belgan" }}
-          >
+        <div className=" absolute w-full  bottom-0 flex justify-center items-center">
+          <h1 className="md:text-[4em] text-2xl font-bold text-black ">
             {project.title}
           </h1>
         </div>
-        <div className="absolute bottom-10 flex p-4 gap-2 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
-          <p className="happy-font">{project.subtitle}</p>
-          <div className=" bg-white rounded-full h-min p-1 text-black">
-            <ArrowOutwardIcon />
-          </div>
-        </div>
-      </motion.div>
+      </div>
     </Link>
   );
 };

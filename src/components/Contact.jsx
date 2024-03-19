@@ -57,9 +57,9 @@ const Contact = () => {
   };
   return (
     <div className=" z-10">
-      <div className=" shadow-2xl mx-20 absolute z-50 bg-white  p-12 h-min  rounded-2xl">
-        <p className={styles.sectionSubText}>get in touch</p>
-        <p className={styles.sectionHeadText}>Contact Me</p>
+      <div className=" shadow-2xl mx-20 w-min  p-12 h-min  rounded-2xl border-2 ">
+        <p className="">get in touch</p>
+        <p className=" text-5xl font-bold">CONTACT ME</p>
 
         <form
           ref={formRef}
@@ -72,7 +72,7 @@ const Contact = () => {
               placeholder="whats your name?"
               onChange={handleChange}
               value={form.name}
-              className=" bg-sky-50 outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
+              className=" bg-black outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
               type="text"
               name="name"
             />
@@ -83,7 +83,7 @@ const Contact = () => {
               placeholder="enter your email here"
               onChange={handleChange}
               value={form.email}
-              className="bg-sky-50 outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary text-white roundes-lg outlined-none  border-none font-medium"
+              className=" bg-black outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
               type="email"
               name="email"
             />
@@ -95,7 +95,7 @@ const Contact = () => {
               placeholder="write message here"
               onChange={handleChange}
               value={form.message}
-              className=" bg-sky-50 outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary text-white roundes-lg outlined-none  border-none font-medium"
+              className=" bg-black outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
               name="message"
             />
           </label>

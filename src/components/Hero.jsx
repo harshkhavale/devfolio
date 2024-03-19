@@ -3,7 +3,13 @@ import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
 import SubHeroSection from "../components/SubHeroSection";
 import Resume from "./Resume";
-import { gradientcolor, gradientcolor2, profile } from "../assets";
+import {
+  gradientcolor,
+  gradientcolor2,
+  profile,
+  stripe2,
+  stripe3,
+} from "../assets";
 const slideInRightEffect = {
   hidden: {
     x: 500,
@@ -30,18 +36,18 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row flex-col-reverse items-center">
+    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"
         animate="visible"
         transition="transition"
-        className="relative md:ms-20 flex-1 p-2 md:p-8 "
+        className="relative  flex-1 "
       >
         <div className="mx-auto flex flex-row items-start gap-5">
           <div>
             <div className="flex ">
-              <h1 className={`${styles.heroSubText} w-full`}>
+              <h1 className={`${styles.heroSubText} mt-6 w-full`}>
                 {" "}
                 Hey there , I' m{" "}
               </h1>
@@ -53,12 +59,14 @@ const Hero = () => {
               {" "}
               A full stack web and mobile application developer.
             </p>
-            <p className="text-secondary bg-white dark:bg-gray-900  text-[17px] p-4 my-4 ps-1">
-              "Proficient in JavaScript, HTML, CSS, React, Angular, Node.js,
-              Next.js, and Android, flutter ,React-Native. Experienced in
-              creating seamless digital experiences for both web and mobile
-              platforms. Let's build something extraordinary{" "}
-              <p className=" inline underline underline-offset-8">together!</p>"
+            <p className=" bg-white dark:bg-gray-900 text-info p-4 my-4 ps-1">
+              "An innovative MCA student at D.Y. Patil Institute of Management
+              and Research, Pune, blending technical prowess with creative flair
+              to craft immersive digital experiences for web and mobile
+              platforms. Let's collaborate to engineer something truly
+              extraordinary
+              <p className=" inline underline underline-offset-8"> together!</p>
+              "
             </p>{" "}
             <Resume />
           </div>
@@ -74,10 +82,10 @@ const Hero = () => {
         <img
           src={profile}
           alt="profile"
-          className="relative rounded-b-full z-50"
+          className="relative rounded-b-full border-b-2 border-r-2 z-50"
         />
         <img
-          src={gradientcolor2}
+          src={stripe3}
           alt=""
           className="absolute top-14 z-10 right-[-20px] "
         />

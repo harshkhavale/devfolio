@@ -7,36 +7,16 @@ const SubHeroSection = () => {
         <div className="content__container ">
           <ul className="content__container__list ">
             <li className="content__container__list__item text-2xl md:text-5xl ">
-              <p
-                
-                className={`${styles.heroHeadText}`}
-              >
-                WEB DEVELOPER
-              </p>
+              <p className={`${styles.heroHeadText}`}>WEB DEVELOPER</p>
             </li>
             <li className="content__container__list__item text-2xl md:text-5xl">
-              <p
-                
-                className={`${styles.heroHeadText}`}
-              >
-                HARSH
-              </p>
+              <p className={`${styles.heroHeadText}`}>HARSH</p>
             </li>
             <li className="content__container__list__item text-2xl md:text-5xl">
-              <p
-                
-                className={`${styles.heroHeadText}`}
-              >
-                APP DEVELOPER
-              </p>
+              <p className={`${styles.heroHeadText}`}>APP DEVELOPER</p>
             </li>
             <li className="content__container__list__item text-2xl md:text-5xl">
-              <p
-               
-                className={`${styles.heroHeadText}`}
-              >
-                UI/UX DESIGNER
-              </p>
+              <p className={`${styles.heroHeadText}`}>UI/UX DESIGNER</p>
             </li>
           </ul>
         </div>

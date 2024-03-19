@@ -33,10 +33,10 @@ const MobileLayout = ({ title, image }) => {
         className={`absolute rotate-90 -start-6 shadow-2xl top-10 navbar w-10 rounded-3xl bg-black p-2`}
       />
       <div
-        className={`absolute rotate-90 -start-6 shadow-2xl top-28 navbar w-10 rounded-3xl bg-black p-2`}
+        className={`absolute rotate-90 -start-6 shadow-2xl top-28 navbar w-2 rounded-3xl bg-black p-2`}
       />
       <div
-        className={`absolute rotate-90 -start-6  top-40 navbar w-10 rounded-3xl bg-black p-2`}
+        className={`absolute rotate-90 -start-6  top-40 navbar w-2 h-6 rounded-3xl bg-black p-2`}
       />
     </div>
   );
