@@ -57,7 +57,7 @@ const Contact = () => {
   };
   return (
     <div className=" z-10">
-      <div className=" shadow-2xl mx-20 w-min  p-12 h-min  rounded-2xl border-2 ">
+      <div className=" shadow-2xl md:mx-20 mx-auto w-min p-6  md:p-12 h-min  rounded-2xl border-2 ">
         <p className="">get in touch</p>
         <p className=" text-5xl font-bold">CONTACT ME</p>
 
@@ -100,7 +100,7 @@ const Contact = () => {
             />
           </label>
           <button
-            className=" bg-gradient-to-r from-sky-400 to-blue-500 py-3 px-8 outline-none w-fit text-white shadow-md font-bold shadow-primary rounded-xl"
+            className="border-2 border-current p-2 bg-white rounded-xl text-black"
             type="submit"
           >
             {loading ? "Sending..." : "Send"}

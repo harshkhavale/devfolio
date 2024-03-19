@@ -42,16 +42,9 @@ const TechSection = () => {
     <div>
       <div className="flex flex-col md:flex-row md:gap-8 items-center justify-center w-full">
         <div className=" flex  flex-col md:flex-1">
-          <p className=" text-9xl font-bold">Tech</p>
-          <p className="text-9xl font-bold">Bucket</p>
-
-          <p className="my-20 ">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-            amet esse maiores. Non aperiam dolor, temporibus numquam accusamus
-            suscipit saepe illum beatae, eaque error recusandae. Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Ducimus amet esse
-            maiores. Non aperiam dolor, temporibus numquam accusamus suscipit
-            saepe illum beatae, eaque error recusandae.
+          <p className=" md:text-9xl text-[6rem] te font-bold">Tech</p>
+          <p className="md:text-9xl text-[6rem] -mt-16 md:mt-0 font-bold">
+            Bucket
           </p>
         </div>
         <div className="bucket md:flex-1 flex flex-col gap-4 text-sm">

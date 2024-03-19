@@ -36,7 +36,7 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center">
+    <div className="flex w-full md:flex-row gap-4 p-2 flex-col-reverse items-center">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"

@@ -139,7 +139,7 @@ const Index = () => {
           </div>
         </div>
         <div className="right col-span-3 absolute top-0 -z-10 -mt-10 md:relative overflow-hidden">
-          <SplineBox />
+          {isNonMobileScreens && <SplineBox />}
 
           <div className="contact absolute  rounded-tl-3xl ps-4 bottom-0 md:bottom-16 right-0 p-2 "></div>
         </div>
@@ -245,7 +245,7 @@ const Index = () => {
             <div className="flex items-center gap-36">
               <div className="flex">
                 <p className="md:text-[22rem] font-bold text-[10rem]">Self</p>
-                <p className="font-bold md:text-[10rem] text-[7rem] flex items-end">
+                <p className="font-bold md:text-[10rem] md:mt-0 text-[3rem] flex items-end">
                   &
                 </p>
               </div>
@@ -263,7 +263,7 @@ const Index = () => {
               )}
             </div>
             <div className="flex justify-between md:-mt-40 -mt-24">
-              <p className="md:text-[22rem] font-bold text-[8rem] text-left">
+              <p className="md:text-[22rem] font-bold text-[7rem] text-left">
                 Others
               </p>
             </div>

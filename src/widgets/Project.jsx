@@ -16,9 +16,9 @@ const Project = ({ project }) => {
           }}
           src={project.image}
           alt=""
-          className="w-full h-72 object-cover"
+          className="w-full h-full object-cover"
         />
-        <div className=" absolute w-full  bottom-0 flex justify-center items-center">
+        <div className=" absolute w-full  bottom-10 flex justify-center items-center">
           <h1 className="md:text-[4em] text-2xl font-bold text-black ">
             {project.title}
           </h1>

@@ -8,7 +8,7 @@ import LottieAnimation from "./LottieAnimation";
 import TextOutline from "./TextOutline";
 const ServiceCard = ({ title, index, icon, animation, description }) => {
   return (
-    <div className="xs:w-[250px] dark:text-white border-2 border-white md:w-[20vw] shadow-xl rounded-2xl">
+    <div className=" dark:text-white border-2 border-white md:w-[20vw] w-10/12 shadow-xl rounded-2xl">
       <div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full  p-[1px] rounded-[20px] shadow-card"

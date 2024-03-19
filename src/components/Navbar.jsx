@@ -4,11 +4,38 @@ import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
 import { Close, DragHandleOutlined } from "@mui/icons-material";
 import { useMediaQuery } from "@mui/material";
+import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 const Navbar = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-
+  const contacts = [
+    {
+      id: "linkdin",
+      title: "LinkedIn",
+      url: "https://www.linkedin.com/in/harshkhavale11/",
+      icon: <LinkedIn />,
+    },
+    {
+      id: "github",
+      title: "GitHub",
+      url: "https://github.com/harshkhavale",
+      icon: <GitHub />,
+    },
+    {
+      id: "email",
+      title: "Gmail",
+      url: "harshkhavale1102@gmailcom",
+      icon: <Email />,
+    },
+    {
+      id: "X",
+      title: "X",
+      url: "https://twitter.com/HarshKhavale",
+      icon: <X />,
+    },
+  ];
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
   return (
@@ -92,6 +119,18 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <div className="contact p-2 ">
+            <ul className="list-none flex my-4 gap-4">
+              {contacts.map((link) => (
+                <li
+                  key={link.id}
+                  className={`bg-white shadow-2xl rounded-full p-1 text-black  gap-2 font-medium cursor-pointer transition-transform transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
+                >
+                  {link.icon}
+                </li>
+              ))}
+            </ul>
+          </div>
         </motion.div>
       </div>
 

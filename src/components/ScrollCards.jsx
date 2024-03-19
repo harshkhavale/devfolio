@@ -30,10 +30,10 @@ const VerticalScrollCarousel = () => {
           )}
           <Certifications />
         </div>
-        <div className="flex justify-end w-full gap-0">
+        <div className="flex md:justify-end justify-center w-full gap-0">
           <motion.div
             style={{ y }}
-            className=" flex  p-1 flex-col mt-0 md:mt-[150vh] md:gap-2"
+            className=" flex  p-1 flex-col md:mt-[150vh] md:gap-2"
           >
             {certificates.map((certificate, index) => (
               <div
