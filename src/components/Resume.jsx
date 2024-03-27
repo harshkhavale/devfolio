@@ -3,11 +3,13 @@ import { resume } from "../assets";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 const Resume = () => {
   return (
-    <div className="bg-white text-black shadow-xl p-4 md:w-2/5 w-2/3 rounded-3xl flex justify-center items-center ">
-      <PictureAsPdfIcon />
-
-      <a className="mx-2 happy-font my-2" href={resume} download="resume.pdf">
-        Download Resume
+    <div className="bg-primary hover:bg-white hover:text-black mx-4 hover:scale-105 rounded-3xl flex justify-center items-center ">
+      <a
+        className=" happy-font font-bold p-2 text-xs"
+        href={resume}
+        download="resume.pdf"
+      >
+        Download
       </a>
     </div>
   );

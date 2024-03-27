@@ -9,6 +9,7 @@ import {
   profile,
   stripe2,
   stripe3,
+  twist,
 } from "../assets";
 const slideInRightEffect = {
   hidden: {
@@ -67,8 +68,7 @@ const Hero = () => {
               extraordinary
               <p className=" inline underline underline-offset-8"> together!</p>
               "
-            </p>{" "}
-            <Resume />
+            </p>
           </div>
         </div>
       </motion.div>
@@ -82,10 +82,10 @@ const Hero = () => {
         <img
           src={profile}
           alt="profile"
-          className="relative rounded-b-full border-b-2 border-r-2 z-50"
+          className="relative rounded-full z-20 border-b-2"
         />
         <img
-          src={stripe3}
+          src={twist}
           alt=""
           className="absolute top-14 z-10 right-[-20px] "
         />

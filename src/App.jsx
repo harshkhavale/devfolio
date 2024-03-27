@@ -5,14 +5,12 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import Footer from "./components/Footer";
-import ProjectPage from "./pages/ProjectPage";
 const App = () => {
   return (
     <div className=" dark:text-white dark:bg-[#191919] bg-white text-black overflow-x-hidden ">
       <AnimatePresence>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/project" element={<ProjectPage />} />
         </Routes>
       </AnimatePresence>
       <Footer />

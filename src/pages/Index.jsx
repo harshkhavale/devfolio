@@ -1,181 +1,223 @@
-import React from "react";
-import SplineBox from "../components/SplineBox";
-import Navbar from "../components/Navbar";
+import React, { useState } from "react";
 import RotatedText from "../widgets/RotatedText";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+
 import { motion } from "framer-motion";
 import Certification from "../components/Certification";
 import { useMediaQuery } from "@mui/material";
 import Creative from "../components/Creative";
 import Contact from "../components/Contact";
+import { fadeIn } from "../utils/motion";
 import Hero from "../components/Hero";
-import { ArrowBack } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import TechSection from "../components/TechSection";
-import {
-  coder,
-  gradientcolor,
-  javascriptCertificate,
-  problemSolvingCertificate,
-} from "../assets";
+
 import Services from "../components/Services";
-// import { contacts, certificates } from "../constants";
-import { useScroll, useTransform } from "framer-motion";
-import {
-  urbananime,
-  spotifyanime,
-  academixanime,
-  airbnbanime,
-  socialanime,
-  variablesanime,
-  stageanime,
-  spotifylogo,
-  urbanstorelogo,
-  sociallogo,
-  stagelogo,
-  academixlogo,
-  airbnblogo,
-} from "../assets/projects";
 
-import { robox } from "../assets";
+import { hletter, logo } from "../assets";
+import { Close, DragHandleOutlined, Home } from "@mui/icons-material";
+import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
+import { IoFlowerOutline } from "react-icons/io5";
+import SliderComponent from "../components/SliderComponent";
+import Resume from "../components/Resume";
+import { SkillsBox } from "../components/SkillsBox";
 
-import Project from "../widgets/Project";
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const navigate = useNavigate();
+  const [value, setValue] = useState(0);
+  const [hoveredLink, setHoveredLink] = useState(null); // State to track hovered link
 
-  const projects = [
+  const navLinks = [
     {
-      title: "STAGE",
-      image: stagelogo,
-      subtitle: "lorecdijhuoehouebvoivovbv",
-      id: 4,
+      id: "about",
+      title: "About",
+      icon: <Home />,
     },
     {
-      title: "urban_store",
-      image: urbanstorelogo,
-      subtitle: "lorecdijhuoehouebvoivovbv",
-      id: 2,
+      id: "work",
+      title: "Work",
     },
     {
-      title: "spotify",
-      image: spotifylogo,
-      subtitle: "lorecdijhuoehouebvoivovbv",
-      id: 3,
+      id: "contact",
+      title: "Contact",
     },
     {
-      title: "ACADEMIX",
-      image: academixlogo,
-      subtitle: "lorecdijhuoehouebvoivovbv",
-      id: 2,
-    },
-    {
-      title: "Airbnb",
-      image: airbnblogo,
-      subtitle: "lorecdijhuoehouebvoivovbv",
-      id: 3,
-    },
-    {
-      title: "social",
-      image: sociallogo,
-      subtitle: "lorecdijhuoehouebvoivovbv",
-      id: 3,
+      id: "featured",
+      title: "Featured",
     },
   ];
+  const contacts = [
+    {
+      id: "linkdin",
+      title: "LinkedIn",
+      url: "https://www.linkedin.com/in/harshkhavale11/",
+      icon: <LinkedIn />,
+    },
+    {
+      id: "github",
+      title: "GitHub",
+      url: "https://github.com/harshkhavale",
+      icon: <GitHub />,
+    },
+    {
+      id: "email",
+      title: "Gmail",
+      url: "harshkhavale1102@gmailcom",
+      icon: <Email />,
+    },
+    {
+      id: "X",
+      title: "X",
+      url: "https://twitter.com/HarshKhavale",
+      icon: <X />,
+    },
+  ];
+
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(true);
+
   return (
     <div>
-      <Navbar />
-      <div className="main-page flex flex-col md:grid relative z-50  grid-rows-1 grid-cols-6 md:px-0">
-        <div className="left col-span-3 p-4">
-          <div className="  flex flex-col items-center justify-center   text-9xl  font-black ">
-            <p className=" text-center flex justify-center md:ms-10 font-black text-[8vh] happy-font md:text-[18vh]">
-              Abstracting
-            </p>
-            <p className=" text-center flex justify-center font-black text-[10vh] happy-font md:text-[20vh]">
-              Art, Building Solutions.{" "}
-            </p>
-
-            <div className="flex flex-col ">
-              <div className="flex justify-end md:justify-center">
-                <p className=" text-base happy-font ">through</p>
-              </div>
-
-              <div className="flex justify-end md:justify-center mb-6 items-center">
-                <div className="line h-1 w-40 mx-[-13px] rounded-3xl bg-current"></div>
-
-                <KeyboardArrowRightIcon />
-              </div>
-              <div></div>
-
-              <div className="flex flex-col gap-2 md:-mt-10 ">
-                <div className="line flex gap-1">
-                  <div className="blue bg-blue-500 p-2 w-2 rounded-xl"></div>
-                  <div className="skyblue bg-sky-500 p-1 w-4 rounded-xl"></div>
-                  <div className="gray bg-gray-200 p-1 w-10 rounded-xl"></div>
-                  <div className="pink bg-pink-500 p-1 w-8 rounded-xl"></div>
-                </div>
-                <div className="line flex gap-1">
-                  <div className="orange bg-orange-500 w-5 p-2 rounded-xl"></div>
-                  <div className="teal bg-teal-500 p-1 w-12 rounded-xl"></div>
-                  <div className="pink bg-sky-500 p-1 w-8 rounded-xl"></div>
-                </div>
-              </div>
-              <div className="arrow flex items-center ">
-                <div className="code flex -mt-2 items-center">
-                  <p className=" font-black md:text-[35vh] happy-font text-[16vh]">
-                    code
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 justify-end items-end">
-                <div className="line flex gap-1">
-                  <div className="blue bg-blue-500 p-2 w-2 rounded-xl"></div>
-                  <div className="skyblue bg-sky-500 p-1 w-4 rounded-xl"></div>
-                  <div className="gray bg-gray-200 p-1 w-10 rounded-xl"></div>
-                  <div className="pink bg-pink-500 p-1 w-8 rounded-xl"></div>
-                </div>
-                <div className="line flex gap-1">
-                  <div className="orange bg-orange-500 w-5 p-2 rounded-xl"></div>
-                  <div className="teal bg-teal-500 p-1 w-12 rounded-xl"></div>
-                  <div className="pink bg-sky-500 p-1 w-8 rounded-xl"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="right col-span-3 absolute top-0 -z-10 -mt-10 md:relative overflow-hidden">
-          {isNonMobileScreens && <SplineBox />}
-
-          <div className="contact absolute  rounded-tl-3xl ps-4 bottom-0 md:bottom-16 right-0 p-2 "></div>
-        </div>
-      </div>
-      <div className=" mt-4 md:-mt-36 px-20">
-        <RotatedText
-          title={"ABOUT"}
-          subtitle={"KNOW-MORE-KNOW-MORE-KNOW-MORE"}
-        />
-      </div>
-      <section
-        id="#featured"
-        className="expertise md:flex items-center relative"
+      <div
+        className={`navbar z-50 fixed top-1
+ flex justify-center  ${!isNonMobileScreens ? "" : ""} `}
       >
-        <div className="side flex flex-col md:w-6/12 gap-8 p-4">
+        <div className="navbar rounded-3xl flex justify-between items-center w-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10  ">
+          <img
+            src={hletter}
+            alt="logo"
+            className="md:w-10 md:h-10 w-6 h-6 md:mx-4"
+          />
+          <div className="links">
+            <ul className="list-none hidden sm:flex flex-row items-center gap-6 rounded-2xl  md:p-2">
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? " md:p-2 " : " "
+                  } hover:bg-white hover:text-black rounded-3xl md:p-2  cursor-pointer`}
+                  onClick={() => {
+                    setActive(link.title);
+                  }}
+                  onMouseEnter={() => {
+                    setHoveredLink(link.id);
+                  }}
+                  onMouseLeave={() => {
+                    setHoveredLink(null);
+                  }}
+                >
+                  <a href={`#${link.id}`} className="font-semibold happy-font">
+                    {hoveredLink === link.id && link.icon}{" "}
+                    {/* Render icon only when link is hovered */}
+                    {link.id}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Resume />
+
+          <div
+            className="sm:hidden cursor-pointer flex flex-1 justify-end items-center"
+            onClick={() => setToggle(!toggle)}
+          >
+            {toggle ? (
+              <DragHandleOutlined />
+            ) : (
+              <Close
+                className="border z-[500000] rounded-full border-white text-white"
+                style={{ color: "white", fontSize: "5rem" }}
+              />
+            )}
+          </div>
+
+          <motion.div
+            variants={fadeIn("right", "spring", 0.5 * 1, 0.75)}
+            className={`${
+              toggle ? "hidden" : "flex-col"
+            } fixed top-0 start-0 w-screen p-4  z-[5000] h-screen flex justify-center rounded-bl-[10rem] bg-black border-2 border-white border-t-0 border-r-0`}
+          >
+            <ul className="list-none my-2 flex  flex-col">
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-[#3c42ff]" : "text-white"
+                  } hover:text-[#3c42ff]  text-[17px] cursor-pointer flex justify-start`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(link.title);
+                  }}
+                >
+                  <a
+                    href={`#${link.id}`}
+                    className="text-5xl font-bold text-center hover:text-[#3c42ff]"
+                  >
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="contact p-2 ">
+              <ul className="list-none flex my-4 gap-4">
+                {contacts.map((link) => (
+                  <li
+                    key={link.id}
+                    className={`bg-white shadow-2xl rounded-full p-1 text-black  gap-2 font-medium cursor-pointer`}
+                  >
+                    {link.icon}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10" />
+
+      <div
+        id="home"
+        className="home md:h-screen h-72 flex flex-col justify-center items-center relative "
+      >
+        <div className="  flex flex-wrap md:gap-6 gap-4 items-center justify-center   text-7xl  font-black ">
+          <p className="text-center flex justify-center font-black text-[5vh] md:text-[18vh] happy-font">
+            Abstracting
+          </p>
+          <p
+            className="flex items-center text-center justify-center font-black text-[5vh] md:text-[20vh]"
+            style={{ fontFamily: "Pilowlava" }}
+          >
+            Art
+            <IoFlowerOutline className=" text-pink-500" />,
+          </p>
+          <p className=" text-center flex justify-center font-black text-[5vh]  md:text-[20vh]">
+            BUILDING
+          </p>
+          <p className=" text-center flex justify-center font-black text-[5vh] happy-font md:text-[18vh]">
+            solutions.{" "}
+          </p>
+        </div>
+      </div>
+      <SliderComponent />
+      <section id="featured" className="expertise  items-center relative">
+        <div className="side flex flex-col  gap-8 p-4">
           <p className=" font-bold text-7xl z-50 md:text-9xl">EXPERTISE</p>
 
-          <div className="flex w-12/12  flex-col md:flex-row ">
-            <p className=" happy-font font-semibold text-xs z-50 md:text-2xl p-2">
-              In web development, mobile app development, backend development,
-              and UI/UX design, I excel. Using React, Next.js, and Angular, I
-              craft seamless web experiences. With Android, React Native, and
-              Flutter, I create responsive mobile apps. Backend solutions are my
-              forte, using Python, Java, and JavaScript. Additionally, I design
-              captivating interfaces with Figma and Canva. My diverse skill set
-              ensures innovative solutions across the digital spectrum.{" "}
+          <div className="flex relative rounded-br-[3rem] overflow-hidden  flex-col md:flex-row ">
+            <p className=" text-xs z-50 md:text-3xl bg-gray-800 font-bold  p-2">
+              I'm a versatile developer and designer skilled in frontend and
+              backend development, UI/UX design, and mobile development.
+              Proficient in technologies like React.js, Express.js, and Figma, I
+              specialize in crafting captivating user experiences and robust
+              server-side solutions. With a focus on seamless integration and
+              user-centric design principles, I create intuitive interfaces and
+              cross-platform applications that prioritize performance and
+              engagement. Passionate about turning ideas into innovative
+              solutions, I thrive on delivering high-quality results that exceed
+              expectations in the digital realm. Welcome to my portfolio!
             </p>
           </div>
         </div>
-        <div className=" w-12/12 md:w-6/12 z-[5000]">
+        <div className="">
           <Services />
         </div>
       </section>
@@ -190,68 +232,11 @@ const Index = () => {
           </p>
         </div>{" "}
       </div>
-      <section
-        id="#work"
-        className={`work relative bg-[#191919] flex ${
-          isNonMobileScreens ? "flex-row" : "flex-col"
-        }`}
-      >
-        <div className=" flex-1">
-          <div className="md:px-8  px-2">
-            <p className="text-bold -my-10 happy-font font-bold">
-              Projects I have done so far..
-            </p>
-            <h1 className="md:text-9xl text-[7rem] font-bold">WORK</h1>
-            <p className=" my-4 ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fuga
-              voluptatibus quidem optio libero sed recusandae iure fugiat, ullam
-              doloribus!
-            </p>
-          </div>
 
-          <img src={robox} alt="" className=" sticky" />
-        </div>
-        <div className="md:p-8 p-2 flex-2 flex justify-center items-center">
-          <div className="md:grid flex flex-col gap-4 grid-rows-3 ">
-            <div className="md:grid flex flex-col gap-4 grid-rows-1 grid-cols-5 ">
-              <div className=" col-span-2 h-full w-full">
-                <Project project={projects[2]} />
-              </div>
-              <div className=" col-span-3 h-full w-full">
-                {" "}
-                <Project project={projects[0]} />
-              </div>
-            </div>
-            <div className="md:grid flex flex-col gap-4 grid-rows-1 grid-cols-5 ">
-              <div className=" col-span-3 h-full w-full">
-                {" "}
-                <Project project={projects[1]} />
-              </div>
-
-              <div className=" col-span-2">
-                <Project project={projects[3]} />
-              </div>
-            </div>
-            <div className="md:grid flex flex-col gap-4 grid-rows-1 grid-cols-5 ">
-              <div className=" col-span-2 ">
-                {" "}
-                <Project project={projects[5]} />
-              </div>
-              <div className=" col-span-3 ">
-                <Project project={projects[4]} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section
         id="#about"
         className="about_section bg-[#191919] relative overflow-hidden "
       >
-        <p className="url fixed top-52 opacity-5 bg-transparent  left-[-250px] dark:opacity-10 font-black text-[12rem] rotate-90 ">
-          HARSH
-        </p>
-
         <div className="relative w-full pt-0 md:px-20">
           <Hero />
           <div className="difference flex flex-col p-2 ">
@@ -264,7 +249,7 @@ const Index = () => {
               </div>
 
               {isNonMobileScreens && (
-                <p className=" mt-20 ">
+                <p className=" mt-20 text-xl happy-font ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,
@@ -301,9 +286,9 @@ const Index = () => {
               </div>
             )}
           </div>
-          <TechSection />
         </div>
       </section>
+      <SkillsBox />
       <Creative />
       <Certification />
       <Contact />

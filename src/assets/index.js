@@ -4,7 +4,7 @@ import resume from "./resume/resume.pdf";
 // #profile
 import profile from "./profile/profilepic.png";
 // #other
-
+import twist from "./twist.png";
 import robox from "./robox.jpg";
 import stripe from "./stripe.png";
 import stripe2 from "./stripe2.png";
@@ -41,7 +41,11 @@ import frontendcertificate from "./certificates/frontendcertificate.png";
 import androidcertificate from "./certificates/android.png";
 import dataminingcertificate from "./certificates/datamining.png";
 import netfundamentalscertificate from "./certificates/netfundamentals.png";
-
+import hletter from "./hletter.png";
+import frontendfr from "./frontend.jpeg";
+import backendfr from "./backend.jpeg";
+import uixfr from "./uix.jpeg";
+import mobilefr from "./mobile.jpeg";
 export {
   javascriptCertificate,
   problemSolvingCertificate,
@@ -63,6 +67,12 @@ export {
   stripe,
   stripe2,
   stripe3,
+  hletter,
+  twist,
+  frontendfr,
+  backendfr,
+  uixfr,
+  mobilefr,
 };
 export { variablesbanner, spotifybanner, socialbanner, airbnbbanner };
 export { variableslogo, browser, mobile, ui, backend };

@@ -9,6 +9,8 @@ import {
   devops,
   web3,
 } from "../constants";
+import { BsBoxSeam } from "react-icons/bs";
+
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 const TechCard = ({ name, index, icon }) => {
@@ -37,22 +39,23 @@ const TechCard = ({ name, index, icon }) => {
   );
 };
 
-const TechSection = () => {
+export const SkillsBox = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:gap-8 items-center justify-center w-full">
-        <div className=" flex  flex-col md:flex-1">
-          <p className=" md:text-[12rem] text-[6rem] te font-bold">Tech</p>
-          <p className="md:text-[10rem] text-[6rem] -mt-20 font-bold">Bucket</p>
+      <div className="md:mx-40 mx-10 relative">
+        <p className=" font-bold text-7xl z-50 md:text-9xl">SKILL's BUCKET</p>
+
+        <div className=" absolute right-0 flex item-center happy-font font-bold text-5xl">
+          <BsBoxSeam className=" h-20 w-20 -rotate-6" />
         </div>
-        <div className="bucket md:flex-1 flex flex-col gap-4 text-sm">
+        <div className="bucket happy-font  flex flex-wrap gap-4 text-sm">
           <div className="frontend bg-zinc-800  rounded-md p-4">
             <p className="font-bold mb-4">Frontend</p>
             <div className="flex flex-wrap gap-2">
               {frontend.map((fe, index) => (
                 <p
                   key={fe.name}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                   style={{ borderColor: fe.color }}
                 >
                   {fe.name}
@@ -165,5 +168,3 @@ const TechSection = () => {
     </div>
   );
 };
-
-export default SectionWrapper(TechSection, "tech-section");
