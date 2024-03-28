@@ -1,10 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+
 const Contact = () => {
   const [isSent, setIsSent] = useState(false);
   const formRef = useRef();
@@ -56,7 +53,7 @@ const Contact = () => {
       );
   };
   return (
-    <section id="#contact">
+    <section id="#contact -mt-96">
       <div className=" shadow-2xl md:mx-20 mx-auto w-min p-6  md:p-12 h-min  rounded-2xl border-2 ">
         <p className="">get in touch</p>
         <p className=" text-5xl font-bold">CONTACT ME</p>

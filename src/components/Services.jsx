@@ -4,16 +4,15 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import LottieAnimation from "./LottieAnimation";
-import TextOutline from "./TextOutline";
-const ServiceCard = ({ title, index, icon, desc, image }) => {
+
+const ServiceCard = ({ title, index, desc, image }) => {
   return (
     <div className=" dark:text-white bg-black md:w-[22%] shadow-xl rounded-2xl border-2 border-white">
-      <div className="header relative w-full border-b-2 flex items-center gap-2 overflow-hidden ">
+      <div className=" h-32 relative w-full border-b-2 flex items-center gap-2 overflow-hidden ">
         <img
           src={image}
           alt=""
-          className=" absolute -z-10 top-0 left-0 w-full rounded-t-2xl h-full object-cover"
+          className=" absolute top-0 left-0 w-full rounded-t-2xl h-full object-cover"
         />
         <p className="absolute inset-0 flex justify-center items-center font-bold text-[5rem]">
           {title}

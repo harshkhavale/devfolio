@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { projects, certificates, certificates2 } from "../constants";
+import { certificates, certificates2 } from "../constants";
 import { useMediaQuery } from "@mui/material";
 const VerticalScrollCarousel = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");

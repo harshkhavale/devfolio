@@ -12,19 +12,21 @@ import { useNavigate } from "react-router-dom";
 
 import Services from "../components/Services";
 
-import { hletter, logo } from "../assets";
+import { hletter } from "../assets";
 import { Close, DragHandleOutlined, Home } from "@mui/icons-material";
 import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
 import { IoFlowerOutline } from "react-icons/io5";
 import SliderComponent from "../components/SliderComponent";
 import Resume from "../components/Resume";
 import { SkillsBox } from "../components/SkillsBox";
+import { LuRocket } from "react-icons/lu";
+import LinesComponent from "../components/LinesComponent";
 
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const navigate = useNavigate();
   const [value, setValue] = useState(0);
-  const [hoveredLink, setHoveredLink] = useState(null); // State to track hovered link
+  const [hoveredLink, setHoveredLink] = useState(null);
 
   const navLinks = [
     {
@@ -172,8 +174,7 @@ const Index = () => {
           </motion.div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10" />
-
+      <LinesComponent />
       <div
         id="home"
         className="home md:h-screen h-72 flex flex-col justify-center items-center relative "
@@ -198,12 +199,15 @@ const Index = () => {
         </div>
       </div>
       <SliderComponent />
-      <section id="featured" className="expertise  items-center relative">
+      <section id="featured" className="expertise mt-8  items-center relative">
         <div className="side flex flex-col  gap-8 p-4">
-          <p className=" font-bold text-7xl z-50 md:text-9xl">EXPERTISE</p>
+          <p className=" font-bold text-5xl flex items-center gap-2 z-50 md:text-7xl">
+            EXPERTISE
+            <LuRocket />
+          </p>
 
           <div className="flex relative rounded-br-[3rem] overflow-hidden  flex-col md:flex-row ">
-            <p className=" text-xs z-50 md:text-3xl bg-gray-800 font-bold  p-2">
+            <p className=" text-xs z-50 md:text-xl bg-gray-800 font-bold  p-2">
               I'm a versatile developer and designer skilled in frontend and
               backend development, UI/UX design, and mobile development.
               Proficient in technologies like React.js, Express.js, and Figma, I
@@ -243,7 +247,7 @@ const Index = () => {
             <div className="flex items-center gap-36">
               <div className="flex">
                 <p className="md:text-[22rem] font-bold text-[10rem]">Self</p>
-                <p className="font-bold md:text-[10rem] md:mt-0 text-[3rem] flex items-end">
+                <p className="font-bold md:text-[10rem] md:mt-0 happy-font  mb-10 text-[3rem] flex items-end">
                   &
                 </p>
               </div>
@@ -267,13 +271,6 @@ const Index = () => {
             </div>
             {!isNonMobileScreens && (
               <div className="">
-                <div className="flex justify-center">
-                  <RotatedText
-                    title={"DIFFERENCE"}
-                    subtitle={"the-difference-between-"}
-                  />
-                </div>
-
                 <p className="font-bold p-2 ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
@@ -292,7 +289,6 @@ const Index = () => {
       <Creative />
       <Certification />
       <Contact />
-      <div className=" h-screen w-screen p-20"></div>
     </div>
   );
 };

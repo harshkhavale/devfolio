@@ -43,11 +43,11 @@ export const SkillsBox = () => {
   return (
     <div>
       <div className="md:mx-40 mx-10 relative">
-        <p className=" font-bold text-7xl z-50 md:text-9xl">SKILL's BUCKET</p>
+        <p className=" font-bold text-5xl flex mb-8 items-center gap-2 z-50 md:text-7xl">
+          SKILLBOX
+          <BsBoxSeam />
+        </p>
 
-        <div className=" absolute right-0 flex item-center happy-font font-bold text-5xl">
-          <BsBoxSeam className=" h-20 w-20 -rotate-6" />
-        </div>
         <div className="bucket happy-font  flex flex-wrap gap-4 text-sm">
           <div className="frontend bg-zinc-800  rounded-md p-4">
             <p className="font-bold mb-4">Frontend</p>
@@ -70,7 +70,7 @@ export const SkillsBox = () => {
                 <p
                   key={be.name}
                   style={{ borderColor: be.color }}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                 >
                   {be.name}
                 </p>
@@ -84,7 +84,7 @@ export const SkillsBox = () => {
                 <p
                   key={db.name}
                   style={{ borderColor: db.color }}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                 >
                   {db.name}
                 </p>
@@ -98,7 +98,7 @@ export const SkillsBox = () => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -117,7 +117,7 @@ export const SkillsBox = () => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -136,7 +136,7 @@ export const SkillsBox = () => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -156,7 +156,7 @@ export const SkillsBox = () => {
                 <p
                   key={wt.name}
                   style={{ borderColor: wt.color }}
-                  className={` text-white border-2 border-black bg-black p-2 rounded-xl`}
+                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
                 >
                   {wt.name}
                 </p>

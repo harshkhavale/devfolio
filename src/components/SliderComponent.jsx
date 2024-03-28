@@ -9,57 +9,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@mui/material";
 
-import {
-  socialanime,
-  airbnbanime,
-  academixanime,
-  spotifyanime,
-  urbananime,
-  stageanime,
-} from "../assets/projects";
 import { LuCodesandbox } from "react-icons/lu";
 import { GitHub, Launch, Link, LinkOffRounded } from "@mui/icons-material";
-
+import { projects } from "../constants";
 SwiperCore.use([Navigation]);
-
-const projects = [
-  {
-    title: "STAGE",
-    image: stageanime,
-    subtitle: "lorecdijhuoehouebvoivovbv",
-    link: "",
-  },
-  {
-    title: "urban_store",
-    image: urbananime,
-    subtitle: "lorecdijhuoehouebvoivovbv",
-    id: 2,
-  },
-  {
-    title: "spotify",
-    image: spotifyanime,
-    subtitle: "lorecdijhuoehouebvoivovbv",
-    id: 3,
-  },
-  {
-    title: "ACADEMIX",
-    image: academixanime,
-    subtitle: "lorecdijhuoehouebvoivovbv",
-    id: 2,
-  },
-  {
-    title: "Airbnb",
-    image: airbnbanime,
-    subtitle: "lorecdijhuoehouebvoivovbv",
-    id: 3,
-  },
-  {
-    title: "social",
-    image: socialanime,
-    subtitle: "lorecdijhuoehouebvoivovbv",
-    id: 3,
-  },
-];
 
 const SliderComponent = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");

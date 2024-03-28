@@ -3,7 +3,7 @@ import { styles } from "../styles";
 const SubHeroSection = () => {
   return (
     <div className="sub-hero ">
-      <div className="content absolute top-36 w-full md:top-48 ml-[-100px] ">
+      <div className="content absolute top-44 w-full md:top-48  ml-[-100px] ">
         <div className="content__container ">
           <ul className="content__container__list ">
             <li className="content__container__list__item text-2xl md:text-5xl ">

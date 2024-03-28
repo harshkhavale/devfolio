@@ -3,14 +3,7 @@ import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
 import SubHeroSection from "../components/SubHeroSection";
 import Resume from "./Resume";
-import {
-  gradientcolor,
-  gradientcolor2,
-  profile,
-  stripe2,
-  stripe3,
-  twist,
-} from "../assets";
+import { profile, twist } from "../assets";
 const slideInRightEffect = {
   hidden: {
     x: 500,
@@ -48,8 +41,9 @@ const Hero = () => {
         <div className="mx-auto flex flex-row items-start gap-5">
           <div>
             <div className="flex ">
-              <h1 className={`${styles.heroSubText} mt-6 w-full`}>
-                {" "}
+              <h1
+                className={`${styles.heroSubText} mt-6 font-bold happy-font w-full`}
+              >
                 Hey there , I' m{" "}
               </h1>
 
@@ -60,13 +54,16 @@ const Hero = () => {
               {" "}
               A full stack web and mobile application developer.
             </p>
-            <p className=" bg-white dark:bg-gray-900 text-info p-4 my-4 ps-1">
+            <p className="happy-font font-bold text-primary p-4 my-4 ps-1">
               "An innovative MCA student at D.Y. Patil Institute of Management
               and Research, Pune, blending technical prowess with creative flair
               to craft immersive digital experiences for web and mobile
               platforms. Let's collaborate to engineer something truly
               extraordinary
-              <p className=" inline underline underline-offset-8"> together!</p>
+              <p className=" inline underline underline-offset-8 font-bold happy-font text-xl">
+                {" "}
+                together!
+              </p>
               "
             </p>
           </div>
@@ -82,12 +79,7 @@ const Hero = () => {
         <img
           src={profile}
           alt="profile"
-          className="relative rounded-full z-20 border-b-2"
-        />
-        <img
-          src={twist}
-          alt=""
-          className="absolute top-14 z-10 right-[-20px] "
+          className="relative bg-black border-2 rounded-full z-20"
         />
       </motion.div>
     </div>

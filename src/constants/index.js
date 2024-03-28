@@ -1,24 +1,9 @@
-// #animations
-import backendanimation from "../assets/animation/backend.json";
-import webanimation from "../assets/animation/web.json";
-import appanimation from "../assets/animation/appdevelopment.json";
-import uixanimation from "../assets/animation/uix.json";
 import {
-  variables,
-  variablesbanner,
-  variableslogo,
-  spotifybanner,
-  socialbanner,
-  airbnbbanner,
   javascriptCertificate,
   problemSolvingCertificate,
   dsacertificate,
   javacertificate,
   linuxcertificate,
-  browser,
-  mobile,
-  backend,
-  ui,
   googleCertificate,
   netfundamentalscertificate,
   androidcertificate,
@@ -29,73 +14,34 @@ import {
   backendfr,
   uixfr,
 } from "../assets";
-import XIcon from "@mui/icons-material/X";
-
 import {
-  socialanime,
-  spotifyanime,
-  spotifydashboard,
-  spotifydashboardmobile,
-  spotifylogo,
-  spotifymain,
-  spotifymainmobile,
-  urbananalysis,
-  urbancartmobile,
-  urbandetail,
-  urbandetailmobile,
-  urbanmain,
-  urbanmainmobile,
-  urbanshowcase,
-  urbansigninmobile,
-  urbanstorebanner,
-  urbanstorelogo,
+  academix,
+  airbnb,
+  social,
+  spotify,
+  stage,
+  urbanstore,
 } from "../assets/projects";
-import { GitHub, Home } from "@mui/icons-material";
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
-  {
-    id: "featured",
-    title: "Featured",
-  },
-];
 
 export const services = [
   {
     title: "Web",
-    animation: webanimation,
-    icon: browser,
     image: frontendfr,
     desc: "As a Frontend Developer,I specialize in crafting captivating user experiences with technologies like React.js and Next.js. Proficient in HTML, CSS, and JavaScript, I create responsive designs using frameworks like Tailwind CSS. My focus on detail ensures seamless navigation and engagement across devices",
   },
   {
     title: "Mobile",
-    animation: appanimation,
-    icon: mobile,
     image: mobilefr,
     desc: "In the realm of Mobile Development,Specializing in Android, React Native, and Flutter, I create cross-platform applications with native-like experiences. By leveraging frontend expertise, I prioritize performance and usability, delivering engaging mobile solutions across devices.",
   },
   {
     title: "Backend",
-    animation: backendanimation,
-    icon: backend,
     image: backendfr,
     desc: "In my role as a Backend Developer,With expertise in Express.js, Node.js, and more, I architect robust server-side solutions for dynamic web applications. I excel in database management with SQL, Firebase, and MongoDB, optimizing performance and reliability. My REST API proficiency ensures smooth interactions and scalability.",
   },
   {
     title: "UI/UX",
-    animation: uixanimation,
-    icon: ui,
+
     image: uixfr,
     desc: "As a UI/UX Designer, I design intuitive interfaces using tools like Figma, blending creativity with user-centric principles. Attention to detail and collaboration with development teams ensure seamless integration of design and functionality, enhancing the overall user experience",
   },
@@ -305,288 +251,35 @@ export const certificates2 = [
     img: frontendcertificate,
   },
 ];
-
 export const projects = [
   {
-    title: "VARIABLES",
-    bannerImg: variablesbanner,
-    tagline: "let's get up to date",
-    technologies: [
-      "ASP.NET",
-      "C#",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstarp",
-      "RazorPay",
-    ],
-    theme: "#ECF0F1",
-    theme2: "#41566e",
-    theme2: "#232426",
-    color: "#17202A",
-    logo: variableslogo,
-    startDate: "Nov/2022",
-    endDate: "Jan/2023",
-    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    deploy: null,
-    headerText: "variables is an Digital electronics gadget ecommerse website.",
-    slider: [
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-    ],
-    pages: [
-      {
-        title: "Home",
-        image: variables,
-        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
-      },
-    ],
-    mobile: [
-      {
-        image: variables,
-      },
-    ],
-    next: {
-      title: "URBANSTORE",
-      to: "/urbanstore",
-    },
+    title: "STAGE",
+    image: stage,
+    link: "",
   },
   {
-    title: "URBAN_STORE",
-    bannerImg: urbanstorebanner,
-    tagline: "let's get up to date",
-    technologies: [
-      "ASP.NET",
-      "C#",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstarp",
-      "RazorPay",
-    ],
-    theme: "#E74C3C",
-    theme2: "#41566e",
-    theme2: "#232426",
-    color: "#FDFEFE",
-    logo: urbanstorelogo,
-    startDate: "Nov/2022",
-    endDate: "Jan/2023",
-    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    deploy: "https://urban-store-in-apk.vercel.app/",
-    headerText: "variables is an Digital electronics gadget ecommerse website.",
-    slider: [
-      {
-        name: "Home",
-        image: urbandetail,
-      },
-      {
-        name: "Home",
-        image: urbanshowcase,
-      },
-      {
-        name: "Home",
-        image: urbananalysis,
-      },
-    ],
-    pages: [
-      {
-        title: "Home",
-        image: urbanmain,
-        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
-      },
-    ],
-    mobile: [
-      {
-        image: urbanmainmobile,
-      },
-      {
-        image: urbancartmobile,
-      },
-      {
-        image: urbandetailmobile,
-      },
-    ],
-    next: {
-      title: "URBANSTORE",
-      to: "/urbanstore",
-    },
-  },
-
-  {
-    title: "SPOTIFY",
-    bannerImg: spotifybanner,
-    tagline: "let's get up to date",
-    technologies: [
-      "ASP.NET",
-      "C#",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstarp",
-      "RazorPay",
-    ],
-    theme: "#2ECC71",
-    theme2: "#00ff1a",
-    theme2: "#232426",
-    color: "#FDFEF",
-    logo: spotifylogo,
-    startDate: "Nov/2022",
-    endDate: "Jan/2023",
-    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    deploy: null,
-    headerText: "variables is an Digital electronics gadget ecommerse website.",
-    slider: [
-      {
-        name: "Home",
-        image: spotifymain,
-      },
-      {
-        name: "Home",
-        image: spotifydashboard,
-      },
-    ],
-    pages: [
-      {
-        title: "Home",
-        image: spotifymain,
-        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
-      },
-    ],
-    mobile: [
-      {
-        image: spotifymainmobile,
-      },
-      {
-        image: spotifydashboardmobile,
-      },
-    ],
-    next: {
-      title: "URBANSTORE",
-      to: "/urbanstore",
-    },
+    title: "urban_store",
+    image: urbanstore,
+    id: 2,
   },
   {
-    title: "SOCIAL",
-    bannerImg: socialanime,
-    tagline: "let's get up to date",
-    technologies: [
-      "ASP.NET",
-      "C#",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstarp",
-      "RazorPay",
-    ],
-    theme: "#D6EAF8",
-    theme2: "#41566e",
-    theme2: "#232426",
-    color: "black",
-    logo: urbanstorelogo,
-    startDate: "Nov/2022",
-    endDate: "Jan/2023",
-    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    deploy: null,
-    headerText: "variables is an Digital electronics gadget ecommerse website.",
-    slider: [
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-    ],
-    pages: [
-      {
-        title: "Home",
-        image: variables,
-        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
-      },
-    ],
-    mobile: [
-      {
-        image: urbanstorelogo,
-      },
-      {
-        image: urbanstorelogo,
-      },
-    ],
-    next: {
-      title: "URBANSTORE",
-      to: "/urbanstore",
-    },
+    title: "spotify",
+    image: spotify,
+    id: 3,
   },
   {
-    title: "airbnb",
-    bannerImg: airbnbbanner,
-    tagline: "let's get up to date",
-    technologies: [
-      "ASP.NET",
-      "C#",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstarp",
-      "RazorPay",
-    ],
-    theme: "#F8BBD0",
-    theme2: "#41566e",
-    theme2: "#232426",
-    color: "black",
-    logo: urbanstorelogo,
-    startDate: "Nov/2022",
-    endDate: "Jan/2023",
-    github: "https://github.com/harshkhavale/asp.net-mobile-shopee-variables",
-    deploy: null,
-    headerText: "variables is an Digital electronics gadget ecommerse website.",
-    slider: [
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-      {
-        name: "Home",
-        image: variables,
-      },
-    ],
-    pages: [
-      {
-        title: "Home",
-        image: variables,
-        info: "Icon has the ability to adjust the layout and order of most any page on the website. As seen on the homepage there's a newsletter sign up, announcement, featured collections, product categories, career listing, and recent limiter posts.",
-      },
-    ],
-    mobile: [
-      {
-        image: urbanstorelogo,
-      },
-      {
-        image: urbanstorelogo,
-      },
-    ],
-    next: {
-      title: "URBANSTORE",
-      to: "/urbanstore",
-    },
+    title: "ACADEMIX",
+    image: academix,
+    id: 2,
+  },
+  {
+    title: "Airbnb",
+    image: airbnb,
+    id: 3,
+  },
+  {
+    title: "social",
+    image: social,
+    id: 3,
   },
 ];
