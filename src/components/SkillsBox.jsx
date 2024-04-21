@@ -13,6 +13,7 @@ import { BsBoxSeam } from "react-icons/bs";
 
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+import { box } from "../assets";
 const TechCard = ({ name, index, icon }) => {
   return (
     <div className=" shadow-2xl p-1 m-1 rounded-full">
@@ -41,21 +42,21 @@ const TechCard = ({ name, index, icon }) => {
 
 export const SkillsBox = () => {
   return (
-    <div>
+    <section id="featured">
       <div className="md:mx-40 mx-10 relative">
         <p className=" font-bold text-5xl flex mb-8 items-center gap-2 z-50 md:text-7xl">
           SKILLBOX
-          <BsBoxSeam />
+          <img src={box} className=" h-20" alt="" />
         </p>
 
         <div className="bucket happy-font  flex flex-wrap gap-4 text-sm">
-          <div className="frontend bg-zinc-800  rounded-md p-4">
+          <div className="frontend dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Frontend</p>
             <div className="flex flex-wrap gap-2">
               {frontend.map((fe, index) => (
                 <p
                   key={fe.name}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                   style={{ borderColor: fe.color }}
                 >
                   {fe.name}
@@ -63,42 +64,42 @@ export const SkillsBox = () => {
               ))}
             </div>
           </div>
-          <div className="frontend bg-zinc-800  rounded-md p-4">
+          <div className="frontend dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Backend</p>
             <div className="flex flex-wrap gap-2">
               {backendtech.map((be, index) => (
                 <p
                   key={be.name}
                   style={{ borderColor: be.color }}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {be.name}
                 </p>
               ))}
             </div>
           </div>
-          <div className="database bg-zinc-800  rounded-md p-4">
+          <div className="frontend dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Database</p>
             <div className="flex flex-wrap gap-2">
               {database.map((db, index) => (
                 <p
                   key={db.name}
                   style={{ borderColor: db.color }}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {db.name}
                 </p>
               ))}
             </div>
           </div>
-          <div className="devops relative bg-zinc-800 overflow-hidden  rounded-md p-4 ">
+          <div className="frontend relative overflow-hidden dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Devops</p>
             <div className="flex flex-wrap gap-2 p-4">
               {devops.map((dv, index) => (
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -110,14 +111,14 @@ export const SkillsBox = () => {
               max="100"
             ></progress>
           </div>
-          <div className="mobile relative bg-zinc-800 overflow-hidden  rounded-md p-4 ">
+          <div className="frontend overflow-hidden relative dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Mobile</p>
             <div className="flex flex-wrap gap-2 p-4">
               {mobiletech.map((dv, index) => (
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -129,14 +130,14 @@ export const SkillsBox = () => {
               max="100"
             ></progress>
           </div>
-          <div className="web3 relative bg-zinc-800 overflow-hidden  rounded-md p-4 ">
+          <div className="frontend overflow-hidden relative dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Web 3</p>
             <div className="flex flex-wrap gap-2 p-4">
               {web3.map((dv, index) => (
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -149,14 +150,14 @@ export const SkillsBox = () => {
             ></progress>
           </div>
 
-          <div className="tool's bg-zinc-800  rounded-md p-4">
+          <div className="frontend dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Tool's</p>
             <div className="flex flex-wrap gap-2">
               {webtools.map((wt, index) => (
                 <p
                   key={wt.name}
                   style={{ borderColor: wt.color }}
-                  className={` text-white border-2 happy-font font-bold border-black bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {wt.name}
                 </p>
@@ -165,6 +166,6 @@ export const SkillsBox = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -34,16 +34,18 @@ const Footer = () => {
           harshkhavale@2024
         </p>
       </div>
-      <div className="bg-white h-8 p-1"></div>
+      <div className="bg-current h-8 p-1"></div>
       <div className="contact p-2 ">
-        <ul className="list-none flex my-4 gap-4">
+        <ul className="list-none flex my-4 gap-2">
           {contacts.map((link) => (
-            <li
+            <a
+              href={link.url}
               key={link.id}
-              className={`bg-white shadow-2xl rounded-full p-1 text-black  gap-2 font-medium cursor-pointer transition-transform transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
+              target="_blank"
+              className={` shadow-2xl rounded-full p-1  gap-2 font-medium cursor-pointer transition-transform transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
             >
               {link.icon}
-            </li>
+            </a>
           ))}
         </ul>
       </div>

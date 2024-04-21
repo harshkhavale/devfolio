@@ -12,8 +12,8 @@ import { useNavigate } from "react-router-dom";
 
 import Services from "../components/Services";
 
-import { hletter } from "../assets";
-import { Close, DragHandleOutlined, Home } from "@mui/icons-material";
+import { hletter, rocket } from "../assets";
+import { Close, DragHandleOutlined } from "@mui/icons-material";
 import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
 import { IoFlowerOutline } from "react-icons/io5";
 import SliderComponent from "../components/SliderComponent";
@@ -21,7 +21,10 @@ import Resume from "../components/Resume";
 import { SkillsBox } from "../components/SkillsBox";
 import { LuRocket } from "react-icons/lu";
 import LinesComponent from "../components/LinesComponent";
-
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
+import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const navigate = useNavigate();
@@ -32,19 +35,22 @@ const Index = () => {
     {
       id: "about",
       title: "About",
-      icon: <Home />,
+      icon: <HomeOutlinedIcon />,
     },
     {
       id: "work",
       title: "Work",
+      icon: <WorkOutlineOutlinedIcon />,
     },
     {
       id: "contact",
       title: "Contact",
+      icon: <CallOutlinedIcon />,
     },
     {
       id: "featured",
       title: "Featured",
+      icon: <ViewInArOutlinedIcon />,
     },
   ];
   const contacts = [
@@ -90,7 +96,7 @@ const Index = () => {
             className="md:w-10 md:h-10 w-6 h-6 md:mx-4"
           />
           <div className="links">
-            <ul className="list-none hidden sm:flex flex-row items-center gap-6 rounded-2xl  md:p-2">
+            <ul className="list-none hidden sm:flex flex-row items-center gap-8 rounded-2xl  md:p-2">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
@@ -110,7 +116,7 @@ const Index = () => {
                   <a href={`#${link.id}`} className="font-semibold happy-font">
                     {hoveredLink === link.id && link.icon}{" "}
                     {/* Render icon only when link is hovered */}
-                    {link.id}
+                    {link.title}
                   </a>
                 </li>
               ))}
@@ -119,15 +125,17 @@ const Index = () => {
           <Resume />
 
           <div
-            className="sm:hidden cursor-pointer flex flex-1 justify-end items-center"
+            className="sm:hidden cursor-pointer flex items-center"
             onClick={() => setToggle(!toggle)}
           >
             {toggle ? (
               <DragHandleOutlined />
             ) : (
               <Close
-                className="border z-[500000] rounded-full border-white text-white"
-                style={{ color: "white", fontSize: "5rem" }}
+                className={
+                  !isNonMobileScreens &&
+                  `border-2 z-[500000] fixed -right-20  rounded-full border-current text-current`
+                }
               />
             )}
           </div>
@@ -135,39 +143,43 @@ const Index = () => {
           <motion.div
             variants={fadeIn("right", "spring", 0.5 * 1, 0.75)}
             className={`${
-              toggle ? "hidden" : "flex-col"
-            } fixed top-0 start-0 w-screen p-4  z-[5000] h-screen flex justify-center rounded-bl-[10rem] bg-black border-2 border-white border-t-0 border-r-0`}
+              toggle ? "hidden" : "flex-col "
+            } fixed p-4 -top-10 -start-40  h-[120vh] w-[100vh] flex justify-center bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border-2 border-white border-t-0 border-r-0`}
           >
-            <ul className="list-none my-2 flex  flex-col">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-[#3c42ff]" : "text-white"
-                  } hover:text-[#3c42ff]  text-[17px] cursor-pointer flex justify-start`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(link.title);
-                  }}
-                >
-                  <a
-                    href={`#${link.id}`}
-                    className="text-5xl font-bold text-center hover:text-[#3c42ff]"
-                  >
-                    {link.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div className="contact p-2 ">
-              <ul className="list-none flex my-4 gap-4">
-                {contacts.map((link) => (
+            <div className=" absolute  start-24 p-20 h-full dark:bg-black dark:text-white bg-white">
+              <ul className="list-none flex-row pt-20 mb-40 items-center gap-8 rounded-2xl ">
+                {navLinks.map((link) => (
                   <li
                     key={link.id}
-                    className={`bg-white shadow-2xl rounded-full p-1 text-black  gap-2 font-medium cursor-pointer`}
+                    className={`${
+                      active === link.title ? " md:p-2 " : " "
+                    } hover:text-primary rounded-3xl md:p-6  cursor-pointer`}
+                    onClick={() => {
+                      setActive(link.title);
+                    }}
+                    onMouseEnter={() => {
+                      setHoveredLink(link.id);
+                    }}
+                    onMouseLeave={() => {
+                      setHoveredLink(null);
+                    }}
+                  >
+                    <a href={`#${link.id}`} className="font-semibold text-5xl">
+                      {link.icon} {link.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <ul className="list-none flex my-4 gap-4">
+                {contacts.map((link) => (
+                  <a
+                    href={link.url}
+                    key={link.id}
+                    target="_blank"
+                    className={` shadow-2xl rounded-full p-1  gap-2 font-medium cursor-pointer transition-transform transform rotate-x-51 rotate-z-43 hover:translate-y-[-16px] hover:rotate-x-51 hover:rotate-z-43 hover:shadow-md border-rounded-md`}
                   >
                     {link.icon}
-                  </li>
+                  </a>
                 ))}
               </ul>
             </div>
@@ -180,46 +192,34 @@ const Index = () => {
         className="home md:h-screen h-72 flex flex-col justify-center items-center relative "
       >
         <div className="  flex flex-wrap md:gap-6 gap-4 items-center justify-center   text-7xl  font-black ">
-          <p className="text-center flex justify-center font-black text-[5vh] md:text-[18vh] happy-font">
+          <p className="text-center bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent  flex justify-center font-black text-[5vh] md:text-[18vh] happy-font">
             Abstracting
           </p>
           <p
-            className="flex items-center text-center justify-center font-black text-[5vh] md:text-[20vh]"
+            className="flex items-center  text-center justify-center font-black text-[5vh] md:text-[20vh]"
             style={{ fontFamily: "Pilowlava" }}
           >
             Art
             <IoFlowerOutline className=" text-pink-500" />,
           </p>
-          <p className=" text-center flex justify-center font-black text-[5vh]  md:text-[20vh]">
+          <p className=" text-center  flex justify-center font-black text-[5vh]   md:text-[20vh]">
             BUILDING
           </p>
-          <p className=" text-center flex justify-center font-black text-[5vh] happy-font md:text-[18vh]">
+          <p className=" text-center bg-gradient-to-r from-fuchsia-600 to-purple-600 bg-clip-text text-transparent flex justify-center font-black text-[5vh] happy-font md:text-[18vh]">
             solutions.{" "}
           </p>
         </div>
       </div>
       <SliderComponent />
-      <section id="featured" className="expertise mt-8  items-center relative">
-        <div className="side flex flex-col  gap-8 p-4">
-          <p className=" font-bold text-5xl flex items-center gap-2 z-50 md:text-7xl">
+      <section
+        id=""
+        className="expertise mt-8 justify-center  items-center relative"
+      >
+        <div className="side flex flex-col justify-center  gap-8 p-4">
+          <p className=" font-bold text-5xl flex items-center gap-2  md:text-7xl">
             EXPERTISE
-            <LuRocket />
+            <img src={rocket} className="h-20" alt="" />{" "}
           </p>
-
-          <div className="flex relative rounded-br-[3rem] overflow-hidden  flex-col md:flex-row ">
-            <p className=" text-xs z-50 md:text-xl bg-gray-800 font-bold  p-2">
-              I'm a versatile developer and designer skilled in frontend and
-              backend development, UI/UX design, and mobile development.
-              Proficient in technologies like React.js, Express.js, and Figma, I
-              specialize in crafting captivating user experiences and robust
-              server-side solutions. With a focus on seamless integration and
-              user-centric design principles, I create intuitive interfaces and
-              cross-platform applications that prioritize performance and
-              engagement. Passionate about turning ideas into innovative
-              solutions, I thrive on delivering high-quality results that exceed
-              expectations in the digital realm. Welcome to my portfolio!
-            </p>
-          </div>
         </div>
         <div className="">
           <Services />
@@ -228,25 +228,24 @@ const Index = () => {
 
       <div className="portfolio  mb-16  ">
         <div className="marquee-container z-50">
-          <p className="marquee-text happy-font text-[12rem] md:text-[20rem] text-current ">
+          <p className="marquee-text happy-font font-black text-[12rem] md:text-[20rem] bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent  ">
             portfolio.
           </p>
-          <p className="marquee-text2 happy-font  text-[12rem] md:text-[20rem]">
+          <p className="marquee-text2 happy-font font-black  text-[12rem] md:text-[20rem] bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
             portfolio.
           </p>
         </div>{" "}
       </div>
 
-      <section
-        id="#about"
-        className="about_section bg-[#191919] relative overflow-hidden "
-      >
+      <section id="about" className="about_section  relative overflow-hidden ">
         <div className="relative w-full pt-0 md:px-20">
           <Hero />
           <div className="difference flex flex-col p-2 ">
             <div className="flex items-center gap-36">
               <div className="flex">
-                <p className="md:text-[22rem] font-bold text-[10rem]">Self</p>
+                <p className="md:text-[22rem] font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-[10rem]">
+                  Self
+                </p>
                 <p className="font-bold md:text-[10rem] md:mt-0 happy-font  mb-10 text-[3rem] flex items-end">
                   &
                 </p>

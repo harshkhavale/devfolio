@@ -32,12 +32,12 @@ const SliderComponent = () => {
   };
 
   return (
-    <div className="relative z-40">
+    <section id="work" className="relative z-40">
       <div className="flex justify-between p-4">
         <div className=" bg-primary  rounded-3xl text-white text-xl flex items-center p-2">
-          Featured Projects <LuCodesandbox />
+          Featured Projects
         </div>
-        <div className=" bg-white w-min flex gap-4 rounded-3xl p-2">
+        <div className=" bg-white w-min flex gap-4 border-2 border-current rounded-3xl p-2">
           <button onClick={goPrev} className="text-gray-500 focus:outline-none">
             <IoIosArrowBack />
           </button>
@@ -68,22 +68,26 @@ const SliderComponent = () => {
                 className="w-full h-full object-cover"
               />
               <div className="links flex items-center bg-white p-2 text-black rounded-3xl m-2 gap-4 absolute top-0 right-0">
-                <a href="">
-                  {" "}
-                  <GitHub />
-                </a>
-                <a href="">
-                  <Launch />
-                </a>
+                {project.gitlink && (
+                  <a href={project.gitlink}>
+                    {" "}
+                    <GitHub />
+                  </a>
+                )}
+                {project.deploylink && (
+                  <a href={project.deploylink}>
+                    <Launch />
+                  </a>
+                )}
               </div>
-              <div className="absolute bottom-0 px-4 bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50  ">
+              <div className="absolute bottom-0 px-4 dark:bg-gray-900 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50  ">
                 <h3 className="text-lg font-semibold mt-2">{project.title}</h3>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 

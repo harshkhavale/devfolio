@@ -3,7 +3,7 @@ import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
 import SubHeroSection from "../components/SubHeroSection";
 import Resume from "./Resume";
-import { profile, twist } from "../assets";
+import { award, pricepic, profile, twist } from "../assets";
 const slideInRightEffect = {
   hidden: {
     x: 500,
@@ -74,13 +74,34 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition="transition"
-        className="profile relative flex-1  "
+        className="profile relative flex-1 gap-2 flex flex-col "
       >
-        <img
-          src={profile}
-          alt="profile"
-          className="relative bg-black border-2 rounded-full z-20"
-        />
+        <div className=" flex items-center gap-2 "></div>
+        <div className="mockup-browser border w-80 md:w-auto bg-base-200">
+          <div className="mockup-browser-toolbar">
+            <div className="input happy-font font-bold ">
+              https://hackthon.com
+            </div>
+          </div>
+          <div className="flex gap-0 justify-center md:h-96   bg-base-200">
+            <img
+              src={award}
+              alt="profile"
+              className="relative bg-black border-2 object-cover w-4/12 rounded- z-20"
+            />
+            <img
+              src={pricepic}
+              alt="profile"
+              className="relative bg-black border-2  object-cover w-4/12 h-auto rounded- z-20"
+            />
+
+            <img
+              src={profile}
+              alt="profile"
+              className="relative bg-black border-2 object-cover w-4/12 rounded- z-20"
+            />
+          </div>
+        </div>
       </motion.div>
     </div>
   );

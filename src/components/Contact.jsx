@@ -53,9 +53,9 @@ const Contact = () => {
       );
   };
   return (
-    <section id="#contact -mt-96">
-      <div className=" shadow-2xl md:mx-20 mx-auto w-min p-6  md:p-12 h-min  rounded-2xl border-2 ">
-        <p className="">get in touch</p>
+    <section id="contact">
+      <div className=" shadow-md md:mx-20  m-4 md:w-1/3 p-6  md:p-12 h-min  rounded-2xl border-2 ">
+        <p className=" happy-font font-bold">get in touch</p>
         <p className=" text-5xl font-bold">CONTACT ME</p>
 
         <form
@@ -69,7 +69,7 @@ const Contact = () => {
               placeholder="whats your name?"
               onChange={handleChange}
               value={form.name}
-              className=" bg-black outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
+              className=" dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4 placeholder:text-primary roundes-lg outlined-none  border-none font-medium"
               type="text"
               name="name"
             />
@@ -80,7 +80,7 @@ const Contact = () => {
               placeholder="enter your email here"
               onChange={handleChange}
               value={form.email}
-              className=" bg-black outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
+              className=" dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4 placeholder:text-primary roundes-lg outlined-none  border-none font-medium"
               type="email"
               name="email"
             />
@@ -92,12 +92,12 @@ const Contact = () => {
               placeholder="write message here"
               onChange={handleChange}
               value={form.message}
-              className=" bg-black outline-sky-500 outline-4 py-4 px-4 placeholder:text-secondary roundes-lg outlined-none  border-none font-medium"
+              className=" dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4 placeholder:text-primary roundes-lg outlined-none  border-none font-medium"
               name="message"
             />
           </label>
           <button
-            className="border-2 border-current p-2 bg-white rounded-xl text-black"
+            className="border-2 border-current p-2  hover:bg-white text-white border-white rounded-xl happy-font font-bold hover:text-black"
             type="submit"
           >
             {loading ? "Sending..." : "Send"}

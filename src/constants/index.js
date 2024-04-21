@@ -80,6 +80,10 @@ const frontend = [
     name: "Next Js 14",
   },
   {
+    name: "Angular",
+    color: "#E74C3C",
+  },
+  {
     name: "figma",
     color: "#EC407A",
   },
@@ -255,31 +259,31 @@ export const projects = [
   {
     title: "STAGE",
     image: stage,
-    link: "",
+    gitlink: "https://github.com/harshkhavale/stage",
   },
   {
     title: "urban_store",
     image: urbanstore,
-    id: 2,
+    gitlink: "https://github.com/harshkhavale/urban_store.in",
+    deploylink: "https://urban-store-in-apk.vercel.app/",
   },
   {
     title: "spotify",
     image: spotify,
-    id: 3,
   },
   {
     title: "ACADEMIX",
     image: academix,
-    id: 2,
+    gitlink: "https://github.com/harshkhavale/academix",
   },
   {
     title: "Airbnb",
     image: airbnb,
-    id: 3,
   },
   {
     title: "social",
     image: social,
-    id: 3,
+    gitlink: "https://github.com/harshkhavale/react-social-media-app",
+    deploylink: "https://social-frontend-eight.vercel.app/",
   },
 ];

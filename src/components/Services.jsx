@@ -7,28 +7,27 @@ import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ title, index, desc, image }) => {
   return (
-    <div className=" dark:text-white bg-black md:w-[22%] shadow-xl rounded-2xl border-2 border-white">
+    <motion.div
+      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+      className=" dark:text-white  md:w-[22%] shadow-xl rounded-2xl border-2 dark:border-white  overflow-hidden"
+    >
       <div className=" h-32 relative w-full border-b-2 flex items-center gap-2 overflow-hidden ">
         <img
           src={image}
           alt=""
           className=" absolute top-0 left-0 w-full rounded-t-2xl h-full object-cover"
         />
-        <p className="absolute inset-0 flex justify-center items-center font-bold text-[5rem]">
+        <p className="absolute inset-0 flex text-white justify-center items-center font-bold text-[5rem]">
           {title}
         </p>
       </div>
 
-      <div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full  p-[1px] rounded-[20px] shadow-card"
-      >
-        <div className=" rounded-[20px] min-h-[250px] p-1 ps-4 flex justify-evenly items-center flex-col ">
+      <div className="w-full  rounded-[20px] ">
+        <div className="min-h-[250px] border-0 happy-font font-bold p-1 ps-4 flex justify-evenly items-center flex-col bg-gray-50 dark:bg-gray-800">
           {desc}
-          <div className=" flex items-center py-2 gap-2"></div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

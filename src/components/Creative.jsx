@@ -73,7 +73,7 @@ const Creative = () => {
         <p className="creative -ms-10 md:ms-auto text-[6rem] md:text-[15rem] ">
           CREATIVE
         </p>
-        <p className="developer text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32">
+        <p className="developer text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32 ">
           developer
         </p>
         <p className="inspire text-[1.5rem] md:text-[5rem] md:-mt-16">
@@ -84,7 +84,7 @@ const Creative = () => {
         </p>
         <div className="last my-6 md:-my-20 flex flex-col -ms-96 md:-ms-72">
           <p className="text-[2rem] md:text-[4rem] text-center">of</p>
-          <p className="-mt-6 md:-mt-28 text-[7rem] md:text-[20rem] creative">
+          <p className="-mt-6 md:-mt-28 text-[7rem] md:text-[20rem] creative bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
             NATURE
           </p>
         </div>
