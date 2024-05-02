@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import RotatedText from "../widgets/RotatedText";
 
 import { motion } from "framer-motion";
@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 import Services from "../components/Services";
 
-import { hletter, rocket } from "../assets";
+import { confluence, hletter, letterh, rocket, rocket2 } from "../assets";
 import { Close, DragHandleOutlined } from "@mui/icons-material";
 import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
 import { IoFlowerOutline } from "react-icons/io5";
@@ -79,19 +79,32 @@ const Index = () => {
       icon: <X />,
     },
   ];
+  const [isDark, setIsDark] = useState(false);
 
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+  };
+  useEffect(() => {
+    // Apply theme styles on initial render
+    applyTheme();
+  }, [isDark]);
+  const applyTheme = () => {
+    // Toggle 'dark' class on the 'html' element
+    document.documentElement.classList.toggle("dark", isDark);
+  };
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
 
   return (
-    <div>
+    <div className="">
+
       <div
         className={`navbar z-50 fixed top-1
  flex justify-center  ${!isNonMobileScreens ? "" : ""} `}
       >
-        <div className="navbar rounded-3xl flex justify-between items-center w-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10  ">
+        <div className="navbar rounded-3xl flex justify-between items-center w-auto bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 gap-2 ">
           <img
-            src={hletter}
+            src={isDark?confluence:confluence}
             alt="logo"
             className="md:w-10 md:h-10 w-6 h-6 md:mx-4"
           />
@@ -102,7 +115,7 @@ const Index = () => {
                   key={link.id}
                   className={`${
                     active === link.title ? " md:p-2 " : " "
-                  } hover:bg-white hover:text-black rounded-3xl md:p-2  cursor-pointer`}
+                  } hover:bg-white transform ease-in-out transition-all duration-100 hover:text-black rounded-3xl md:p-2  cursor-pointer`}
                   onClick={() => {
                     setActive(link.title);
                   }}
@@ -113,9 +126,8 @@ const Index = () => {
                     setHoveredLink(null);
                   }}
                 >
-                  <a href={`#${link.id}`} className="font-semibold happy-font">
+                  <a href={`#${link.id}`} className="font-semibold  happy-font">
                     {hoveredLink === link.id && link.icon}{" "}
-                    {/* Render icon only when link is hovered */}
                     {link.title}
                   </a>
                 </li>
@@ -123,6 +135,13 @@ const Index = () => {
             </ul>
           </div>
           <Resume />
+          <label class="fixed -start-[31vw] top-72 rotate-90 inline-flex items-center mb-5 cursor-pointer">
+
+  <input type="checkbox" value=""  checked={isDark}
+  onChange={toggleDarkMode} class="sr-only peer"/>
+  <div class="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary dark:peer-focus:ring-primary rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+         
 
           <div
             className="sm:hidden cursor-pointer flex items-center"
@@ -144,9 +163,9 @@ const Index = () => {
             variants={fadeIn("right", "spring", 0.5 * 1, 0.75)}
             className={`${
               toggle ? "hidden" : "flex-col "
-            } fixed p-4 -top-10 -start-40  h-[120vh] w-[100vh] flex justify-center bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border-2 border-white border-t-0 border-r-0`}
+            } fixed p-4 -top-10 -start-40 z-50  h-[120vh] w-[100vh] flex justify-center bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border-2 border-white border-t-0 border-r-0`}
           >
-            <div className=" absolute  start-24 p-20 h-full dark:bg-black dark:text-white bg-white">
+            <div className=" absolute   start-24 p-20 h-full dark:bg-black dark:text-white bg-white">
               <ul className="list-none flex-row pt-20 mb-40 items-center gap-8 rounded-2xl ">
                 {navLinks.map((link) => (
                   <li
@@ -218,7 +237,7 @@ const Index = () => {
         <div className="side flex flex-col justify-center  gap-8 p-4">
           <p className=" font-bold text-5xl flex items-center gap-2  md:text-7xl">
             EXPERTISE
-            <img src={rocket} className="h-20" alt="" />{" "}
+            <img src={isDark? rocket2 :rocket} className={`${isDark?'h-16':'h-20'}`} alt="" />{" "}
           </p>
         </div>
         <div className="">
@@ -228,10 +247,10 @@ const Index = () => {
 
       <div className="portfolio  mb-16  ">
         <div className="marquee-container z-50">
-          <p className="marquee-text happy-font font-black text-[12rem] md:text-[20rem] bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent  ">
+          <p className="marquee-text capitalize  text-[12rem] md:text-[20rem]  ">
             portfolio.
           </p>
-          <p className="marquee-text2 happy-font font-black  text-[12rem] md:text-[20rem] bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
+          <p className="marquee-text2 capitalize   text-[12rem] md:text-[20rem] ">
             portfolio.
           </p>
         </div>{" "}
@@ -264,7 +283,7 @@ const Index = () => {
               )}
             </div>
             <div className="flex justify-between md:-mt-40 -mt-24">
-              <p className="md:text-[22rem] font-bold text-[7rem] text-left">
+              <p className="md:text-[22rem] font-bold text-[7rem] text-left bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent">
                 Others
               </p>
             </div>
@@ -284,7 +303,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <SkillsBox />
+      <SkillsBox isDark={isDark} />
       <Creative />
       <Certification />
       <Contact />

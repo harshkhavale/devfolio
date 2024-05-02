@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { coder } from "../assets";
 
 const Contact = () => {
   const [isSent, setIsSent] = useState(false);
@@ -53,8 +54,9 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact">
-      <div className=" shadow-md md:mx-20  m-4 md:w-1/3 p-6  md:p-12 h-min  rounded-2xl border-2 ">
+    <section id="contact" className=" flex md:flex-row flex-col px-8 justify-center gap-8">
+      <div className="shadow-md md:w-6/12">
+      <div className="md:mx-20 p-8 h-min  rounded-2xl border-2 ">
         <p className=" happy-font font-bold">get in touch</p>
         <p className=" text-5xl font-bold">CONTACT ME</p>
 
@@ -97,12 +99,18 @@ const Contact = () => {
             />
           </label>
           <button
-            className="border-2 border-current p-2  hover:bg-white text-white border-white rounded-xl happy-font font-bold hover:text-black"
+            className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-sm px-5 py-2.5 text-center me-2 mb-2 font-bold rounded-full happy-font"
             type="submit"
           >
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+      </div>
+      </div>
+     
+      <div className=" md:w-6/12">
+      <img src={coder} alt=""  />
+
       </div>
     </section>
   );

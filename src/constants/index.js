@@ -269,6 +269,7 @@ export const projects = [
   },
   {
     title: "spotify",
+    gitlink:"https://github.com/harshkhavale/spotify-clone",
     image: spotify,
   },
   {
@@ -278,6 +279,7 @@ export const projects = [
   },
   {
     title: "Airbnb",
+    gitlink:"https://github.com/harshkhavale/airbnb-clone",
     image: airbnb,
   },
   {

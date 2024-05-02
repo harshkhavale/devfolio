@@ -34,7 +34,7 @@ const SliderComponent = () => {
   return (
     <section id="work" className="relative z-40">
       <div className="flex justify-between p-4">
-        <div className=" bg-primary  rounded-3xl text-white text-xl flex items-center p-2">
+        <div className=" text-white bg-gradient-to-br text-sm from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 px-5 py-2.5 text-center me-2 mb-2  rounded-3xl happy-font font-bold flex items-center p-2">
           Featured Projects
         </div>
         <div className=" bg-white w-min flex gap-4 border-2 border-current rounded-3xl p-2">

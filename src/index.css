@@ -1,27 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Reenie+Beanie&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Belgan";
-  src: url("../public/belgan_aesthetic/BelganAesthetic.ttf") format("truetype");
-}
+
 @font-face {
   font-family: "Pilowlava";
-  src: url("../public/pilowlava-master/Pilowlava-Regular.otf")
+  src: url("../public/fonts/Pilowlava-Regular.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Happy-Monkey";
+  src: url("../public/fonts/HappyMonkey-Regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "DM-SANS";
+  src: url("../public/fonts/DMSans.ttf")
     format("truetype");
 }
 * {
   margin: 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM-SANS", sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .happy-font {
-  font-family: "Happy Monkey", system-ui;
+  font-family: "Happy-Monkey", system-ui;
 }
 .outlined-text {
   display: inline-block;

@@ -70,10 +70,10 @@ const Creative = () => {
   return (
     <div>
       <div className="section font-bold">
-        <p className="creative -ms-10 md:ms-auto text-[6rem] md:text-[15rem] ">
+        <p className="creative -ms-16 md:ms-auto text-[6rem] md:text-[15rem] ">
           CREATIVE
         </p>
-        <p className="developer text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32 ">
+        <p className="developer bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32 md:ps-0 ">
           developer
         </p>
         <p className="inspire text-[1.5rem] md:text-[5rem] md:-mt-16">

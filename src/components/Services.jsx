@@ -23,7 +23,7 @@ const ServiceCard = ({ title, index, desc, image }) => {
       </div>
 
       <div className="w-full  rounded-[20px] ">
-        <div className="min-h-[250px] border-0 happy-font font-bold p-1 ps-4 flex justify-evenly items-center flex-col bg-gray-50 dark:bg-gray-800">
+        <div className="min-h-[250px] h-full border-0 happy-font font-bold p-1 ps-4 flex justify-evenly items-center flex-col bg-gray-50 dark:bg-gray-800">
           {desc}
         </div>
       </div>

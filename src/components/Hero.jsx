@@ -2,8 +2,7 @@ import React from "react";
 import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
 import SubHeroSection from "../components/SubHeroSection";
-import Resume from "./Resume";
-import { award, pricepic, profile, twist } from "../assets";
+import { award, pricepic, profile, profilephoto } from "../assets";
 const slideInRightEffect = {
   hidden: {
     x: 500,
@@ -30,7 +29,7 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row gap-4 p-2 flex-col-reverse items-center">
+    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"
@@ -40,16 +39,16 @@ const Hero = () => {
       >
         <div className="mx-auto flex flex-row items-start gap-5">
           <div>
-            <div className="flex ">
+            <div className="flex md:ps-0  ">
               <h1
-                className={`${styles.heroSubText} mt-6 font-bold happy-font w-full`}
+                className={` mt-6 font-bold happy-font bg-red-400 text-white text-2xl p-1 w-full`}
               >
                 Hey there , I' m{" "}
               </h1>
 
               <SubHeroSection />
             </div>
-            <div className=" "></div>
+            <div className=" flex flex-col justify-center md:p-auto p-8">
             <p className={`${styles.heroSubText} mt-20 md:mt-32 text-[20px] `}>
               {" "}
               A full stack web and mobile application developer.
@@ -65,7 +64,7 @@ const Hero = () => {
                 together!
               </p>
               "
-            </p>
+            </p></div>
           </div>
         </div>
       </motion.div>
@@ -77,31 +76,11 @@ const Hero = () => {
         className="profile relative flex-1 gap-2 flex flex-col "
       >
         <div className=" flex items-center gap-2 "></div>
-        <div className="mockup-browser border w-80 md:w-auto bg-base-200">
-          <div className="mockup-browser-toolbar">
-            <div className="input happy-font font-bold ">
-              https://hackthon.com
-            </div>
-          </div>
-          <div className="flex gap-0 justify-center md:h-96   bg-base-200">
-            <img
-              src={award}
-              alt="profile"
-              className="relative bg-black border-2 object-cover w-4/12 rounded- z-20"
-            />
-            <img
-              src={pricepic}
-              alt="profile"
-              className="relative bg-black border-2  object-cover w-4/12 h-auto rounded- z-20"
-            />
-
-            <img
-              src={profile}
-              alt="profile"
-              className="relative bg-black border-2 object-cover w-4/12 rounded- z-20"
-            />
-          </div>
+        <div className=" overflow-hidden rounded-0 z-50 ">
+        <img src={profilephoto} className="z-30 h-[100vh] object-cover " alt="" />
         </div>
+        <div className=" absolute top-40 p-60  bg-gradient-to-r from-blue-600 to-violet-600"></div>
+
       </motion.div>
     </div>
   );

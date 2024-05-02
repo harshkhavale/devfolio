@@ -1,22 +1,16 @@
-import academix from "./academix.jpeg";
-import airbnb from "./airbnb.jpg";
-import social from "./social.jpeg";
-import spotify from "./spotify.jpeg";
-import stage from "./stage.jpg";
-import urbanstore from "./urbanstore.jpg";
+import academix from './academix-min.jpeg'
+import airbnb from './airbnb-min.jpg'
+import social from './social-min.jpeg'
+import spotify from './spotify-min.jpeg'
+import stage from './stage-min.jpg'
+import urbanstore from './urbanstore-min.jpg'
 
-// #other
-import almondtech from "./almond-tech.png";
-import glory from "./glory.png";
-import uber from "./uber.png";
+
 export {
-  academix,
+academix,
   airbnb,
   social,
   spotify,
   stage,
   urbanstore,
-  almondtech,
-  glory,
-  uber,
-};
+}
