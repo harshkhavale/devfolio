@@ -54,8 +54,7 @@ const Hero = () => {
               A full stack web and mobile application developer.
             </p>
             <p className="happy-font font-bold text-primary p-4 my-4 ps-1">
-              "An innovative MCA student at D.Y. Patil Institute of Management
-              and Research, Pune, blending technical prowess with creative flair
+              "An innovative BIENG,blending technical prowess with creative flair
               to craft immersive digital experiences for web and mobile
               platforms. Let's collaborate to engineer something truly
               extraordinary
