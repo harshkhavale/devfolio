@@ -30,7 +30,7 @@ export const SkillsBox = ({isDark}) => {
               {frontend.map((fe, index) => (
                 <p
                   key={fe.name}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                   style={{ borderColor: fe.color }}
                 >
                   {fe.name}
@@ -45,7 +45,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={be.name}
                   style={{ borderColor: be.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {be.name}
                 </p>
@@ -59,7 +59,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={db.name}
                   style={{ borderColor: db.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {db.name}
                 </p>
@@ -73,7 +73,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -92,7 +92,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -111,7 +111,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
@@ -131,7 +131,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={wt.name}
                   style={{ borderColor: wt.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {wt.name}
                 </p>

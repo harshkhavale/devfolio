@@ -11,12 +11,17 @@
 }
 @font-face {
   font-family: "Happy-Monkey";
-  src: url("../public/fonts/HappyMonkey-Regular.ttf")
+  src: url("../public/fonts/GeneralSans-Regular.otf")
     format("truetype");
 }
 @font-face {
   font-family: "DM-SANS";
   src: url("../public/fonts/DMSans.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "happy-monkey";
+  src: url("../public/fonts/HappyMonkey-Regular.ttf")
     format("truetype");
 }
 * {
@@ -26,8 +31,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.happy-font {
-  font-family: "Happy-Monkey", system-ui;
+.handwriting{
+  font-family: "Handwriting", system-ui;
+
+}
+.happyfont {
+  font-family: "happy-monkey", system-ui;
 }
 .outlined-text {
   display: inline-block;

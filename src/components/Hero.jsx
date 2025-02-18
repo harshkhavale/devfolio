@@ -29,7 +29,7 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center">
+    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center bg-blue-800 text-white">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"
@@ -38,30 +38,24 @@ const Hero = () => {
         className="relative  flex-1 "
       >
         <div className="mx-auto flex flex-row items-start gap-5">
-          <div>
+          <div className=" px-8">
             <div className="flex md:ps-0  ">
-              <h1
-                className={` mt-6 font-bold happy-font bg-red-400 text-white text-2xl p-1 w-full`}
-              >
-                Hey there , I' m{" "}
-              </h1>
-
-              <SubHeroSection />
+           
+            <p className=" text-8xl">Harsh Khavale</p>
             </div>
-            <div className=" flex flex-col justify-center md:p-auto p-8">
-            <p className={`${styles.heroSubText} mt-20 md:mt-32 text-[20px] `}>
-              {" "}
+            <div className=" flex flex-col justify-center md:p-auto">
+            <p className={`${styles.heroSubText} mt-10 md:mt-10 text-[20px] happyfont `}>
               A full stack web and mobile application developer.
             </p>
-            <p className="happy-font font-bold text-primary p-4 my-4 ps-1">
+            <p className="happy-font  text-2xl text-gray-100 p-4 my-4 ps-1">
               "An innovative BIENG,blending technical prowess with creative flair
               to craft immersive digital experiences for web and mobile
               platforms. Let's collaborate to engineer something truly
               extraordinary
-              <p className=" inline underline underline-offset-8 font-bold happy-font text-xl">
+              <a href="#" className=" inline underline underline-offset-8 font-bold happy-font text-xl">
                 {" "}
                 together!
-              </p>
+              </a>
               "
             </p></div>
           </div>
@@ -78,7 +72,7 @@ const Hero = () => {
         <div className=" overflow-hidden rounded-0 z-50 ">
         <img src={profilephoto} className="z-30 h-[100vh] object-cover " alt="" />
         </div>
-        <div className=" absolute top-40 p-60  bg-gradient-to-r from-blue-600 to-violet-600"></div>
+        <div className=" absolute -top-96 p-[30rem] bg-blue-700 -right-40 rounded-full  e"></div>
 
       </motion.div>
     </div>

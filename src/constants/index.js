@@ -1,3 +1,4 @@
+import { PanelsTopLeft } from "lucide-react";
 import {
   javascriptCertificate,
   problemSolvingCertificate,
@@ -23,29 +24,7 @@ import {
   urbanstore,
 } from "../assets/projects";
 
-export const services = [
-  {
-    title: "Web",
-    image: frontendfr,
-    desc: "As a Frontend Developer,I specialize in crafting captivating user experiences with technologies like React.js and Next.js. Proficient in HTML, CSS, and JavaScript, I create responsive designs using frameworks like Tailwind CSS. My focus on detail ensures seamless navigation and engagement across devices",
-  },
-  {
-    title: "Mobile",
-    image: mobilefr,
-    desc: "In the realm of Mobile Development,Specializing in Android, React Native, and Flutter, I create cross-platform applications with native-like experiences. By leveraging frontend expertise, I prioritize performance and usability, delivering engaging mobile solutions across devices.",
-  },
-  {
-    title: "Backend",
-    image: backendfr,
-    desc: "In my role as a Backend Developer,With expertise in Express.js, Node.js, and more, I architect robust server-side solutions for dynamic web applications. I excel in database management with SQL, Firebase, and MongoDB, optimizing performance and reliability. My REST API proficiency ensures smooth interactions and scalability.",
-  },
-  {
-    title: "UI/UX",
 
-    image: uixfr,
-    desc: "As a UI/UX Designer, I design intuitive interfaces using tools like Figma, blending creativity with user-centric principles. Attention to detail and collaboration with development teams ensure seamless integration of design and functionality, enhancing the overall user experience",
-  },
-];
 const frontend = [
   {
     name: "HTML5",

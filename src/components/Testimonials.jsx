@@ -11,10 +11,12 @@ import { useMediaQuery } from "@mui/material";
 
 import { LuCodesandbox } from "react-icons/lu";
 import { GitHub, Launch, Link, LinkOffRounded } from "@mui/icons-material";
-import { projects } from "../constants";
+import { MoveRight } from "lucide-react";
+import { MoveLeft } from "lucide-react";
+import { testimonials } from "../constants/data";
 SwiperCore.use([Navigation]);
 
-const SliderComponent = () => {
+const Testimonials = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
   const [swiper, setSwiper] = useState(null);
@@ -32,30 +34,23 @@ const SliderComponent = () => {
   };
 
   return (
-    <section id="work" className="relative z-40">
+    <section id="work" className="relative z-40 md:p-20">
       <div className="flex justify-between p-4">
-       <p className=" text-5xl">Some of the Projects I have Worked on</p>
-        <div className=" bg-white w-min flex gap-4 border-2 border-current rounded-3xl p-2">
-          <button onClick={goPrev} className="text-gray-500 focus:outline-none">
-            <IoIosArrowBack />
-          </button>
-          <button onClick={goNext} className="text-gray-500 focus:outline-none">
-            <IoIosArrowForward />
-          </button>
-        </div>
+       <p className=" text-5xl">My colleagues and clients say</p>
+       
       </div>
       <Swiper
         spaceBetween={30}
-        slidesPerView={isNonMobileScreens ? 3 : 1}
+        slidesPerView={isNonMobileScreens ? 2 : 1}
         onSwiper={setSwiper}
         navigation={false} // Disable default navigation
         loop={true}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
       >
-        {projects.map((project) => (
+        {testimonials.map((project) => (
           <SwiperSlide key={project.id}>
-            <div className=" relative  shadow-md h-72 overflow-hidden">
-              <motion.img
+            <div className=" relative h-72 overflow-hidden">
+              {/* <motion.img
                 whileHover={{
                   scale: 1.1,
                   zIndex: 10,
@@ -64,29 +59,28 @@ const SliderComponent = () => {
                 src={project.image}
                 alt={project.title}
                 className="w-full h-full object-cover"
-              />
-              <div className="links flex items-center bg-white p-2 text-black rounded-3xl m-2 gap-4 absolute top-0 right-0">
-                {project.gitlink && (
-                  <a href={project.gitlink}>
-                    {" "}
-                    <GitHub />
-                  </a>
-                )}
-                {project.deploylink && (
-                  <a href={project.deploylink}>
-                    <Launch />
-                  </a>
-                )}
-              </div>
-              <div className="absolute bottom-0 px-4 dark:bg-gray-900 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50  ">
-                <h3 className="text-lg font-semibold mt-2">{project.title}</h3>
+              /> */}
+             
+              <div className=" p-2">
+                <h3 className="text-xl md:pe-32 happyfont py-4 ">"{project.testimonial}"</h3>
+                <p>{project.name}</p>
+                <p>{project.company}</p>
               </div>
             </div>
+            <div className=" bg-black p-[1px] rotate-90 w-full absolute -right-80"></div>
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className=" w-min flex gap-4 p-2">
+          <button onClick={goPrev} className="text-gray-500 focus:outline-none">
+          <MoveLeft/> Prev
+          </button>
+          <button onClick={goNext} className="text-gray-500 focus:outline-none">
+            <MoveRight/> Next
+          </button>
+        </div>
     </section>
   );
 };
 
-export default SliderComponent;
+export default Testimonials;
