@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { coder } from "../assets";
+import { monkeysvg,bot } from "../assets";
 
 const Contact = () => {
   const [isSent, setIsSent] = useState(false);
@@ -54,7 +54,10 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className=" flex md:flex-row flex-col px-8 justify-center gap-8">
+    <section id="contact" >
+       <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
+       <p className="text-7xl py-10 md:px-20 px-4 ">Would you like to work together?</p>
+      <div className=" flex md:flex-row flex-col px-8 justify-center gap-8">
       <div className="md:w-6/12">
       <div className="md:mx-20 p-8 h-min  rounded-2xl border-2 ">
 
@@ -106,9 +109,10 @@ const Contact = () => {
       </div>
       </div>
      
-      <div className=" md:w-6/12">
-      <img src={coder} alt=""  />
+      <div className=" md:w-5/12">
+      <img src={bot} alt=""  />
 
+      </div>
       </div>
     </section>
   );

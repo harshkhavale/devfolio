@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import RotatedText from "../widgets/RotatedText";
 
 import { motion } from "framer-motion";
-import Certification from "../components/Certification";
 import { useMediaQuery } from "@mui/material";
 import Creative from "../components/Creative";
 import Contact from "../components/Contact";
@@ -12,27 +11,20 @@ import { useNavigate } from "react-router-dom";
 
 import Services from "../components/Services";
 
-import { confluence, hletter, letterh, rocket, rocket2 } from "../assets";
 import { Close, DragHandleOutlined } from "@mui/icons-material";
 import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
-import { IoFlowerOutline } from "react-icons/io5";
-import SliderComponent from "../components/SliderComponent";
-import Resume from "../components/Resume";
 import { SkillsBox } from "../components/SkillsBox";
-import { LuRocket } from "react-icons/lu";
-import LinesComponent from "../components/LinesComponent";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
-import { CornerRightDown } from "lucide-react";
 import { CornerDownRight } from "lucide-react";
-import AboutSection from "../components/AboutSection";
-import GalleryComponent from "../components/GalleryComponent";
-import { RiArrowRightDownLine } from "react-icons/ri";
-import { Cable } from "lucide-react";
-import { Zap } from "lucide-react";
+
 import Testimonials from "../components/Testimonials";
+import HeroSection from "../sections/HeroSection";
+import AboutSection from "../sections/AboutSection";
+import WorkSection from "../sections/WorkSection";
+import Keyboard from "../components/Keyboard";
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const navigate = useNavigate();
@@ -108,8 +100,8 @@ const Index = () => {
 
       <div
         className={`navbar z-50 fixed bg-white dark:bg-[#191919] top-0 p-0
-   border-b flex justify-between border-black px-4 dark:border-white`}
-      ><p className=" font-bold text-2xl happyfont">Harsh Khavale</p>
+   border-b flex justify-between border-black md:px-4 px-2 dark:border-white`}
+      ><p className=" text-3xl asthetic font-semibold new-font">harsh khavale</p>
         <div className="flex justify-between items-center">
 
           <ul className="list-none hidden sm:flex flex-row items-center gap-4">
@@ -122,7 +114,7 @@ const Index = () => {
                 onMouseEnter={() => setHoveredLink(link.id)}
                 onMouseLeave={() => setHoveredLink(null)}
               >
-                <a href={`#${link.id}`} className="text-sm flex gap-1 happy-font">
+                <a href={`#${link.id}`} className="text-sm flex gap-1 ">
                   <CornerDownRight className="text-xs font-light h-4 w-4" />
                   {link.title}
                 </a>
@@ -132,28 +124,14 @@ const Index = () => {
 
 
 
-          <div
-            className="sm:hidden cursor-pointer flex items-center"
-            onClick={() => setToggle(!toggle)}
-          >
-            {toggle ? (
-              <DragHandleOutlined />
-            ) : (
-              <Close
-                className={`${!isNonMobileScreens
-                  ? "border-2 z-[500000] fixed -right-20 rounded-full border-current text-current"
-                  : ""
-                  }`}
-              />
-            )}
-          </div>
+
 
           <motion.div
             variants={fadeIn("right", "spring", 0.5 * 1, 0.75)}
             className={`${toggle ? "hidden" : "flex-col"
-              } fixed p-4 -top-10 -start-40 z-50 h-[120vh] w-[100vh] flex justify-center bg-black bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border-2 border-white border-t-0 border-r-0`}
+              } fixed p-4 top-40  start-40 z-50 h-screen w-screen bg-white flex justify-center  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40`}
           >
-            <div className="absolute start-24 h-full dark:bg-black dark:text-white bg-white">
+            <div className="absolute h-full dark:bg-black dark:text-white bg-white">
               <ul className="list-none flex-row items-center gap-8 rounded-2xl">
                 {navLinks.map((link) => (
                   <li
@@ -193,43 +171,41 @@ const Index = () => {
             onChange={toggleDarkMode}
             className="sr-only peer"
           />
-          <div className="relative w-9 h-5 bg-gray-200 dark:ring-1 ring-white/30 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-black"></div>
+          <div className="relative w-9 h-5 bg-gray-800 dark:ring-1 ring-white/30 peer-focus:outline-none rounded-full peer dark:bg-gray-200 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white dark:after:bg-black after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-white"></div>
         </label>
-      </div>
-
-      {/* <div className=" h-[1px] absolute top-20 w-full bg-black dark:bg-white"></div> */}
-
-      <div
-        id="home"
-        className="home md:h-[40rem] h-72 flex flex-col justify-center items-center relative "
-      >
-        <div className="">
-          <p className=" text-7xl text-right px-4">
-            <a href="#" className=" underline underline-offset-8 happyfont text-9xl ">Abstracting</a> Code, Crafting Scalable Solutions & Full Stack <a href="#" className=" underline underline-offset-1 happyfont ">Developer</a>  & DevOps Enthusiast
-          </p><div className="ps-[50rem] py-8">
-            <p className=" py-4 text-2xl">I specialize in crafting user-centric applications that are visually striking and intuitive. I bring a unique combination of creativity and technical skill to every project.</p>
-
-            <div className=" flex items-center gap-2 ">
-              <CornerDownRight/> <a href="#" className=" text-base">Contact me</a>
-            </div>
-
-          </div>
+        <div
+          className="sm:hidden cursor-pointer flex items-center"
+          onClick={() => setToggle(!toggle)}
+        >
+          {toggle ? (
+            <DragHandleOutlined />
+          ) : (
+            <Close
+              className={`${!isNonMobileScreens
+                ? "border-2 z-[500000] fixed right-20 rounded-full border-current text-current"
+                : ""
+                }`}
+            />
+          )}
         </div>
-        
       </div>
-      <GalleryComponent />
-      <div className=' h-[1px] w-full bg-black my-8'></div>
 
-      <AboutSection />
-      <SliderComponent />
+      <HeroSection />
+
+      <div className=' h-[1px] w-full bg-black dark:bg-white my-8'></div>
+
+<AboutSection/>      <div className=" bg-black dark:bg-white h-[1px] w-full" />
+<WorkSection/>
       <section
         id=""
-        className="expertise mt-8 justify-center  items-center relative"
+        className="expertise my-8 justify-center  items-center relative"
       >
+        <div className=" bg-black h-[1px] w-full" />
+
         <div className="side flex flex-col justify-center  gap-8 p-4">
-          <p className=" text-5xl flex items-center gap-2 md:text-7xl">
-            Services available
-            
+          <p className=" text-right text-7xl pb-10">
+            Services we provide
+
           </p>
         </div>
         <div className="">
@@ -237,29 +213,19 @@ const Index = () => {
         </div>
       </section>
 
-      <div className="portfolio  mb-16  ">
-        <div className="marquee-container z-50">
-          <p className="marquee-text capitalize text-[12rem] md:text-[20rem]  ">
-            portfolio.
-          </p>
-          <p className="marquee-text2 capitalize text-[12rem] md:text-[20rem] ">
-            portfolio.
-          </p>
-        </div>{" "}
-      </div>
+     
 
       <section id="about" className="about_section  relative overflow-hidden ">
         <Hero />
-
         <div className="relative w-full pt-0 md:px-20">
           <div className="difference flex flex-col p-2 ">
             <div className="flex items-center gap-36">
               <div className="flex">
-                <p className="md:text-[22rem] font-bold bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent text-[10rem]">
+                <p className="md:text-[22rem] font-bold text-[10rem]">
                   Self
                 </p>
-                <p className="font-bold md:text-[10rem] md:mt-0 happyfont  mb-10 text-[3rem] flex items-end">
-                  &
+                <p className="font-bold md:text-[10rem] md:mt-0 new-font  mb-10 text-[3rem] flex items-end">
+                  and
                 </p>
               </div>
 
@@ -275,8 +241,8 @@ const Index = () => {
                 </p>
               )}
             </div>
-            <div className="flex justify-between md:-mt-40 -mt-24">
-              <p className="md:text-[22rem] font-bold text-[7rem] text-left bg-gradient-to-r from-rose-400 to-red-500 bg-clip-text text-transparent">
+            <div className="flex justify-between md:-mt-48 -mt-24">
+              <p className="md:text-[22rem] font-bold text-[7rem] text-left ">
                 Others
               </p>
             </div>
@@ -296,13 +262,11 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <div className=" bg-black dark:bg-white h-[1px] mb-10 w-full" />
+
       <SkillsBox isDark={isDark} />
       <Creative />
-      <Certification />
-      <Testimonials/>
-      <div  className=" h-[1px] w-full dark:bg-white bg-black"></div>
-      <p className="text-7xl py-10 md:px-20 ">Would you like to work together?</p>
-           
+      <Testimonials />
       <Contact />
     </div>
   );

@@ -19,7 +19,7 @@ const images = [
   
       gsap.to(rowOne, {
         xPercent: -100,
-        duration: 40,
+        duration: 90,
         ease: "linear",
         repeat: -1,
         modifiers: {
@@ -29,7 +29,7 @@ const images = [
   
       gsap.to(rowTwo, {
         xPercent: 0,
-        duration: 40,
+        duration: 90,
         ease: "linear",
         repeat: -1,
         modifiers: {

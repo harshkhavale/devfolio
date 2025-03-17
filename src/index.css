@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Reenie+Beanie&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +9,11 @@
 @font-face {
   font-family: "Pilowlava";
   src: url("../public/fonts/Pilowlava-Regular.otf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Asthetic";
+  src: url("../public/fonts/BelganAesthetic.ttf")
     format("truetype");
 }
 @font-face {
@@ -19,11 +26,15 @@
   src: url("../public/fonts/DMSans.ttf")
     format("truetype");
 }
-@font-face {
+/* @font-face {
   font-family: "happy-monkey";
   src: url("../public/fonts/HappyMonkey-Regular.ttf")
     format("truetype");
-}
+} */
+ .new-font{
+  font-family: "Sacramento", cursive;
+
+ }
 * {
   margin: 0;
   font-family: "DM-SANS", sans-serif;
@@ -31,8 +42,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.handwriting{
-  font-family: "Handwriting", system-ui;
+.asthetica{
+  font-family: "Asthetic", system-ui;
 
 }
 .happyfont {

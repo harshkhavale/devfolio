@@ -1,23 +1,7 @@
 import { PanelsTopLeft } from "lucide-react";
-import {
-  javascriptCertificate,
-  problemSolvingCertificate,
-  dsacertificate,
-  javacertificate,
-  linuxcertificate,
-  googleCertificate,
-  netfundamentalscertificate,
-  androidcertificate,
-  dataminingcertificate,
-  frontendcertificate,
-  mobilefr,
-  frontendfr,
-  backendfr,
-  uixfr,
-} from "../assets";
+
 import {
   academix,
-  airbnb,
   social,
   spotify,
   stage,
@@ -133,6 +117,10 @@ const backendtech = [
     color: "#B0BEC5",
   },
   {
+    name: "Spring",
+    color: "#B0BEC5",
+  },
+  {
     name: "asp.net",
   },
 ];
@@ -175,96 +163,11 @@ const devops = [
   },
   {
     name: "AWS",
+  },{
+    name: "K8N",
   },
 ];
 
 export { frontend, database, devops, backendtech, webtools, mobiletech, web3 };
 
-export const certificates = [
-  {
-    title: "Google",
-    link: "https://www.hackerrank.com/certificates/c3536b132243",
-    img: googleCertificate,
-  },
-  {
-    title: "Javascript",
-    link: "https://www.hackerrank.com/certificates/c3536b132243",
-    img: javascriptCertificate,
-  },
-  {
-    title: "Linux ",
-    link: "",
-    img: linuxcertificate,
-  },
-  {
-    title: "Problem Solving",
-    link: "https://www.hackerrank.com/certificates/0644fd90b3c2",
-    img: problemSolvingCertificate,
-  },
-  {
-    title: "DSA",
-    link: "",
-    img: dsacertificate,
-  },
-  {
-    title: "Java",
-    link: "",
-    img: javacertificate,
-  },
-];
-export const certificates2 = [
-  {
-    title: ".NET Certificate",
-    link: "https://www.hackerrank.com/certificates/c3536b132243",
-    img: netfundamentalscertificate,
-  },
-  {
-    title: "Android Certificate",
-    link: "https://www.hackerrank.com/certificates/c3536b132243",
-    img: androidcertificate,
-  },
-  {
-    title: "Data Mining Certificate",
-    link: "",
-    img: dataminingcertificate,
-  },
-  {
-    title: "Frontend CSS",
-    link: "https://www.hackerrank.com/certificates/0644fd90b3c2",
-    img: frontendcertificate,
-  },
-];
-export const projects = [
-  {
-    title: "STAGE",
-    image: stage,
-    gitlink: "https://github.com/harshkhavale/stage",
-  },
-  {
-    title: "urban_store",
-    image: urbanstore,
-    gitlink: "https://github.com/harshkhavale/urban_store.in",
-    deploylink: "https://urban-store-in-apk.vercel.app/",
-  },
-  {
-    title: "spotify",
-    gitlink:"https://github.com/harshkhavale/spotify-clone",
-    image: spotify,
-  },
-  {
-    title: "ACADEMIX",
-    image: academix,
-    gitlink: "https://github.com/harshkhavale/academix",
-  },
-  {
-    title: "Airbnb",
-    gitlink:"https://github.com/harshkhavale/airbnb-clone",
-    image: airbnb,
-  },
-  {
-    title: "social",
-    image: social,
-    gitlink: "https://github.com/harshkhavale/react-social-media-app",
-    deploylink: "https://social-frontend-eight.vercel.app/",
-  },
-];
+

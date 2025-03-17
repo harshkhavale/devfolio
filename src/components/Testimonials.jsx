@@ -34,8 +34,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="work" className="relative z-40 md:p-20">
-      <div className="flex justify-between p-4">
+    <section id="work" className="relative z-40 md:p-20 px-4">
+      <div className="flex justify-between">
        <p className=" text-5xl">My colleagues and clients say</p>
        
       </div>
@@ -67,7 +67,7 @@ const Testimonials = () => {
                 <p>{project.company}</p>
               </div>
             </div>
-            <div className=" bg-black p-[1px] rotate-90 w-full absolute -right-80"></div>
+            <div className="hidden md:block bg-black p-[1px] rotate-90 w-full absolute -right-80"></div>
           </SwiperSlide>
         ))}
       </Swiper>
