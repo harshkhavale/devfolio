@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Reenie+Beanie&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +12,13 @@
     format("truetype");
 }
 @font-face {
+  font-family: "Asthetic";
+  src: url("../public/fonts/BelganAesthetic.ttf")
+    format("truetype");
+}
+@font-face {
   font-family: "Happy-Monkey";
-  src: url("../public/fonts/HappyMonkey-Regular.ttf")
+  src: url("../public/fonts/GeneralSans-Regular.otf")
     format("truetype");
 }
 @font-face {
@@ -19,6 +26,15 @@
   src: url("../public/fonts/DMSans.ttf")
     format("truetype");
 }
+/* @font-face {
+  font-family: "happy-monkey";
+  src: url("../public/fonts/HappyMonkey-Regular.ttf")
+    format("truetype");
+} */
+ .new-font{
+  font-family: "Sacramento", cursive;
+
+ }
 * {
   margin: 0;
   font-family: "DM-SANS", sans-serif;
@@ -26,8 +42,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.happy-font {
-  font-family: "Happy-Monkey", system-ui;
+.asthetica{
+  font-family: "Asthetic", system-ui;
+
+}
+.happyfont {
+  font-family: "happy-monkey", system-ui;
 }
 .outlined-text {
   display: inline-block;

@@ -11,17 +11,15 @@ import {
 } from "../constants";
 
 import { fadeIn, textVariant } from "../utils/motion";
-import { box, box2 } from "../assets";
 
 
 export const SkillsBox = ({isDark}) => {
   return (
     <section id="featured">
       <div className="md:mx-40 mx-10 relative">
-        <p className=" font-bold text-5xl flex mb-8 items-center gap-4 z-50 md:text-7xl">
-          SKILLBOX
-          <img src={isDark?box2:box} className={`${isDark?'h-16':'h-20'}`} alt="" />
-        </p>
+        <span className=" text-5xl flex mb-8 md:text-left md:gap-4 z-50 md:text-7xl text-right">
+          Drive into my{" "} <a href="#" className=" font-bold">{"  "}skill-box</a> 
+        </span>
 
         <div className="bucket happy-font  flex flex-wrap gap-4 text-sm">
           <motion.div       variants={fadeIn("right", "spring", 0.5 * 1, 0.75)}  className="frontend dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
@@ -30,7 +28,7 @@ export const SkillsBox = ({isDark}) => {
               {frontend.map((fe, index) => (
                 <p
                   key={fe.name}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                   style={{ borderColor: fe.color }}
                 >
                   {fe.name}
@@ -45,7 +43,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={be.name}
                   style={{ borderColor: be.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {be.name}
                 </p>
@@ -59,7 +57,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={db.name}
                   style={{ borderColor: db.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {db.name}
                 </p>
@@ -73,17 +71,13 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
               ))}
             </div>
-            <progress
-              className="absolute bottom-0 w-full mt-8 -start-0 progress progress-accent"
-              value="85"
-              max="100"
-            ></progress>
+           
           </motion.div>
           <motion.div       variants={fadeIn("right", "spring", 0.5 * 5, 0.75)}  className="frontend overflow-hidden relative dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Mobile</p>
@@ -92,17 +86,13 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
               ))}
             </div>
-            <progress
-              className="absolute bottom-0 w-full mt-8 -start-0 progress progress-error"
-              value="70"
-              max="100"
-            ></progress>
+           
           </motion.div>
           <motion.div       variants={fadeIn("right", "spring", 0.5 * 6, 0.75)}  className="frontend overflow-hidden relative dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
             <p className="font-bold mb-4">Web 3</p>
@@ -111,17 +101,13 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={dv.name}
                   style={{ borderColor: dv.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {dv.name}
                 </p>
               ))}
             </div>
-            <progress
-              className="absolute bottom-0 w-full mt-8 -start-0 progress progress-primary"
-              value="40"
-              max="100"
-            ></progress>
+          
           </motion.div>
 
           <motion.div       variants={fadeIn("right", "spring", 0.5 * 7, 0.75)}  className="frontend dark:bg-zinc-800 bg-gray-200   rounded-3xl p-4">
@@ -131,7 +117,7 @@ export const SkillsBox = ({isDark}) => {
                 <p
                   key={wt.name}
                   style={{ borderColor: wt.color }}
-                  className={` dark:text-white border-2 happy-font font-bold border-black dark:bg-black p-2 rounded-xl`}
+                  className={` dark:text-white border-2 happyfont font-bold border-black dark:bg-black p-2 rounded-xl`}
                 >
                   {wt.name}
                 </p>
