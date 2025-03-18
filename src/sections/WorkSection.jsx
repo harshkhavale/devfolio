@@ -1,6 +1,5 @@
 import React from 'react'
-import { artndirt, bluehyphen, easysportspass, stage, zengram } from '../assets/projects'
-import { lazybox } from '../assets'
+import { bluehyphen, easysportspass, zengram } from '../assets/projects'
 
 const WorkSection = () => {
   return (

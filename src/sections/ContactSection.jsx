@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { monkeysvg,bot } from "../assets";
+import { bot } from "../assets";
 
 const ContactSection = () => {
   const [isSent, setIsSent] = useState(false);

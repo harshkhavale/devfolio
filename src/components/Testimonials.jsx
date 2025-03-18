@@ -35,7 +35,7 @@ const Testimonials = () => {
 
   return (
     <section>       <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
-    <div id="work" className="relative z-40 md:p-20 px-4">
+    <div id="work" className="relative z-40 md:p-20 p-10 px-4">
       <div className="flex justify-between">
        <p className=" text-5xl">My colleagues and clients say</p>
        
@@ -50,7 +50,7 @@ const Testimonials = () => {
       >
         {testimonials.map((project) => (
           <SwiperSlide key={project.id}>
-            <div className=" relative h-72 overflow-hidden">
+            <div className=" relative md:h-72 h-[28rem] overflow-hidden">
               {/* <motion.img
                 whileHover={{
                   scale: 1.1,
@@ -63,7 +63,7 @@ const Testimonials = () => {
               /> */}
              
               <div className=" p-2">
-                <h3 className="text-xl md:pe-32 happyfont py-4 ">"{project.testimonial}"</h3>
+                <h3 className="text-xl md:pe-32 py-4 ">"{project.testimonial}"</h3>
                 <p>{project.name}</p>
                 <p>{project.company}</p>
               </div>

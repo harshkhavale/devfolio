@@ -5,7 +5,6 @@ import resume from "./resume/resume.pdf";
 import profile from "./profile/award2-min.jpeg";
 
 import profilephoto from './profile.png';
-import globe from './zombieing.png'
 
 // #other
 
@@ -25,13 +24,12 @@ import gallery12 from './gallery/mixd-aesthetic-website-design-example.jpeg';
 import gallery13 from './gallery/PetCare Website Design.jpeg';
 import gallery14 from './gallery/screencapture-social-web-platform-vercel-app-2025-03-18-12_53_25.png';
 import dashboard from './Screenshot 2025-03-18 171635.png';
-import lazybox from "./lazybox.png";
 import mobile from "./mobile.jpg";
-import uiux from "./uiux.jpeg";
+import uiux from "./Bento UI Grids.jpeg";
 import website from "./website.jpg";
 import backend from "./backend.jpg";
 import monkeysvg from "./monkey-svg.png";
 import arroe from './arrow.png'
 import bot from './bot-removebg-preview.png'
-export { profile, resume, profilephoto,globe,lazybox,monkeysvg,mobile,website,backend,uiux,arroe,bot, dashboard};
+export { profile, resume, profilephoto,monkeysvg,mobile,website,backend,uiux,arroe,bot, dashboard};
 export {gallery1,gallery2,gallery3,gallery4,gallery5,gallery6,gallery7,gallery8,gallery9,gallery10,gallery11,gallery12,gallery13,gallery14};

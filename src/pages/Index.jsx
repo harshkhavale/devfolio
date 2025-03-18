@@ -4,7 +4,6 @@ import { useMediaQuery } from "@mui/material";
 import Creative from "../components/Creative";
 import Hero from "../components/Hero";
 
-import Services from "../components/Services";
 
 
 
@@ -26,14 +25,14 @@ const Index = () => {
     <div className="">
       <Navbar />
       <HeroSection />
-      <div className=" h-[1px] w-full dark:bg-white my-20 bg-black"></div>
+      <div className=" h-[1px] w-full dark:bg-white md:my-20 my-10 bg-black"></div>
 
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
+            <h1 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
               custom solution's through <br />
-              <span className="text-3xl md:text-[10rem] font-bold mt-1 leading-none text-nowrap">
+              <span className="text-5xl md:text-[10rem] font-bold mt-1 leading-none text-nowrap">
                 Design <span className=" new-font">and </span>Code
               </span>
             </h1>
@@ -71,7 +70,7 @@ const Index = () => {
               </div>
 
               {isNonMobileScreens && (
-                <p className=" mt-20 text-xl happy-font ">
+                <p className=" mt-20 text-xl ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,
@@ -89,7 +88,7 @@ const Index = () => {
             </div>
             {!isNonMobileScreens && (
               <div className="">
-                <p className="font-bold p-2 ">
+                <p className=" p-2 ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,

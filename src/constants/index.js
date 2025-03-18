@@ -1,12 +1,6 @@
 import { PanelsTopLeft } from "lucide-react";
 
-import {
-  academix,
-  social,
-  spotify,
-  stage,
-  urbanstore,
-} from "../assets/projects";
+
 
 
 const frontend = [
