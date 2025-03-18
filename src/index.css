@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Reenie+Beanie&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 
 @tailwind base;
 @tailwind components;
@@ -24,6 +23,11 @@
 @font-face {
   font-family: "DM-SANS";
   src: url("../public/fonts/DMSans.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Sacramento";
+  src: url("../public/fonts/Sacramento-Regular.ttf")
     format("truetype");
 }
 /* @font-face {
