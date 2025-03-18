@@ -34,7 +34,8 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="work" className="relative z-40 md:p-20 px-4">
+    <section>       <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
+    <div id="work" className="relative z-40 md:p-20 px-4">
       <div className="flex justify-between">
        <p className=" text-5xl">My colleagues and clients say</p>
        
@@ -67,7 +68,7 @@ const Testimonials = () => {
                 <p>{project.company}</p>
               </div>
             </div>
-            <div className="hidden md:block bg-black p-[1px] rotate-90 w-full absolute -right-80"></div>
+            <div className="hidden md:block dark:bg-white bg-black p-[1px] rotate-90 w-full absolute -right-80"></div>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -79,7 +80,8 @@ const Testimonials = () => {
             <MoveRight/> Next
           </button>
         </div>
-    </section>
+    </div></section>
+
   );
 };
 

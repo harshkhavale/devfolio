@@ -1,8 +1,84 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { Close, DragHandleOutlined } from "@mui/icons-material";
+import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
+import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
+import ViewInArOutlinedIcon from "@mui/icons-material/ViewInArOutlined";
+import { CornerDownRight } from "lucide-react";
+import { fadeIn } from '../utils/motion';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const [value, setValue] = useState(0);
+  const [hoveredLink, setHoveredLink] = useState(null);
+
+  const navLinks = [
+    {
+      id: "about",
+      title: "About",
+      icon: <HomeOutlinedIcon />,
+    },
+    {
+      id: "work",
+      title: "Work",
+      icon: <WorkOutlineOutlinedIcon />,
+    },
+    {
+      id: "contact",
+      title: "Contact",
+      icon: <CallOutlinedIcon />,
+    },
+    {
+      id: "featured",
+      title: "Featured",
+      icon: <ViewInArOutlinedIcon />,
+    },
+  ];
+  const contacts = [
+    {
+      id: "linkdin",
+      title: "LinkedIn",
+      url: "https://www.linkedin.com/in/harshkhavale11/",
+      icon: <LinkedIn />,
+    },
+    {
+      id: "github",
+      title: "GitHub",
+      url: "https://github.com/harshkhavale",
+      icon: <GitHub />,
+    },
+    {
+      id: "email",
+      title: "Gmail",
+      url: "harshkhavale1102@gmailcom",
+      icon: <Email />,
+    },
+    {
+      id: "X",
+      title: "X",
+      url: "https://twitter.com/HarshKhavale",
+      icon: <X />,
+    },
+  ];
+  const [isDark, setIsDark] = useState(true);
+
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+  };
+  useEffect(() => {
+    applyTheme();
+  }, [isDark]);
+  const applyTheme = () => {
+    document.documentElement.classList.toggle("dark", isDark);
+  };
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(true);
   return (
-    <div> <div
+    
+    <div
     className={`navbar z-50 fixed bg-white dark:bg-[#191919] top-0 p-0
 border-b flex justify-between border-black md:px-4 px-2 dark:border-white`}
   ><p className=" text-3xl asthetic font-semibold new-font">harsh khavale</p>
@@ -93,7 +169,6 @@ border-b flex justify-between border-black md:px-4 px-2 dark:border-white`}
       )}
     </div>
   </div>
-</div>
   )
 }
 

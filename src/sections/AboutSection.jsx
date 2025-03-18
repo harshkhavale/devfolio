@@ -44,8 +44,12 @@ const AboutSection = () => {
   };
 
   return (
-    <section ref={sectionRef} id="about" className="flex md:justify-end px-4">
-      <div className="flex-col md:w-1/2 justify-end">
+    <section ref={sectionRef} id="about" className=" sticky top-0" >
+      <div>
+      <div className=' h-[1px] w-full bg-black dark:bg-white my-8'></div>
+<div className="flex md:justify-end px-4">
+
+<div className="flex-col md:w-1/2 justify-end">
         <p className="md:text-5xl text-2xl text-left md:-ms-80">
           <span className="md:ps-80"></span>
           My design journey started with a passion for creating intuitive and
@@ -85,6 +89,9 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
+</div>
+      </div>
+     
     </section>
   );
 };
