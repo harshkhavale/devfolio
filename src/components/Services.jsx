@@ -23,7 +23,7 @@ const ServiceCard = ({ title, index, desc, image }) => {
       <div className="w-full relative  rounded-[20px] ">
      
         <div className="min-h-[250px] h-full border-0 p-1 ps-4 flex justify-evenly items-center flex-col  ">
-        <span className="font-bold text-9xl absolute z-10 text-black/5 ">
+        <span className="font-bold text-9xl absolute z-10 text-black/5 dark:text-white/10">
           {title}
         </span> <p className=" z-20"><span className="new-font font-bold text-2xl">{title}{"  "}</span>{desc}</p> 
         </div>

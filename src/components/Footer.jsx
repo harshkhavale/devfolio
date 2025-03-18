@@ -31,7 +31,7 @@ const Footer = () => {
     <div className="relative flex justify-center gap-4 items-center p-2">
       <div>
         <p className="font-bold md:text-xl text-sm happyfont">
-          harshkhavale@2024
+          harshkhavale@2025
         </p>
       </div>
       <div className="bg-current h-8 p-1"></div>

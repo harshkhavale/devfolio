@@ -69,6 +69,8 @@ const Creative = () => {
 
   return (
     <div>
+             <div className=" h-[1px] w-full mt-10 dark:bg-white bg-black"></div>
+
       <div className="section font-bold">
         <p className="creative -ms-16 md:ms-auto text-[6rem] md:text-[15rem] new-font ">
           creative

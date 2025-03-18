@@ -67,8 +67,7 @@ const Hero = () => {
         className="profile relative flex-1 gap-2 flex flex-col "
       >
         <div className=" flex flex-col items-center gap-2 z-40 ">
-          <img src={arroe} alt="" className="z-40 h-40 absolute rotate-45 top-40 left-0" />
-          <p className="new-font font-bold absolute top-16 left-4 text-3xl">yes, it's me!</p>
+         
         </div>
         <div className=" overflow-hidden rounded-0 z-20">
         <img src={profilephoto} className="z-10  h-[100vh] object-cover " alt="profile-img" />
