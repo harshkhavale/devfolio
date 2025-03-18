@@ -38,9 +38,9 @@ const App = () => {
 
   return (
     <>
-      {/* {isLoading ? (
+      {isLoading ? (
         <Preloader onComplete={() => setIsLoading(false)} />
-      ) : ( */}
+      ) : (
         <div className="dark:text-white dark:bg-[#191919] bg-white text-black overflow-x-hidden">
           <CustomCursor />
           <AnimatePresence>
@@ -50,7 +50,7 @@ const App = () => {
           </AnimatePresence>
           <Footer />
         </div>
-      {/* )} */}
+      )} 
     </>
   );
 };
