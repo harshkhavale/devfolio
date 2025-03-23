@@ -1,27 +1,30 @@
 import React from 'react'
 import GalleryComponent from '../components/GalleryComponent'
 import { CornerDownRight } from 'lucide-react'
+import { semicolon2 } from '../assets'
 
 const HeroSection = () => {
   return (
     <>
     <div
     id="hero"
-    className=" flex flex-col justify-center items-center relative mt-20 md:my-20 my-24 px-4 md:px-0"
+    className=" relative flex flex-col justify-center items-center py-20 px-4 md:px-0 bg-gradient-to-r dark:from-[#261FB3] from-[#efeff6] dark:to-black to-[#ffffff]"
   >
-    <div className=" relative w-full text-3xl">
-      <p className=" md:text-base text-xs pb-4 font-bold text-gray-400 md:ps-10">{'[DEVFOLIO-25]'}</p>
-      <p className=" md:text-7xl text-5xl text-wrap text-right px-4 md:ps-96">
-        <a href="#" className="">Architecting </a> code, <span className=' font-bold'>crafting</span> Scalable Solutions. Full Stack Artisan & DevOps <span className='font-bold'>aficionado.</span>
+    <div className=" relative w-full text-3xl z-20">
+      <p className=" md:text-base text-xs pb-4 font-bold dark:text-gray-400 text-gray-400 md:ps-10">{'[DEVFOLIO-25]'}</p>
+            <p className=" md:text-7xl text-5xl text-wrap text-right px-4 md:ps-96 z-50">
+        <a href="#" className="z-50 ">Architecting </a> code, <span className=' font-bold text-[#261FB3]'>crafting</span> Scalable Solutions. Full Stack Artisan & DevOps <span className='font-bold text-[#261FB3]'>aficionado.</span>
       </p><div className="md:ps-[50rem] py-8">
         <p className=" py-4 md:text-2xl text-xl">I specialize in crafting user-centric applications that are visually striking and intuitive. I bring a unique combination of creativity and technical skill to every project.</p>
 
         <div className=" flex items-center gap-2 ">
-          <CornerDownRight /> <a href="#" className=" text-base underline underline-offset-4">Contact me</a>
+          <CornerDownRight /> <a href="#" className=" text-base underline underline-offset-4 normal-font">Contact Me</a>
         </div>
 
       </div>
     </div>
+    <div className='-z-0 opacity-5 dark:opacity-100 '><img src={semicolon2} alt="" className=' w-[50rem] absolute md:-top-[90rem] -top-[50rem] md:-start-2 -start-52 -z-10'/></div>
+
 
   </div>
   <GalleryComponent />

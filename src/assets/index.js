@@ -31,5 +31,10 @@ import backend from "./backend.jpg";
 import monkeysvg from "./monkey-svg.png";
 import arroe from './arrow.png'
 import bot from './bot-removebg-preview.png'
-export { profile, resume, profilephoto,monkeysvg,mobile,website,backend,uiux,arroe,bot, dashboard};
+import semicolon from './semicolon.svg'
+import cemicolon from './cemicolon.svg'
+import logo from './logo.svg'
+import semicolon2 from './semicolon-2.svg'
+
+export { profile, resume, profilephoto,monkeysvg,mobile,website,backend,uiux,arroe,bot, dashboard, semicolon,semicolon2, cemicolon, logo};
 export {gallery1,gallery2,gallery3,gallery4,gallery5,gallery6,gallery7,gallery8,gallery9,gallery10,gallery11,gallery12,gallery13,gallery14};

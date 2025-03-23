@@ -26,9 +26,9 @@ const Preloader = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 flex flex-col bg-white text-black items-center justify-center  z-50">
+    <div className="fixed inset-0 flex flex-col bg-[#261FB3] text-white items-center justify-center  z-50">
      
-      <p className="mt-2 text-9xl">{progress}%</p>
+      <p className="mt-2 text-9xl">{"<"}{progress}%</p>
     </div>
   );
 };

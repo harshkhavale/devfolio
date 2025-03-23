@@ -61,28 +61,28 @@ const AboutSection = () => {
 
             <div className="">
               <div className="flex md:flex-row flex-wrap py-4 gap-6">
-                <p className="md:text-lg p-4 rounded-lg bg-gray-400/10 dark:bg-black/30">
+                <p className="md:text-lg p-4 rounded-lg bg-gray-400/10 dark:bg-black/30 normal-font">
                   My design philosophy focuses on crafting seamless, engaging user journeys that leave a lasting impression. I believe in the power of clear communication, user empathy, and a meticulous eye for detail to create high-quality websites.
                 </p>
 
-                <p className="md:text-lg p-4 rounded-lg bg-gray-400/10 dark:bg-black/30">
+                <p className="md:text-lg p-4 rounded-lg bg-gray-400/10 dark:bg-black/30 normal-font">
                   When I'm not designing or developing, I explore the vibrant Los
                   Angeles neighborhood, seek inspiration in nature, and continuously
                   learn new things to improve my design skills.
                 </p>
               </div>
-              <a href="#" className="text-sm flex gap-2 underline underline-offset-8">
+              <a href="#" className="text-sm flex gap-2 underline underline-offset-8 normal-font">
                 <CornerDownRight /> Learn More About Me
               </a>
             </div>
 
             <div className="flex md:gap-20 gap-8 py-20">
               <div>
-                <p>Years in Work</p>
+                <p className=" normal-font">Years in Work</p>
                 <p className="text-9xl">{years}+</p>
               </div>
               <div>
-                <p>Total Happy Clients</p>
+                <p className=" normal-font">Total Happy Clients</p>
                 <p className="text-9xl">{clients}+</p>
               </div>
             </div>
