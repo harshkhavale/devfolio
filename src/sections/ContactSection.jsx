@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { bot } from "../assets";
+import { bot, semicolon2 } from "../assets";
 
 const ContactSection = () => {
   const [isSent, setIsSent] = useState(false);
@@ -67,40 +67,40 @@ const ContactSection = () => {
           className="mt-4 flex flex-col gap-4"
         >
           <label className="flex flex-col">
-            <span className="text-gray-500 font-medium mb-4">Your Name</span>
+            <span className="text-gray-500 font-medium mb-4  normal-font">Your Name</span>
             <input
               placeholder="whats your name?"
               onChange={handleChange}
               value={form.name}
-              className=" dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4  roundes-lg outlined-none  border-none font-medium"
+              className=" normal-font dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4  roundes-lg outlined-none  border-none font-medium"
               type="text"
               name="name"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-gray-500 font-medium mb-4">Your Email</span>
+            <span className="text-gray-500 font-medium mb-4 normal-font">Your Email</span>
             <input
               placeholder="enter your email here"
               onChange={handleChange}
               value={form.email}
-              className=" dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4  roundes-lg outlined-none  border-none font-medium"
+              className=" normal-font dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4  roundes-lg outlined-none  border-none font-medium"
               type="email"
               name="email"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-gray-500 font-medium mb-4">Your Message</span>
+            <span className="text-gray-500 font-medium mb-4  normal-font">Your Message</span>
             <textarea
               rows={5}
               placeholder="write message here"
               onChange={handleChange}
               value={form.message}
-              className=" dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4  roundes-lg outlined-none  border-none font-medium"
+              className=" normal-font dark:bg-black bg-gray-200 outline-sky-500 outline-4 py-4 px-4  roundes-lg outlined-none  border-none font-medium"
               name="message"
             />
           </label>
           <button
-            className="text-white bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 text-sm px-5 py-2.5 text-center me-2 mb-2 font-bold happy-font"
+            className="text-white bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-[#261FB3] text-sm px-5 py-2.5 text-center me-2 mb-2 font-bold happy-font"
             type="submit"
           >
             {loading ? "Sending..." : "Send"}
@@ -110,8 +110,7 @@ const ContactSection = () => {
       </div>
      
       <div className=" md:w-5/12">
-      <img src={bot} alt=""  />
-
+<p className=" md:text-[20rem] text-center text-[16rem] text-[#261FB3]">H11</p>
       </div>
       </div>
     </section>

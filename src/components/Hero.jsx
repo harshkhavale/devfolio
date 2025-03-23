@@ -1,7 +1,7 @@
 import React from "react";
 import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
-import {  arroe, profile, profilephoto } from "../assets";
+import {  arroe, profile, profilephoto, semicolon } from "../assets";
 const slideInRightEffect = {
   hidden: {
     x: 500,
@@ -28,7 +28,7 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center bg-gray-100 dark:bg-slate-900 ">
+    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center bg-gray-100 dark:bg-[#261FB3] ">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"
@@ -69,10 +69,22 @@ const Hero = () => {
         <div className=" flex flex-col items-center gap-2 z-40 ">
          
         </div>
-        <div className=" overflow-hidden rounded-0 z-20">
-        <img src={profilephoto} className="z-10  h-[100vh] object-cover " alt="profile-img" />
-        </div>
-        <div className=" absolute -top-96 p-[30rem] dark:bg-slate-950 bg-gray-200 -right-40 rounded-full  e"></div>
+        <div className="relative overflow-hidden w-full h-[100vh]">
+  
+  
+  <img
+    src={profilephoto}
+    className="absolute inset-0 w-full h-full object-cover z-20 "
+    alt="profile-img"
+  />
+</div>
+<img
+    src={semicolon}
+    className="absolute w-[100rem] z-10"
+    alt="semicolon-svg"
+  />
+
+        <div className=" absolute -top-96 p-[30rem] dark:bg-[#261fb3cf] bg-gray-200 -right-40 rounded-full  e"></div>
 
       </motion.div>
     </div>

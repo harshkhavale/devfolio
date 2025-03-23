@@ -30,10 +30,10 @@ const Index = () => {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-xl md:text-2xl font-semibold text-black dark:text-white">
+            <h1 className="text-xl md:text-xl font-semibold text-black dark:text-white normal-font">
               custom solution's through <br />
-              <span className="text-5xl md:text-[10rem] font-bold mt-1 leading-none text-nowrap">
-                Design <span className=" new-font">and </span>Code
+              <span className="text-3xl flex items-center text-[#261FB3] pb-20 md:text-[9rem] font-bold mt-1 leading-none text-nowrap">
+                Design<span className=" new-font text-3xl">and </span>Code
               </span>
             </h1>
           </>
@@ -70,7 +70,7 @@ const Index = () => {
               </div>
 
               {isNonMobileScreens && (
-                <p className=" mt-20 text-xl ">
+                <p className=" mt-20 normal-font ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,
@@ -88,7 +88,7 @@ const Index = () => {
             </div>
             {!isNonMobileScreens && (
               <div className="">
-                <p className=" p-2 ">
+                <p className=" p-2 normal-font ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,

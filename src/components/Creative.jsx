@@ -75,8 +75,8 @@ const Creative = () => {
         <p className="creative -ms-16 md:ms-auto text-[6rem] md:text-[15rem] new-font ">
           creative
         </p>
-        <p className="developer text-center text-[4rem] md:text-[10rem] -mt-10 md:-mt-32 md:ps-0 font-normal ">
-          Software Engineer
+        <p className="developer text-center text-[3rem] md:text-[8rem] -mt-10 md:-mt-32 md:ps-0 font-normal text-nowrap flex ">
+          <span className="hidden md:block">Software</span> Engineer
         </p>
         <p className="inspire text-[1.5rem] md:text-[5rem] md:-mt-16 font-normal ">
           inspired by the
