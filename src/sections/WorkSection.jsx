@@ -3,10 +3,9 @@ import { bluehyphen, easysportspass, zengram } from '../assets/projects'
 
 const WorkSection = () => {
   return (
-    <section id="work" className=" sticky top-0" >
-      <div className=' h-[1px] w-full bg-black dark:bg-white my-8'></div>
-      <div className='p-8' >
-        <p className=' text-right text-5xl py-16'>Projects I have Worked On</p>
+    <section id="work" className="" >
+      <div className='p-8 py-40' >
+        <p className=' text-5xl md:text-7xl pb-20 text-center'>Solutions I’ve Built {">"}</p>
         <div className=' flex flex-col md:flex-row relative gap-4  '>
           <div className="div1 flex flex-1 gap-4">
             <div className="flex flex-col flex-1 gap-2 relative">
@@ -27,6 +26,8 @@ const WorkSection = () => {
               <p className=' font-bold text-2xl text-[#261FB3]  '>bluehyphen.com</p></div>
           </div></div>
       </div>
+      <div className=' h-[1px] w-full bg-black dark:bg-white my-8'></div>
+
     </section>
 
   )

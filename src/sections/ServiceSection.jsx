@@ -5,19 +5,20 @@ const ServiceSection = () => {
   return (
     <section
     id="service"
-    className="expertise my-8 justify-center  items-center relative"
+    className="expertise justify-center  items-center relative"
   >
-       <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
 
-    <div className="side flex flex-col justify-center  gap-8 p-4">
-      <p className=" text-right text-7xl py-12">
-        Services we provide
+    <div className="side flex flex-col justify-center md:pt-40  gap-8 p-4">
+      <p className=" text-center text-5xl md:text-7xl py-12">
+      Stuff I Ship {">"}
 
       </p>
     </div>
-    <div className="">
+    <div className=" md:pb-80 pb-20">
       <Services />
     </div>
+    <div className=" bg-black dark:[#261FB3] h-[1px] w-full" />
+
   </section>  )
 }
 

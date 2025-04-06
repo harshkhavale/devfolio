@@ -9,7 +9,7 @@ import { logo } from "../assets";
 const Navbar = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const navigate = useNavigate();
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const [toggle, setToggle] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
@@ -64,7 +64,7 @@ const Navbar = () => {
                {
                 scrolling ? (<a href={`#${link.id}`} className="text-sm flex items-center gap-2 normal-font">
                   {link.icon}
-                </a>) : (<a href={`#${link.id}`} className="text-sm flex items-center gap-2 normal-font">
+                </a>) : (<a href={`#${link.id}`} className=" flex items-center gap-2 normal-font">
                   <CornerDownRight className="h-4 w-4 " />
                   {link.title}
                 </a>)
@@ -103,10 +103,10 @@ const Navbar = () => {
           <Close />
         </button>
 
-        <ul className="flex flex-col items-start gap-6 mt-40 w-full">
+        <ul className="flex flex-col items-start gap-8 mt-40 w-full">
           {navLinks.map((link) => (
             <li key={link.id} className="hover:text-black dark:hover:text-white cursor-pointer w-full">
-              <a href={`#${link.id}`} className="text-xl flex gap-3 items-center" onClick={() => setToggle(false)}>
+              <a href={`#${link.id}`} className="text-xl flex gap-8 items-center" onClick={() => setToggle(false)}>
                 {link.icon} {link.title}
               </a>
             </li>
@@ -114,13 +114,15 @@ const Navbar = () => {
         </ul>
 
         {/* Social Links */}
-        <div className="flex gap-4 mt-40">
+        <ul className="flex flex-col items-start gap-8 mt-40 w-full">
           {contacts.map((link) => (
-            <a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer" className="p-2 border rounded-3xl transition-transform transform hover:-translate-y-1">
-              {link.icon}
-            </a>
+             <li key={link.id} className="hover:text-black dark:hover:text-white cursor-pointer w-full">
+             <a href={`${link.url}`} className="text-xl flex gap-8 items-center" onClick={() => setToggle(false)}>
+               {link.icon} {link.title}
+             </a>
+           </li>
           ))}
-        </div>
+        </ul>
       </motion.div>
     </nav>
   );

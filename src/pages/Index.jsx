@@ -17,6 +17,7 @@ import Navbar from "../components/Navbar";
 import ServiceSection from "../sections/ServiceSection";
 import ContainerScroll from "../components/ContainerScroll";
 import { dashboard, gallery12, mobile, website } from "../assets";
+import GradientBox from "../components/GradientBox";
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
@@ -26,14 +27,13 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <div className=" h-[1px] w-full dark:bg-white md:my-20 my-10 bg-black"></div>
-
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-xl md:text-xl font-semibold text-black dark:text-white normal-font">
+            <h1 className="text-xl md:text-xl flex justify-center flex-col font-semibold text-black dark:text-white text-center">
               custom solution's through <br />
-              <span className="text-3xl flex items-center text-[#261FB3] pb-20 md:text-[9rem] font-bold mt-1 leading-none text-nowrap">
-                Design<span className=" new-font text-3xl">and </span>Code
+              <span className="text-7xl flex items-center justify-center text-[#261FB3] pb-20 md:text-[18rem] text-center font-bold mt-1 leading-none text-nowrap">
+                Design<span className=" new-font md:text-9xl px-4">and </span>Code
               </span>
             </h1>
           </>
@@ -55,9 +55,9 @@ const Index = () => {
 
      
 
-      <section id="about" className="about_section  relative overflow-hidden ">
-        <Hero />
-        <div className="relative w-full pt-0 md:px-20">
+      <section id="about" className="about_section relative overflow-hidden ">
+        <Hero /><GradientBox content={<>
+          <div className="relative w-full dark:-mt-80 pt-0 md:px-20">
           <div className="difference flex flex-col p-2 ">
             <div className="flex items-center gap-36">
               <div className="flex">
@@ -70,7 +70,7 @@ const Index = () => {
               </div>
 
               {isNonMobileScreens && (
-                <p className=" mt-20 normal-font ">
+                <p className=" mt-20 text-xl normal-font ">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,
@@ -101,10 +101,13 @@ const Index = () => {
             )}
           </div>
         </div>
-      </section>
-      <div className=" bg-black dark:bg-white h-[1px] mb-10 w-full" />
+          </>}/>
 
-      <FeaturedSection />
+        
+      </section>
+      <div className=" bg-black dark:bg-[#261FB3] h-[1px] mb-10 w-full" />
+
+      <FeaturedSection/>
       <Creative />
       <Testimonials />
       <ContactSection />

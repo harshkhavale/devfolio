@@ -34,14 +34,14 @@ export default function GalleryComponent() {
         {/* Row 1 */}
         <div className="flex w-max space-x-4" ref={rowOneRef}>
           {[...topImages, ...topImages].map((src, index) => (
-            <img key={`row1-${index}`} src={src} className="w-64 h-44 object-cover" alt={`Gallery ${index + 1}`} />
+            <img key={`row1-${index}`} src={src} className="w-80 h-64 object-cover" alt={`Gallery ${index + 1}`} />
           ))}
         </div>
 
         {/* Row 2 (Reverse Direction) */}
         <div className="flex w-max space-x-4" ref={rowTwoRef}>
           {[...bottomImages, ...bottomImages].map((src, index) => (
-            <img key={`row2-${index}`} src={src} className="w-64 h-44 object-cover" alt={`Gallery ${index + 1}`} />
+            <img key={`row2-${index}`} src={src} className="w-80 h-64 object-cover" alt={`Gallery ${index + 1}`} />
           ))}
         </div>
       </div>

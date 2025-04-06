@@ -35,7 +35,7 @@ const Testimonials = () => {
 
   return (
     <section>       <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
-    <div id="work" className="relative z-40 md:p-20 p-10 px-4">
+    <div id="work" className="relative z-40 md:p-20 p-10 md:py-80 px-4">
       <div className="flex justify-between">
        <p className=" text-5xl py-4">My colleagues and clients say</p>
        

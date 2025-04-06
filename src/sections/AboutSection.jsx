@@ -79,16 +79,18 @@ const AboutSection = () => {
             <div className="flex md:gap-20 gap-8 py-20">
               <div>
                 <p className=" normal-font">Years in Work</p>
-                <p className="text-9xl">{years}+</p>
+                <p className="md:text-[12rem] text-9xl font-bold">{years}+</p>
               </div>
               <div>
                 <p className=" normal-font">Total Happy Clients</p>
-                <p className="text-9xl">{clients}+</p>
+                <p className="md:text-[12rem] text-9xl font-bold">{clients}+</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div className=' h-[1px] w-full bg-black dark:bg-white my-8'></div>
+
 
     </section>
   );

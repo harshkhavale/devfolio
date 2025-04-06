@@ -2,9 +2,9 @@
 import resume from "./resume/resume.pdf";
 
 // #profile
-import profile from "./profile/award2-min.jpeg";
+import profile from "./profile/ghibli-2.png";
 
-import profilephoto from './profile.png';
+import profilephoto from './profile/ghibli-profile.png';
 
 // #other
 

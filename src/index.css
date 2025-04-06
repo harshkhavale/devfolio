@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,8 +6,8 @@
 
 
 @font-face {
-  font-family: "Pilowlava";
-  src: url("../public/fonts/Pilowlava-Regular.otf")
+  font-family: "Degular";
+  src: url("../public/fonts/DegularDisplay-Regular.otf")
     format("truetype");
 }
 @font-face {
@@ -21,11 +20,7 @@
   src: url("../public/fonts/GeneralSans-Regular.otf")
     format("truetype");
 }
-@font-face {
-  font-family: "DM-SANS";
-  src: url("../public/fonts/DMSans.ttf")
-    format("truetype");
-}
+
 @font-face {
   font-family: "Sacramento";
   src: url("../public/fonts/Sacramento-Regular.ttf")
@@ -39,13 +34,10 @@
  .new-font{
   font-family: "Sacramento", cursive;
  }
- .normal-font{
-  font-family: "DM-SANS", sans-serif;
-
- }
+ 
 * {
   margin: 0;
-  font-family: "Audiowide", sans-serif;
+  font-family: "Degular", sans-serif;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

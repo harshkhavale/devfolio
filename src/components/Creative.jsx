@@ -68,7 +68,7 @@ const Creative = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" py-20">
              <div className=" h-[1px] w-full mt-10 dark:bg-white bg-black"></div>
 
       <div className="section font-bold">
