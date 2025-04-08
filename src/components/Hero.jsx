@@ -37,10 +37,10 @@ const Hero = () => {
         className="relative  flex-1 "
       >
         <div className="mx-auto flex flex-row items-start gap-5">
-          <div className=" px-8">
+          <div className="p-2 px-8">
             <div className="flex md:ps-0  ">
 
-              <p className=" font-bold text-9xl">Harsh Khavale</p>
+              <p className=" font-bold text-8xl">Harsh Khavale</p>
             </div>
             <div className=" flex flex-col justify-center md:p-auto">
               <p className={`${styles.heroSubText} mt-10 md:mt-10 text-[20px] happyfont `}>

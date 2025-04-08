@@ -7,7 +7,7 @@ const WorkSection = () => {
       <div className='p-8 py-40' >
         <p className=' text-5xl md:text-7xl pb-20 text-center'>Solutions I’ve Built {">"}</p>
         <div className=' flex flex-col md:flex-row relative gap-4  '>
-          <div className="div1 flex flex-1 gap-4">
+          <div className="div1 flex-col md:flex-row flex-1 gap-4">
             <div className="flex flex-col flex-1 gap-2 relative">
               <img src={zengram} className=" h-[18rem] object-cover" />
               <p className='normal-font bg-gray-400/10 dark:bg-black/30 p-1'>Zengram is a Zen-focused social app designed for mindful connections. Share, reflect, and engage in a peaceful digital space that fosters calmness, positivity, and meaningful interactions.</p>

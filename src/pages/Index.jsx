@@ -32,7 +32,7 @@ const Index = () => {
           <>
             <h1 className="text-xl md:text-xl flex justify-center flex-col font-semibold text-black dark:text-white text-center">
               custom solution's through <br />
-              <span className="text-7xl flex items-center justify-center text-[#261FB3] pb-20 md:text-[18rem] text-center font-bold mt-1 leading-none text-nowrap">
+              <span className="text-5xl flex items-center justify-center text-[#261FB3] md:pb-20 md:text-[18rem] text-center font-bold mt-1 leading-none text-nowrap">
                 Design<span className=" new-font md:text-9xl px-4">and </span>Code
               </span>
             </h1>
@@ -57,7 +57,7 @@ const Index = () => {
 
       <section id="about" className="about_section relative overflow-hidden ">
         <Hero /><GradientBox content={<>
-          <div className="relative w-full dark:-mt-80 pt-0 md:px-20">
+          <div className="relative w-full dark:-mt-60 md:dark:-mt-80 pt-0 md:px-20">
           <div className="difference flex flex-col p-2 ">
             <div className="flex items-center gap-36">
               <div className="flex">
@@ -70,7 +70,7 @@ const Index = () => {
               </div>
 
               {isNonMobileScreens && (
-                <p className=" mt-20 text-xl normal-font ">
+                <p className=" mt-20 text-xl">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,
@@ -88,7 +88,7 @@ const Index = () => {
             </div>
             {!isNonMobileScreens && (
               <div className="">
-                <p className=" p-2 normal-font ">
+                <p className=" p-2 text-xl">
                   My standout quality lies in my versatility across diverse
                   fields within technology. While others may specialize in one
                   area, I excel in web development, mobile app development,

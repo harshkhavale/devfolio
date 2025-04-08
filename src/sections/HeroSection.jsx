@@ -23,7 +23,7 @@ const HeroSection = () => {
 
       </div>
     </div>
-    <div className='-z-0 opacity-5 dark:opacity-100 '><img src={semicolon2} alt="" className=' w-[50rem] absolute md:-top-[90rem] -top-[50rem] md:-start-2 -start-52 -z-10'/></div>
+    <div className='-z-0 opacity-5 dark:opacity-100 '><img src={semicolon2} alt="" className=' w-[50rem] absolute md:-top-[90rem] -top-[40rem] -right-12 md:-start-2 -z-10'/></div>
 
 
   </div>

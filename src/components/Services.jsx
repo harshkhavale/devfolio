@@ -35,7 +35,7 @@ const ServiceCard = ({ title, index, desc, image }) => {
 const Services = () => {
   return (
     <div className="relative ">
-      <div className=" w-full flex flex-wrap gap-2 justify-center">
+      <div className=" w-full flex flex-wrap md:gap-2 gap-4 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

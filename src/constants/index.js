@@ -188,6 +188,7 @@ const backend = [
   { name: "Express.js", color: "#000000" },
   { name: "NestJS", color: "#E0234E" },
   { name: "Spring Boot", color: "#6DB33F" },
+  { name: "Laravel", color: "#DC382D" },
   { name: "Django", color: "#092E20" },
   { name: "FastAPI", color: "#009688" },
   { name: "GraphQL", color: "#E10098" },
