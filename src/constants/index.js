@@ -174,13 +174,14 @@ const frontend = [
   { name: "React", color: "#61DAFB" },
   { name: "Next.js", color: "#000000" },
   { name: "Angular", color: "#DD0031" },
-  { name: "Vue.js", color: "#42B883" },
-  { name: "Svelte", color: "#FF3E00" },
-  { name: "Tailwind CSS", color: "#38B2AC" },
+ 
   { name: "Bootstrap", color: "#7952B3" },
   { name: "Shadcn UI", color: "#ff7ff7" },
   { name: "Three.js", color: "#000000" },
   { name: "Framer Motion", color: "#0055FF" },
+  { name: "Vue.js", color: "#42B883" },
+  { name: "Svelte", color: "#FF3E00" },
+  { name: "Tailwind CSS", color: "#38B2AC" },
 ];
 
 const backend = [

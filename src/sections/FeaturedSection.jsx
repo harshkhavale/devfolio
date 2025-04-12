@@ -34,12 +34,12 @@ export const FeaturedSection = () => {
           {categories.map((category) => (
             <div key={category.title} className="bg-white/5 overflow-hidden rounded-2xl shadow-md backdrop-blur-md">
               <h3 className="text-7xl font-semibold text-black/80 text-center py-4   dark:text-gray-400 mb-4 ">{category.title}</h3>
-              <ul className="space-y-2 flex flex-wrap gap-2 p-4">
+              <ul className="space-y-2 flex flex-wrap justify-center gap-2 p-4">
                 {category.items.map((item) => (
                   <motion.li
                     key={item.name}
                     className="flex relative border-4
-                     text-nowrap rounded-3xl p-2 w-min items-center gap-3 text-xl"
+                     text-nowrap rounded-3xl p-2 w-min items-center justify-center gap-3 text-xl"
                     whileHover={{ scale: 1.05 }}
                     style={{ borderColor: item.color }}
 
