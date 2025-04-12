@@ -31,8 +31,9 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-50 bg-white rounded-full mix-blend-difference"
-      animate={{
+    style={{ zIndex: 9999 }} 
+    className="fixed top-0 left-0 pointer-events-none z-[9999] bg-white rounded-full mix-blend-difference hidden md:block"
+    animate={{
         left: mousePos.x - (isHovered ? 20 : 5),
         top: mousePos.y - (isHovered ? 20 : 5),
         width: isHovered ? 60 : 10,

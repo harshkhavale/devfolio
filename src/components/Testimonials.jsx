@@ -34,7 +34,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section>       <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
+    <section>       <div className=" h-[1px] text-xl w-full dark:bg-white bg-black"></div>
     <div id="work" className="relative z-40 md:p-20 p-10 md:py-80 px-4">
       <div className="flex justify-between">
        <p className=" text-5xl py-4">My colleagues and clients say</p>
@@ -63,7 +63,7 @@ const Testimonials = () => {
               /> */}
              
               <div className=" p-2">
-                <h3 className="text-xl md:pe-32 py-4 ">"{project.testimonial}"</h3>
+                <h3 className="text-2xl md:pe-32 py-4 ">"{project.testimonial}"</h3>
                 <p>{project.name}</p>
                 <p>{project.company}</p>
               </div>
@@ -72,7 +72,7 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className=" w-min flex gap-4 p-2">
+      <div className=" w-min flex text-2xl gap-4 p-2">
           <button onClick={goPrev} className="text-gray-500 focus:outline-none">
           <MoveLeft/> Prev
           </button>

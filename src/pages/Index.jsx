@@ -16,7 +16,7 @@ import { FeaturedSection } from "../sections/FeaturedSection";
 import Navbar from "../components/Navbar";
 import ServiceSection from "../sections/ServiceSection";
 import ContainerScroll from "../components/ContainerScroll";
-import { dashboard, gallery12, mobile, website } from "../assets";
+import {  gallery4} from "../assets";
 import GradientBox from "../components/GradientBox";
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
@@ -40,7 +40,7 @@ const Index = () => {
         }
       >
         <img
-          src={mobile}
+          src={gallery4}
           alt="hero"
           height={720}
           width={1400}
@@ -57,14 +57,14 @@ const Index = () => {
 
       <section id="about" className="about_section relative overflow-hidden ">
         <Hero /><GradientBox content={<>
-          <div className="relative w-full dark:-mt-60 md:dark:-mt-80 pt-0 md:px-20">
+          <div className="relative w-full dark:-mt-60 lg:dark:-mt-80 pt-0 md:px-20">
           <div className="difference flex flex-col p-2 ">
             <div className="flex items-center gap-36">
               <div className="flex">
-                <p className="md:text-[22rem] font-bold text-[10rem]">
+                <p className="lg:text-[22rem] font-bold text-[10rem]">
                   Self
                 </p>
-                <p className="font-bold md:text-[10rem] md:mt-0 new-font  mb-10 text-[3rem] flex items-end">
+                <p className="font-bold lg:text-[10rem] md:mt-0 new-font  mb-10 text-[3rem] flex items-end">
                   and
                 </p>
               </div>
@@ -82,7 +82,7 @@ const Index = () => {
               )}
             </div>
             <div className="flex justify-between md:-mt-48 -mt-24">
-              <p className="md:text-[22rem] font-bold text-[7rem] text-left ">
+              <p className="lg:text-[22rem] font-bold text-[7rem] text-left ">
                 Others
               </p>
             </div>

@@ -39,22 +39,20 @@ export const services =[
   export const testimonials = [
     {
         id:1,
-      name: "John Doe",
-      company: "XYZ Corp",
+      name: "Manish S.",
       image: "https://via.placeholder.com/150",
       testimonial: "I've worked with Harsh on several projects, and he's consistently delivering high-quality, intuitive designs. His attention to detail and creativity make him a favorite among my teammates."
     },
     {        id:2,
 
-      name: "Jane Smith",
-      company: "ABC Inc",
+      name: "Vikas Maderna",
+      company: "Manager at Salesforce",
       image: "https://via.placeholder.com/150",
       testimonial: "Harsh is a skilled and dedicated developer. His ability to create clean, efficient code and maintain high-quality designs is truly commendable."
     },
     {        id:3,
 
-        name: "Mike Johnson",
-      company: "DEF LTD",
+        name: "Akkshara P.",
       image: "https://via.placeholder.com/150",
       testimonial: "Working with Harsh K. on my Art and Dirt website was exceptional. His professionalism and web development expertise were clear from the start, seamlessly translating my vision into a beautiful, functional site. Harsh's creativity and technical skills ensured an efficient process, perfectly capturing the essence of Art and Dirt. I highly recommend him for any web development projects – his dedication and talent truly shine"
     }

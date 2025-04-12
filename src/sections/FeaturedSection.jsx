@@ -32,9 +32,9 @@ export const FeaturedSection = () => {
         {/* Categories */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {categories.map((category) => (
-            <div key={category.title} className="bg-white/5 p-6 rounded-2xl shadow-md backdrop-blur-md">
-              <h3 className="text-8xl font-semibold text-white/10 text-gray-300 mb-4 ">{category.title}</h3>
-              <ul className="space-y-2 flex flex-wrap gap-2">
+            <div key={category.title} className="bg-white/5 overflow-hidden rounded-2xl shadow-md backdrop-blur-md">
+              <h3 className="text-7xl font-semibold text-black/80 text-center py-4   dark:text-gray-400 mb-4 ">{category.title}</h3>
+              <ul className="space-y-2 flex flex-wrap gap-2 p-4">
                 {category.items.map((item) => (
                   <motion.li
                     key={item.name}

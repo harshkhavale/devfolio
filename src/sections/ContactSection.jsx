@@ -13,6 +13,7 @@ const ContactSection = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [message,setMessage] = useState("Send");
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -25,21 +26,21 @@ const ContactSection = () => {
     // xSUXSNQa16ExCz0zO
     emailjs
       .send(
-        "service_f9lge7n",
-        "template_by937ha",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Harsh",
           from_email: form.email,
-          to_email: "harshkhavale1102@gmail.com",
+          to_email: "harshkhavale.work@gmail.com",
           message: form.message,
         },
-        "xSUXSNQa16ExCz0zO"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setLoading(false);
-          alert("done!");
+          setMessage("Message Sent Successfully!")
           setForm({
             name: "",
             email: "",
@@ -48,14 +49,14 @@ const ContactSection = () => {
         },
         (error) => {
           setLoading(false);
-          console.log("error");
+          setMessage("Something went wrong!")
           alert("error");
         }
       );
   };
   return (
-    <section id="contact" >
-      <div className=" h-[1px] w-full dark:bg-white bg-black"></div>
+    <section className=" text-xl min-h-screen" id="contact" >
+      <div className=" text-base h-[1px] w-full dark:bg-white bg-black"></div>
       <p className="text-7xl md:px-20 py-20 px-4 ">Would you like to work together?</p>
       <div className=" flex md:flex-row flex-col pb-20 px-8 justify-center gap-8">
         <div className="md:w-6/12">
@@ -103,14 +104,14 @@ const ContactSection = () => {
                 className="text-white bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-[#261FB3] text-sm px-5 py-2.5 text-center me-2 mb-2 font-bold happy-font"
                 type="submit"
               >
-                {loading ? "Sending..." : "Send"}
+                {loading ? "Sending..." : message}
               </button>
             </form>
           </div>
         </div>
 
-        <div className=" md:w-5/12">
-          <p className=" md:text-[24rem] text-center font-bold text-[16rem] text-[#261FB3]">H11</p>
+        <div className=" flex justify-center  items-center md:w-5/12 h-96 md:h-auto ">
+          <p className=" md:text-[30rem] text-center font-bold new-font text-[16rem] text-[#261FB3]">h11</p>
         </div>
       </div>
     </section>

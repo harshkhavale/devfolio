@@ -75,12 +75,12 @@ const Hero = () => {
 
           <img
             src={profilephoto}
-            className="md:absolute  md:block md:inset-0 md:h-2/3 md:top-20 z-20 "
+            className="md:absolute  md:block md:inset-0 h-4/5 md:h-2/3 md:top-20 z-20 "
             alt="profile-img"
           />
           <img
             src={profile}
-            className="absolute hidden h-2/3 top-60 md:right-40 z-20 "
+            className="absolute lg:block hidden h-2/3 top-80 md:right-40 z-20 "
             alt="profile-img"
           />
         </div>
