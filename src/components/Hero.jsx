@@ -28,7 +28,7 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center bg-white dark:bg-[#261FB3] ">
+    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center bg-white dark:bg-[#000000] ">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"
@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="p-2 px-8">
             <div className="flex md:ps-0  ">
 
-              <p className=" font-bold text-8xl">Harsh Khavale</p>
+              <p className=" font-bold excalidraw text-8xl">Harsh Khavale</p>
             </div>
             <div className=" flex flex-col justify-center md:p-auto">
               <p className={`${styles.heroSubText} mt-10 md:mt-10 text-[20px] happyfont `}>

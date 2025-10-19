@@ -46,15 +46,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 md:p-3 p-2 transition-all duration-300 ${
+      className={`fixed top-2 w-full z-50 md:p-3 p-4 transition-all duration-300 ${
         scrolling
-          ? " w-min flex justify-center m-2 md:rounded-3xl rounded-xl transition-all ease-in-out duration-100 shadow-md bg-white dark:bg-[#261FB3]"
+          ? " w-min flex justify-center m-2 md:rounded-3xl rounded-xl transition-all ease-in-out duration-100 shadow-md bg-white dark:bg-[#000000]"
           : "bg-transparent"
       }`}
     >
       <div className="flex justify-between gap-2 items-center">
-        <p className={`text-3xl font-semibold text-nowrap ${scrolling ? 'hidden':''}`}>Harsh Khavale</p>
-        <p className={`text-3xl font-semibold text-nowrap ${scrolling ? '':'hidden'}`}>H11</p>
+        <p className={`text-3xl font-semibold text-nowrap excalidraw ${scrolling ? 'hidden':''}`}>Harsh Khavale</p>
+        <p className={`text-3xl font-semibold text-nowrap excalidraw ${scrolling ? '':'hidden'}`}>Harshk.</p>
 
         <div className="flex items-center gap-6">
           {/* Desktop Navigation */}

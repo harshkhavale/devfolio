@@ -1,4 +1,4 @@
-import { CornerDownRight } from "lucide-react";
+import { ChevronDown, CodeXml, CornerDownRight, MessageCircle, MousePointer2, PenTool, Sparkles, Spline, Square, SquareDashed, SquareDashedMousePointer, Type } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 
 const AboutSection = () => {
@@ -39,35 +39,29 @@ const AboutSection = () => {
       }, 60); // Speed of count
     };
 
-    increment(2, setYears); // Target: 3+ years
+    increment(3, setYears); // Target: 3+ years
     increment(25, setClients); // Target: 25+ clients
   };
 
   return (
     <section ref={sectionRef} id="about" className=" sticky top-0" >
       <div>
-        <div className=' h-[1px] w-full bg-black dark:bg-white my-8'></div>
+       
         <div className="flex md:justify-end px-4">
 
           <div className="flex-col md:w-1/2 justify-end">
-            <p className="md:text-5xl text-2xl md:text-left md:-ms-80 text-wrap">
+            <p className="md:text-2xl text-2xl md:text-left md:-ms-80 excalidraw border rounded-xl p-2 bg-green-400 text-black text-wrap">
               <span className="md:ps-80"></span>
-              My design journey started with a passion for creating intuitive and
-              visually captivating experiences, driven by the transformative impact
-              of design in solving problems and enhancing user interactions with
-              technology. My aim is to develop digital experiences that blend
-              functionality with delight.
+              My design philosophy focuses on crafting seamless, engaging user journeys that leave a lasting impression. I believe in the power of clear communication, user empathy, and a meticulous eye for detail to create high-quality websites.
+
             </p>
 
             <div className="">
               <div className="flex md:flex-row flex-wrap py-4 gap-6">
-                <p className="md:text-lg p-4 rounded-lg bg-gray-400/10 dark:bg-black/30 normal-font">
-                  My design philosophy focuses on crafting seamless, engaging user journeys that leave a lasting impression. I believe in the power of clear communication, user empathy, and a meticulous eye for detail to create high-quality websites.
-                </p>
+                
 
-                <p className="md:text-lg p-4 rounded-lg bg-gray-400/10 dark:bg-black/30 normal-font">
-                  When I'm not designing or developing, I explore the vibrant Los
-                  Angeles neighborhood, seek inspiration in nature, and continuously
+                <p className="md:text-lg p-4 rounded-lg bg-yellow-400 dark:bg-yellow-400 text-black border excalidraw">
+                  When I'm not designing or developing, I explore the vibrant pune city & neighborhood, seek inspiration in nature, and continuously
                   learn new things to improve my design skills.
                 </p>
               </div>

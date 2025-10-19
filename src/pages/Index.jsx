@@ -18,6 +18,8 @@ import ServiceSection from "../sections/ServiceSection";
 import ContainerScroll from "../components/ContainerScroll";
 import {  gallery4} from "../assets";
 import GradientBox from "../components/GradientBox";
+import { ChevronDown, CodeXml, CornerDownRight, Frame, MessageCircle, MousePointer2, PenTool, Sparkles, Spline, Square, SquareDashed, SquareDashedMousePointer, Type } from "lucide-react";
+
 const Index = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
@@ -30,9 +32,9 @@ const Index = () => {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-xl md:text-xl flex justify-center flex-col font-semibold text-black dark:text-white text-center">
+            <h1 className="text-xl md:text-xl flex justify-center flex-col font-semibold  dark:text-white text-center">
               custom solution's through <br />
-              <span className="text-5xl flex items-center justify-center text-[#261FB3] md:pb-20 md:text-[18rem] text-center font-bold mt-1 leading-none text-nowrap">
+              <span className="text-5xl flex items-center justify-center  md:pb-20 md:text-[18rem] text-center font-bold mt-1 leading-none text-nowrap">
                 Design<span className=" new-font md:text-9xl px-4">and </span>Code
               </span>
             </h1>
@@ -48,7 +50,56 @@ const Index = () => {
           draggable={false}
         />
       </ContainerScroll>
+      <div className=" flex justify-center -mt-32 mb-40"> 
+      <div className="figma text-black bg-white border shadow-sm flex w-min rounded-xl">
+        <div className="flex gap-4 p-4 border-r ">
 
+          <div className=" flex items-center gap-1">
+          <MousePointer2 className=" bg-blue-500 text-white rounded-md size-7 p-1"/>
+            <ChevronDown className=" size-3"/>
+          </div>
+          <div className=" flex items-center gap-1">
+          <Frame/>
+            <ChevronDown className=" size-3"/>
+          </div>
+          <div className=" flex items-center gap-1">
+          <Square/>
+            <ChevronDown className=" size-3"/>
+          </div>
+          <div className=" flex items-center gap-1">
+          <PenTool/>
+            <ChevronDown className=" size-3"/>
+          </div>
+          <div className=" flex pe-2 items-center gap-1">
+          <Type/>
+          </div>
+          <div className=" flex items-center gap-1">
+          <MessageCircle/>
+            <ChevronDown className=" size-3"/>
+          </div>
+          <div className=" flex items-center gap-1">
+          <Sparkles/>
+            <ChevronDown className=" size-3"/>
+          </div>
+
+          </div>
+          <div className=" flex m-2 px-3 gap-4 items-center bg-neutral-100 rounded-xl">
+
+          <div className=" flex items-center gap-1">
+          <Spline/>
+          </div>
+          <div className=" flex bg-white shadow-sm p-1 border rounded-md items-center gap-1">
+          <SquareDashedMousePointer className=" size-7"/>
+          </div>
+          <div className=" flex items-center gap-1">
+          <CodeXml/>
+          </div>
+          </div>
+
+          
+        </div>
+      </div>
+      
       <AboutSection />     
       <WorkSection />
      <ServiceSection/>
@@ -105,7 +156,7 @@ const Index = () => {
 
         
       </section>
-      <div className=" bg-black dark:bg-[#261FB3] h-[1px] mb-10 w-full" />
+      <div className=" bg-black dark:bg-[#000000] h-[1px] mb-10 w-full" />
 
       <FeaturedSection/>
       <Creative />

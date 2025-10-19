@@ -63,7 +63,7 @@ const Testimonials = () => {
               /> */}
              
               <div className=" p-2">
-                <h3 className="text-2xl md:pe-32 py-4 ">"{project.testimonial}"</h3>
+                <h3 className="text-2xl md:pe-32 py-4 excalidraw ">"{project.testimonial}"</h3>
                 <p>{project.name}</p>
                 <p>{project.company}</p>
               </div>

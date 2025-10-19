@@ -1,16 +1,16 @@
 
 import React from "react";
 import { frontend, backend, database, devops, tools } from "../constants";
-import { PanelsTopLeft } from "lucide-react";
+import { Container, Database, GitBranch, PanelTop, Settings } from "lucide-react";
 import { motion } from "framer-motion";
 
 const categories = [
-  { title: "Backend", items: backend },
-  { title: "Database", items: database },
-  { title: "Frontend", items: frontend },
+  { icon: <Settings/> ,title: "Backend", items: backend },
+  { icon: <Database/>, title: "Database", items: database },
+  { icon: <PanelTop/> ,title: "Frontend", items: frontend },
 
-  { title: "DevOps", items: devops },
-  { title: "Tools", items: tools },
+  {icon: <Container/>, title: "DevOps", items: devops },
+  {icon: <GitBranch/>, title: "Tools", items: tools },
 ];
 
 export const FeaturedSection = () => {
@@ -24,22 +24,21 @@ export const FeaturedSection = () => {
 
       {/* Content */}
       <div className="relative z-10 mx-auto text-center">
-      <p className=' text-5xl text-center'>My Developer Arsenal</p>
-      <p className=" mb-12">
+      <p className=" text-5xl mb-40 excalidraw">
           Technologies and tools I work with daily
         </p>
 
         {/* Categories */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2">
           {categories.map((category) => (
-            <div key={category.title} className="bg-white/5 overflow-hidden rounded-2xl shadow-md backdrop-blur-md">
-              <h3 className="text-7xl font-semibold text-black/80 text-center py-4   dark:text-gray-400 mb-4 ">{category.title}</h3>
+            <div key={category.title} className=" overflow-hidden rounded-2xl shadow-md backdrop-blur-md">
+              <h3 className="text-3xl text-black/80 text-center py-4 excalidraw flex items-center justify-center underline underline-offset-4 gap-2   dark:text-gray-400 mb-4 ">{category.icon}{category.title}</h3>
               <ul className="space-y-2 flex flex-wrap justify-center gap-2 p-4">
                 {category.items.map((item) => (
                   <motion.li
                     key={item.name}
                     className="flex relative border-4
-                     text-nowrap rounded-3xl p-2 w-min items-center justify-center gap-3 text-xl"
+                     text-nowrap rounded-3xl p-2 w-min excalidraw items-center justify-center gap-3 text-xl"
                     whileHover={{ scale: 1.05 }}
                     style={{ borderColor: item.color }}
 

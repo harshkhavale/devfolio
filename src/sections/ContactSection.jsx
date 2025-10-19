@@ -101,7 +101,7 @@ const ContactSection = () => {
                 />
               </label>
               <button
-                className="text-white bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-[#261FB3] text-sm px-5 py-2.5 text-center me-2 mb-2 font-bold happy-font"
+                className="text-white bg-black hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-[#000000] text-sm px-5 py-2.5 text-center me-2 mb-2 font-bold happy-font"
                 type="submit"
               >
                 {loading ? "Sending..." : message}
@@ -111,7 +111,7 @@ const ContactSection = () => {
         </div>
 
         <div className=" flex justify-center  items-center md:w-5/12 h-96 md:h-auto ">
-          <p className=" md:text-[30rem] text-center font-bold new-font text-[16rem] text-[#261FB3]">h11</p>
+          <p className=" md:text-[10rem] excalidraw text-center font-bold text-[16rem] ">Harshk.</p>
         </div>
       </div>
     </section>

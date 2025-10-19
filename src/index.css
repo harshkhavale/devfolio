@@ -16,6 +16,11 @@
     format("truetype");
 }
 @font-face {
+  font-family: "Excalidraw";
+  src: url("../public/fonts/Excalifont-Regular.woff2")
+    format("truetype");
+}
+@font-face {
   font-family: "Happy-Monkey";
   src: url("../public/fonts/GeneralSans-Regular.otf")
     format("truetype");
@@ -42,8 +47,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.asthetica{
-  font-family: "Asthetic", system-ui;
+.excalidraw{
+  font-family: "Excalidraw", system-ui;
 
 }
 .happyfont {
