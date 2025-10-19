@@ -28,7 +28,7 @@ const Preloader = ({ onComplete }) => {
   return (
     <div className="fixed inset-0 flex flex-col bg-[#000000] text-white items-center justify-center  z-50">
      
-      <p className="mt-2 font-bold text-9xl md:text-[18rem]">{"<"}{progress}%{">"}</p>
+      <p className="mt-2 font-bold text-9xl excalidraw md:text-[18rem]">{"<"}{progress}%{">"}</p>
     </div>
   );
 };
@@ -38,9 +38,9 @@ const App = () => {
 
   return (
     <>
-      {/* {isLoading ? (
+      {isLoading ? (
         <Preloader onComplete={() => setIsLoading(false)} />
-      ) : ( */}
+      ) : (
         <div className="dark:text-white dark:bg-[#191919] bg-white text-black overflow-x-hidden">
           <CustomCursor />
           <AnimatePresence>
@@ -50,7 +50,7 @@ const App = () => {
           </AnimatePresence>
           <Footer />
         </div>
-      {/* )} */}
+      )}
     </>
   );
 };
