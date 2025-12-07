@@ -9,7 +9,7 @@ import { logo } from "../assets";
 const Navbar = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
   const navigate = useNavigate();
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [toggle, setToggle] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 

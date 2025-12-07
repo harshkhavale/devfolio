@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import Index from "./pages/Index";
 import Footer from "./components/Footer";
 import CustomCursor from "./widgets/CustomCursor";
+import SmoothScroll from "./components/SmoothScroll";
+
+// Scroll Progress Indicator Component
+const ScrollProgress = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  return (
+    <motion.div
+      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 origin-left z-[100]"
+      style={{ scaleX }}
+    />
+  );
+};
 
 const Preloader = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
@@ -37,21 +55,18 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <>
-      {isLoading ? (
-        <Preloader onComplete={() => setIsLoading(false)} />
-      ) : (
-        <div className="dark:text-white dark:bg-[#191919] bg-white text-black overflow-x-hidden">
-          <CustomCursor />
-          <AnimatePresence>
-            <Routes>
-              <Route path="/" element={<Index />} />
-            </Routes>
-          </AnimatePresence>
-          <Footer />
-        </div>
-      )}
-    </>
+    <SmoothScroll>
+      <div className="dark:text-white dark:bg-[#191919] bg-white text-black overflow-x-hidden">
+        <ScrollProgress />
+        <CustomCursor />
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<Index />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </div>
+    </SmoothScroll>
   );
 };
 
