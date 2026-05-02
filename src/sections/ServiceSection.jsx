@@ -6,11 +6,9 @@ import {
   Server,
   Palette,
   ArrowRight,
-  Sparkles,
   Globe,
   Database,
   Layers,
-  Zap
 } from 'lucide-react'
 
 const services = [
@@ -107,92 +105,62 @@ const ServiceCard = ({ service, index, isHovered, onHover }) => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => onHover(service.id)}
       onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX,
-        rotateY,
-        transformStyle: "preserve-3d",
-      }}
       className="relative group"
     >
-      <motion.div
-        className={`relative h-full p-6 md:p-8 rounded-3xl border ${service.borderColor} bg-white dark:bg-zinc-900/50 backdrop-blur-sm overflow-hidden transition-all duration-300`}
-        whileHover={{ scale: 1.02 }}
-      >
-        {/* Gradient Background on Hover */}
-        <motion.div
-          className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-        />
+      {/* Offset shadow box */}
+      <div className="relative">
+        <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black dark:bg-white" />
+        <div className="relative h-full p-6 md:p-8 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 overflow-hidden">
+          {/* Icon */}
+          <motion.div
+            className="relative w-14 h-14 border border-gray-200 dark:border-zinc-700 flex items-center justify-center mb-6 bg-gray-50 dark:bg-zinc-800"
+            whileHover={{ rotate: [0, -10, 10, 0] }}
+            transition={{ duration: 0.5 }}
+          >
+            <Icon className="w-7 h-7" />
+          </motion.div>
 
-        {/* Floating Icon */}
-        <motion.div
-          className={`relative w-16 h-16 rounded-2xl ${service.bgColor} flex items-center justify-center mb-6`}
-          whileHover={{ rotate: [0, -10, 10, 0] }}
-          transition={{ duration: 0.5 }}
-          style={{ transform: "translateZ(50px)" }}
-        >
-          <Icon className={`w-8 h-8 bg-gradient-to-br ${service.color} bg-clip-text`}
-            style={{
-              stroke: `url(#gradient-${service.id})`,
-            }}
-          />
-          {/* Gradient definition for icon */}
-          <svg width="0" height="0">
-            <defs>
-              <linearGradient id={`gradient-${service.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor={service.color.includes('blue') ? '#3b82f6' :
-                  service.color.includes('purple') ? '#a855f7' :
-                  service.color.includes('green') ? '#22c55e' : '#f97316'} />
-                <stop offset="100%" stopColor={service.color.includes('blue') ? '#06b6d4' :
-                  service.color.includes('purple') ? '#ec4899' :
-                  service.color.includes('green') ? '#10b981' : '#ef4444'} />
-              </linearGradient>
-            </defs>
-          </svg>
-        </motion.div>
+          {/* Content */}
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">{service.title}</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              {service.description}
+            </p>
 
-        {/* Content */}
-        <div style={{ transform: "translateZ(30px)" }}>
-          <h3 className="text-2xl md:text-3xl font-bold mb-3">{service.title}</h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-            {service.description}
-          </p>
-
-          {/* Skills */}
-          <div className="flex flex-wrap gap-2 mb-6">
-            {service.skills.map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 text-xs font-medium bg-gray-100 dark:bg-zinc-800 rounded-full"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-
-          {/* Stats */}
-          <div className="flex items-center gap-6 pt-4 border-t border-gray-100 dark:border-zinc-800">
-            <div>
-              <p className="text-2xl font-bold">{service.stats.projects}</p>
-              <p className="text-xs text-gray-500">Projects</p>
+            {/* Skills */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {service.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 text-xs font-medium border border-gray-200 dark:border-zinc-700"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-            <div>
-              <p className="text-2xl font-bold">{service.stats.satisfaction}</p>
-              <p className="text-xs text-gray-500">Satisfaction</p>
+
+            {/* Stats */}
+            <div className="flex items-center gap-6 pt-4 border-t-2 border-black dark:border-white">
+              <div>
+                <p className="text-2xl font-bold">{service.stats.projects}</p>
+                <p className="text-xs text-gray-500">Projects</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold">{service.stats.satisfaction}</p>
+                <p className="text-xs text-gray-500">Satisfaction</p>
+              </div>
             </div>
           </div>
+
+          {/* Hover Arrow */}
+          <motion.div
+            className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity"
+            whileHover={{ x: 5 }}
+          >
+            <ArrowRight className="w-5 h-5" />
+          </motion.div>
         </div>
-
-        {/* Hover Arrow */}
-        <motion.div
-          className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity"
-          whileHover={{ x: 5 }}
-        >
-          <ArrowRight className="w-5 h-5" />
-        </motion.div>
-
-        {/* Corner Decoration */}
-        <div className={`absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-gradient-to-br ${service.color} opacity-10 blur-2xl group-hover:opacity-20 transition-opacity`} />
-      </motion.div>
+      </div>
     </motion.div>
   )
 }
@@ -255,40 +223,13 @@ const ServiceSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-zinc-800 rounded-full mb-6"
+            className="inline-flex items-center px-3 py-1 bg-gray-100 dark:bg-zinc-800 mb-6 text-xs font-medium tracking-widest uppercase text-gray-500 dark:text-gray-400"
           >
-            <Sparkles className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm font-medium">What I Do</span>
+            What I Do
           </motion.div>
 
           <h2 className="text-5xl md:text-7xl font-bold mb-6">
-            Stuff I{" "}
-            <span className="relative">
-              Ship
-              <motion.svg
-                className="absolute -bottom-2 left-0 w-full"
-                viewBox="0 0 200 20"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.5 }}
-              >
-                <motion.path
-                  d="M0 15 Q50 0 100 15 T200 15"
-                  fill="none"
-                  stroke="url(#underline-gradient)"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient id="underline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3b82f6" />
-                    <stop offset="50%" stopColor="#a855f7" />
-                    <stop offset="100%" stopColor="#ec4899" />
-                  </linearGradient>
-                </defs>
-              </motion.svg>
-            </span>
+            Stuff I Ship
           </h2>
 
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -323,16 +264,17 @@ const ServiceSection = () => {
           <p className="text-gray-500 dark:text-gray-400 mb-6">
             Have a project in mind? Let's make it happen.
           </p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-full font-medium shadow-lg shadow-purple-500/25"
-          >
-            <Zap className="w-5 h-5" />
-            Start a Project
-            <ArrowRight className="w-5 h-5" />
-          </motion.a>
+          <div className="relative inline-block">
+            <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black dark:bg-white" />
+            <motion.a
+              href="#contact"
+              whileTap={{ scale: 0.98 }}
+              className="relative inline-flex items-center gap-3 px-8 py-4 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 font-medium"
+            >
+              Start a Project
+              <ArrowRight className="w-5 h-5" />
+            </motion.a>
+          </div>
         </motion.div>
       </div>
 

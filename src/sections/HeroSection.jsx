@@ -43,7 +43,7 @@ const HeroSection = () => {
         transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         className=" md:text-9xl font-bold text-5xl text-wrap text-right px-4 md:ps-96 z-50"
       >
-        <a href="#" className="z-50 ">Architecting </a> code, <span className=' font-bold excalidraw'>crafting</span> Scalable Solutions. Full Stack Artisan & DevOps <span className='font-bold excalidraw'>aficionado.</span>
+        <a href="#" className="z-50 ">Architecting </a> code, <span className=' font-bold excalidraw'>crafting</span> Scalable Solutions.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 30 }}

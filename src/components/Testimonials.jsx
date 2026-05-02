@@ -11,8 +11,6 @@ import { useMediaQuery } from "@mui/material";
 
 import { LuCodesandbox } from "react-icons/lu";
 import { GitHub, Launch, Link, LinkOffRounded } from "@mui/icons-material";
-import { MoveRight } from "lucide-react";
-import { MoveLeft } from "lucide-react";
 import { testimonials } from "../constants/data";
 SwiperCore.use([Navigation]);
 
@@ -50,7 +48,7 @@ const Testimonials = () => {
       >
         {testimonials.map((project) => (
           <SwiperSlide key={project.id}>
-            <div className=" relative md:h-72 h-[28rem] overflow-hidden">
+            <div className="relative">
               {/* <motion.img
                 whileHover={{
                   scale: 1.1,
@@ -72,14 +70,20 @@ const Testimonials = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className=" w-min flex text-2xl gap-4 p-2">
-          <button onClick={goPrev} className="text-gray-500 focus:outline-none">
-          <MoveLeft/> Prev
-          </button>
-          <button onClick={goNext} className="text-gray-500 focus:outline-none">
-            <MoveRight/> Next
+      <div className="flex gap-4 mt-6">
+        <div className="relative inline-block">
+          <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-black dark:bg-white" />
+          <button onClick={goPrev} className="relative flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 focus:outline-none">
+            <IoIosArrowBack className="w-4 h-4" />
           </button>
         </div>
+        <div className="relative inline-block">
+          <div className="absolute inset-0 translate-x-1.5 translate-y-1.5 bg-black dark:bg-white" />
+          <button onClick={goNext} className="relative flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 focus:outline-none">
+            <IoIosArrowForward className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
     </div></section>
 
   );

@@ -11,6 +11,7 @@ import Testimonials from "../components/Testimonials";
 import HeroSection from "../sections/HeroSection";
 import AboutSection from "../sections/AboutSection";
 import WorkSection from "../sections/WorkSection";
+import ExperienceSection from "../sections/ExperienceSection";
 import ContactSection from "../sections/ContactSection";
 import { FeaturedSection } from "../sections/FeaturedSection";
 import Navbar from "../components/Navbar";
@@ -314,21 +315,21 @@ const Index = () => {
       <AnimatedDivider />
 
       {/* New Modern Design & Code Section */}
-      <DesignCodeSection />
+      {/* <DesignCodeSection /> */}
 
-      <AboutSection />     
+      <AboutSection />
       <WorkSection />
+      <ExperienceSection />
      <ServiceSection/>
 
      
 
       <SelfOthersSection isNonMobileScreens={isNonMobileScreens} />
-      <AnimatedDivider />
 
-      {/* Big scrolling text divider */}
-      <ScrollDivider text="SKILLS & EXPERTISE" />
+      {/* <AnimatedDivider /> */}
+      {/* <ScrollDivider text="SKILLS & EXPERTISE" /> */}
 
-      <FeaturedSection/>
+      {/* <FeaturedSection/> */}
       <Creative />
       <Testimonials />
       <ContactSection />

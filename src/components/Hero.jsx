@@ -1,7 +1,7 @@
 import React from "react";
 import { easeInOut, motion } from "framer-motion";
 import { styles } from "../styles";
-import { arroe, profile, profilephoto, semicolon } from "../assets";
+import { arroe, profile, semicolon } from "../assets";
 const slideInRightEffect = {
   hidden: {
     x: 500,
@@ -28,7 +28,7 @@ const slideInLeftEffect = {
 };
 const Hero = () => {
   return (
-    <div className="flex w-full md:flex-row gap-4 flex-col-reverse items-center bg-white dark:bg-[#000000] ">
+    <div className="flex w-full max-w-7xl mx-auto md:flex-row gap-4 flex-col-reverse items-center bg-white dark:bg-[#000000]">
       <motion.div
         variants={slideInLeftEffect}
         initial="hidden"
@@ -70,19 +70,15 @@ const Hero = () => {
         <div className=" flex flex-col items-center gap-2 z-40 ">
 
         </div>
-        <div className="relative w-full h-[100vh]">
-
-
-          <img
-            src={profilephoto}
-            className="md:absolute  md:block md:inset-0 h-4/5 md:h-2/3 md:top-20 z-20 "
-            alt="profile-img"
-          />
-          <img
-            src={profile}
-            className="absolute lg:block hidden h-2/3 top-80 md:right-40 z-20 "
-            alt="profile-img"
-          />
+        <div className="relative w-full flex justify-end pr-4 pb-4">
+          <div className="relative inline-block">
+            <div className="absolute inset-0 translate-x-3 translate-y-3 bg-gray-200 dark:bg-white" />
+            <img
+              src={profile}
+              className="relative h-auto max-h-[520px] w-auto object-contain border-2 border-black dark:border-white"
+              alt="profile-img"
+            />
+          </div>
         </div>
 
 

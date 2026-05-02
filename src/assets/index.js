@@ -2,9 +2,7 @@
 import resume from "./resume/resume.pdf";
 
 // #profile
-import profile from "./profile/ghibli-2.png";
-
-import profilephoto from './profile/ghibli-profile.png';
+import profile from "./profile/profile.png";
 
 // #other
 
@@ -36,5 +34,5 @@ import cemicolon from './cemicolon.svg'
 import logo from './logo.svg'
 import semicolon2 from './semicolon-2.svg'
 
-export { profile, resume, profilephoto,monkeysvg,mobile,website,backend,uiux,arroe,bot, dashboard, semicolon,semicolon2, cemicolon, logo};
+export { profile, resume, monkeysvg,mobile,website,backend,uiux,arroe,bot, dashboard, semicolon,semicolon2, cemicolon, logo};
 export {gallery1,gallery2,gallery3,gallery4,gallery5,gallery6,gallery7,gallery8,gallery9,gallery10,gallery11,gallery12,gallery13,gallery14};

@@ -40,7 +40,7 @@ const AboutSection = () => {
     };
 
     increment(3, setYears); // Target: 3+ years
-    increment(25, setClients); // Target: 25+ clients
+    increment(10, setClients); // Target: 10+ clients
   };
 
   return (
@@ -76,7 +76,7 @@ const AboutSection = () => {
                 <p className="md:text-[12rem] text-9xl font-bold">{years}+</p>
               </div>
               <div>
-                <p className=" normal-font">Total Happy Clients</p>
+                <p className=" normal-font">Freelance Happy Clients</p>
                 <p className="md:text-[12rem] text-9xl font-bold">{clients}+</p>
               </div>
             </div>
