@@ -22,7 +22,7 @@ const services = [
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/20",
     skills: ["React.js", "Next.js", "TypeScript", "Tailwind CSS"],
-    stats: { projects: "50+", satisfaction: "100%" }
+    stats: { projects: "3", satisfaction: "100%" }
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const services = [
     bgColor: "bg-purple-500/10",
     borderColor: "border-purple-500/20",
     skills: ["React Native", "Flutter", "iOS", "Android"],
-    stats: { projects: "20+", satisfaction: "100%" }
+    stats: { projects: "2", satisfaction: "100%" }
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const services = [
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
     skills: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
-    stats: { projects: "40+", satisfaction: "100%" }
+    stats: { projects: "3", satisfaction: "100%" }
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const services = [
     bgColor: "bg-orange-500/10",
     borderColor: "border-orange-500/20",
     skills: ["Figma", "Prototyping", "User Research", "Design Systems"],
-    stats: { projects: "30+", satisfaction: "100%" }
+    stats: { projects: "2", satisfaction: "100%" }
   },
 ]
 
