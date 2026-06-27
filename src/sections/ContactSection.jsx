@@ -27,8 +27,8 @@ const ContactSection = () => {
     script.onload = () => {
       if (window.SureContactForms) {
         window.SureContactForms.render({
-          formId: "cf951d27-4791-4967-8fd3-dd47710e75aa",
-          container: "#surecontact-form-portfolio-query",
+          formId: "92912e86-65ac-4585-b6cd-14abd1dda680",
+          container: "#surecontact-form-website-form",
         });
       }
     };
@@ -94,7 +94,7 @@ const ContactSection = () => {
             <div className="relative">
               <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black dark:bg-white" />
               <div className="relative p-8 md:p-10 border-2 border-black dark:border-white bg-white dark:bg-zinc-900">
-                <div id="surecontact-form-portfolio-query" />
+                <div id="surecontact-form-website-form" />
               </div>
             </div>
           </motion.div>
