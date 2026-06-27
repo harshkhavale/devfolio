@@ -11,8 +11,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isDark, setIsDark] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
-
   const navLinks = [
     { id: "about", title: "About", icon: <User /> },
     { id: "work", title: "Work", icon: <Square /> },
@@ -30,45 +28,24 @@ const Navbar = () => {
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark);
 
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, [isDark]);
 
   const toggleDarkMode = () => setIsDark(!isDark);
 
   return (
-    <nav
-      className={`fixed top-2 w-full z-50 md:p-3 p-4 transition-all duration-300 ${
-        scrolling
-          ? " w-min flex justify-center m-2 md:rounded-3xl rounded-xl transition-all ease-in-out duration-100 shadow-md bg-white dark:bg-[#000000]"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className="fixed top-2 w-full z-50 md:p-3 p-4 bg-transparent">
       <div className="flex justify-between gap-2 items-center">
-        <p className={`text-3xl font-semibold text-nowrap excalidraw ${scrolling ? 'hidden':''}`}>Harsh Khavale</p>
-        <p className={`text-3xl font-semibold text-nowrap excalidraw ${scrolling ? '':'hidden'}`}>Harshk.</p>
+        <p className="text-3xl font-semibold text-nowrap excalidraw">Harsh Khavale</p>
 
         <div className="flex items-center gap-6">
           {/* Desktop Navigation */}
           <ul className="hidden sm:flex items-center gap-6">
             {navLinks.map((link) => (
               <li key={link.id} className="hover:text-black dark:hover:text-white cursor-pointer transition-all">
-               {
-                scrolling ? (<a href={`#${link.id}`} className="text-sm flex items-center gap-2 normal-font">
-                  {link.icon}
-                </a>) : (<a href={`#${link.id}`} className=" flex items-center gap-2 normal-font">
-                  <CornerDownRight className="h-4 w-4 " />
+                <a href={`#${link.id}`} className="flex items-center gap-2 normal-font">
+                  <CornerDownRight className="h-4 w-4" />
                   {link.title}
-                </a>)
-               } 
+                </a>
               </li>
             ))}
           </ul>
