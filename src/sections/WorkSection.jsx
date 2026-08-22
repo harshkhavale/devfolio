@@ -1,242 +1,84 @@
-import React, { useRef, useState } from 'react'
-import { espHome, espAdmin, espLogin } from '../assets/projects'
-import artndirtHome from '../assets/work/artndirt-home.png'
-import artndirtShop from '../assets/work/artndirt-shop.png'
-import artndirtPayment from '../assets/work/artndirt-payment.png'
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
+import React, { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
-// Featured Project with editorial 3-panel layout
-const FeaturedProject = () => {
-  const [active, setActive] = useState(1)
-  const containerRef = useRef(null)
+const projects = [
+  {
+    id: 'easysportspass',
+    number: '01',
+    title: 'EasySportsPass',
+    category: 'B2B Fitness',
+    year: '2024',
+    tagline: 'Connecting gym owners with corporate wellness programs at scale.',
+    tags: ['React', '.NET', 'MySQL', 'Stripe'],
+  },
+  {
+    id: 'artndirt',
+    number: '02',
+    title: 'Art N Dirt',
+    category: 'E-Commerce',
+    year: '2024',
+    tagline: 'Art marketplace with a custom Razorpay subscription plugin.',
+    tags: ['WordPress', 'WooCommerce', 'PHP', 'Razorpay'],
+  },
+]
 
-  const panels = [
-    { src: espLogin,  label: 'Login Portal' },
-    { src: espHome,   label: 'Landing Page' },
-    { src: espAdmin,  label: 'Admin Dashboard' },
-  ]
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "center center"]
-  })
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1])
-  const y = useTransform(scrollYProgress, [0, 1], [60, 0])
+const ProjectRow = ({ project, index }) => {
+  const navigate = useNavigate()
 
   return (
-    <motion.div ref={containerRef} style={{ opacity, y }} className="relative w-full">
-      {/* 3-panel image strip */}
-      <div className="flex w-full h-[55vw] max-h-[600px] overflow-hidden">
-        {panels.map((panel, idx) => {
-          const isCenter = idx === active
-          return (
-            <motion.div
-              key={idx}
-              onClick={() => setActive(idx)}
-              animate={{ flex: isCenter ? 3 : 1 }}
-              transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-              className="relative overflow-hidden cursor-pointer"
-            >
-              <img
-                src={panel.src}
-                alt={panel.label}
-                className="absolute inset-0 w-full h-full object-cover object-top"
-              />
-              {/* Dark scrim on non-active */}
-              <motion.div
-                animate={{ opacity: isCenter ? 0 : 0.5 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 bg-black"
-              />
-              {/* Center expand hint */}
-              {isCenter && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/60 bg-white/10 backdrop-blur-sm flex items-center justify-center"
-                >
-                  <ArrowUpRight className="w-4 h-4 text-white" />
-                </motion.div>
-              )}
-              {/* Next label on right panel */}
-              {idx === (active + 1) % panels.length && (
-                <div className="absolute bottom-8 right-6 text-right text-white">
-                  <p className="text-sm opacity-70">Next</p>
-                  <p className="font-semibold">{panels[(active + 1) % panels.length].label}</p>
-                </div>
-              )}
-              {/* Panel label bottom left on non-active left */}
-              {idx !== active && idx === (active - 1 + panels.length) % panels.length && (
-                <div className="absolute bottom-8 left-6 text-white">
-                  <p className="text-sm opacity-70">{panel.label}</p>
-                </div>
-              )}
-            </motion.div>
-          )
-        })}
-      </div>
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
+      onClick={() => navigate(`/work/${project.id}`)}
+      className="group cursor-pointer border-b border-black dark:border-white/20 relative"
+    >
+      {/* Hover background */}
+      <div className="absolute inset-0 bg-zinc-50 dark:bg-zinc-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      {/* Info row below panels */}
-      <div className="flex flex-col md:flex-row justify-between gap-8 pt-8 border-t border-gray-200 dark:border-zinc-800 mt-0">
-        {/* Left: attribution / link */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="space-y-1"
-        >
-          <p className="text-sm text-gray-500 dark:text-gray-400">B2B Fitness Platform · 2024</p>
-          <motion.a
-            href="https://easysportspass.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ x: 4 }}
-            className="inline-flex items-center gap-1 text-sm underline underline-offset-4"
-          >
-            Discover EasySportsPass <ArrowUpRight className="w-3.5 h-3.5" />
-          </motion.a>
-          <div className="flex flex-wrap gap-2 pt-3">
-            {['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'].map((tech) => (
-              <span key={tech} className="px-2 py-0.5 text-xs border border-gray-200 dark:border-zinc-700 rounded-full">
-                {tech}
+      <div className="relative flex items-start md:items-center justify-between gap-6 py-8 md:py-10 px-4 md:px-8">
+        {/* Left */}
+        <div className="flex items-start md:items-center gap-5 md:gap-10 flex-1 min-w-0">
+          <span className="text-xs font-mono text-gray-400 flex-shrink-0 pt-1 md:pt-0">
+            {project.number}
+          </span>
+          <div className="min-w-0">
+            <h3 className="text-2xl md:text-4xl font-bold leading-tight group-hover:translate-x-1 transition-transform duration-300">
+              {project.title}
+            </h3>
+            <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base mt-1 truncate">
+              {project.tagline}
+            </p>
+            {/* Tags — mobile only */}
+            <div className="flex flex-wrap gap-1.5 mt-3 md:hidden">
+              {project.tags.map(tag => (
+                <span key={tag} className="text-xs px-2 py-0.5 border border-gray-200 dark:border-zinc-700 text-gray-500 dark:text-gray-400">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right */}
+        <div className="flex items-center gap-6 md:gap-10 flex-shrink-0">
+          <div className="hidden md:flex flex-wrap gap-1.5">
+            {project.tags.map(tag => (
+              <span key={tag} className="text-xs px-2 py-0.5 border border-gray-200 dark:border-zinc-700 text-gray-500 dark:text-gray-400">
+                {tag}
               </span>
             ))}
           </div>
-        </motion.div>
-
-        {/* Right: title + description */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="md:max-w-md space-y-3"
-        >
-          <div>
-            <h3 className="text-3xl md:text-4xl font-bold">EasySportsPass</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{panels[active].label}</p>
-          </div>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-            A comprehensive platform connecting gym owners with corporate clients.
-            Features include membership management, corporate wellness programs,
-            real-time analytics dashboard, and seamless payment integration.
-          </p>
-        </motion.div>
+          <span className="hidden md:block text-xs tracking-widest uppercase text-gray-400 whitespace-nowrap">
+            {project.category} · {project.year}
+          </span>
+          <ArrowUpRight className="w-5 h-5 flex-shrink-0 opacity-30 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+        </div>
       </div>
-    </motion.div>
-  )
-}
-
-// Art N Dirt project — same editorial panel layout
-const ArtNDirtProject = () => {
-  const [active, setActive] = useState(1)
-  const containerRef = useRef(null)
-
-  const panels = [
-    { src: artndirtShop,    label: 'Shop' },
-    { src: artndirtHome,    label: 'Homepage' },
-    { src: artndirtPayment, label: 'Razorpay Checkout' },
-  ]
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "center center"]
-  })
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1])
-  const y = useTransform(scrollYProgress, [0, 1], [60, 0])
-
-  return (
-    <motion.div ref={containerRef} style={{ opacity, y }} className="relative w-full">
-      <div className="flex w-full h-[55vw] max-h-[600px] overflow-hidden">
-        {panels.map((panel, idx) => {
-          const isCenter = idx === active
-          return (
-            <motion.div
-              key={idx}
-              onClick={() => setActive(idx)}
-              animate={{ flex: isCenter ? 3 : 1 }}
-              transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-              className="relative overflow-hidden cursor-pointer"
-            >
-              <img
-                src={panel.src}
-                alt={panel.label}
-                className="absolute inset-0 w-full h-full object-cover object-top"
-              />
-              <motion.div
-                animate={{ opacity: isCenter ? 0 : 0.5 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 bg-black"
-              />
-              {isCenter && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/60 bg-white/10 backdrop-blur-sm flex items-center justify-center"
-                >
-                  <ArrowUpRight className="w-4 h-4 text-white" />
-                </motion.div>
-              )}
-              {idx === (active + 1) % panels.length && (
-                <div className="absolute bottom-8 right-6 text-right text-white">
-                  <p className="text-sm opacity-70">Next</p>
-                  <p className="font-semibold">{panels[(active + 1) % panels.length].label}</p>
-                </div>
-              )}
-              {idx !== active && idx === (active - 1 + panels.length) % panels.length && (
-                <div className="absolute bottom-8 left-6 text-white">
-                  <p className="text-sm opacity-70">{panel.label}</p>
-                </div>
-              )}
-            </motion.div>
-          )
-        })}
-      </div>
-
-      <div className="flex flex-col md:flex-row justify-between gap-8 pt-8 border-t border-gray-200 dark:border-zinc-800">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="space-y-1"
-        >
-          <p className="text-sm text-gray-500 dark:text-gray-400">WordPress Art E-commerce · Custom Plugin</p>
-          <motion.a
-            href="https://artndirt.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ x: 4 }}
-            className="inline-flex items-center gap-1 text-sm underline underline-offset-4"
-          >
-            Visit artndirt.com <ArrowUpRight className="w-3.5 h-3.5" />
-          </motion.a>
-          <div className="flex flex-wrap gap-2 pt-3">
-            {['WordPress', 'WooCommerce', 'Razorpay', 'PHP', 'Custom Plugin'].map((tech) => (
-              <span key={tech} className="px-2 py-0.5 text-xs border border-gray-200 dark:border-zinc-700 rounded-full">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="md:max-w-md space-y-3"
-        >
-          <div>
-            <h3 className="text-3xl md:text-4xl font-bold">Art N Dirt</h3>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">{panels[active].label}</p>
-          </div>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
-            A WordPress-based art e-commerce platform for independent artists. Built a custom Razorpay subscription plugin from scratch to handle recurring memberships, enabling artists to offer exclusive content and print subscriptions seamlessly.
-          </p>
-        </motion.div>
-      </div>
-    </motion.div>
+    </motion.article>
   )
 }
 
@@ -244,19 +86,17 @@ const WorkSection = () => {
   const sectionRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "end start"]
+    offset: ['start end', 'end start'],
   })
-
-  const titleY = useTransform(scrollYProgress, [0, 0.2], [80, 0])
+  const titleY = useTransform(scrollYProgress, [0, 0.2], [60, 0])
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [0, 1])
 
   return (
-    <section id="work" ref={sectionRef} className="overflow-hidden py-20 md:py-32">
+    <section id="work" ref={sectionRef} className="py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        {/* Section Header */}
         <motion.div
           style={{ y: titleY, opacity: titleOpacity }}
-          className="mb-16 md:mb-24"
+          className="mb-12 md:mb-16"
         >
           <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4 tracking-widest">
             FREELANCE WORK
@@ -267,40 +107,36 @@ const WorkSection = () => {
           </h2>
         </motion.div>
 
-        {/* EasySportsPass */}
-        <div className="mb-24 md:mb-36">
-          <FeaturedProject />
+        {/* Rows */}
+        <div className="border-t border-black dark:border-white/20">
+          {projects.map((project, idx) => (
+            <ProjectRow key={project.id} project={project} index={idx} />
+          ))}
         </div>
-
-        <div className="h-[1px] w-full bg-gray-200 dark:bg-zinc-800 mb-24 md:mb-36" />
-
-        {/* Art N Dirt */}
-        <ArtNDirtProject />
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-24 text-center"
+          className="mt-12 flex items-center justify-between"
         >
-          <p className="text-gray-500 dark:text-gray-400 mb-4">
+          <p className="text-gray-500 dark:text-gray-400 text-sm">
             Interested in working together?
           </p>
           <div className="relative inline-block">
             <div className="absolute inset-0 translate-x-2 translate-y-2 bg-black dark:bg-white" />
-            <motion.a
+            <a
               href="#contact"
-              whileTap={{ scale: 0.98 }}
-              className="relative inline-flex items-center gap-2 px-8 py-4 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 font-medium"
+              className="relative inline-flex items-center gap-2 px-6 py-3 border-2 border-black dark:border-white bg-white dark:bg-zinc-900 font-medium text-sm"
             >
               Let's Talk <ArrowUpRight className="w-4 h-4" />
-            </motion.a>
+            </a>
           </div>
         </motion.div>
       </div>
 
-      <div className="h-[1px] w-full bg-black dark:bg-white mt-20" />
+      <div className="h-[1px] w-full bg-black dark:bg-white mt-16" />
     </section>
   )
 }
