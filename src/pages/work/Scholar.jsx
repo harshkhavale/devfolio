@@ -142,7 +142,7 @@ const Scholar = () => {
             <div className="relative w-[260px] md:w-[300px] mt-6">
               {/* Offset shadow */}
               <div className="absolute inset-0 translate-x-3 translate-y-3 bg-black dark:bg-white rounded-3xl" />
-              <div className="relative border-2 border-black dark:border-white rounded-3xl overflow-hidden bg-black">
+              <div className="relative border-2 border-black dark:border-white rounded-3xl overflow-hidden bg-black h-[640px]">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={active}
@@ -152,7 +152,7 @@ const Scholar = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.25 }}
-                    className="w-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
                   />
                 </AnimatePresence>
               </div>

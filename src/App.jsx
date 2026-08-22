@@ -6,6 +6,8 @@ import Index from "./pages/Index";
 import EasySportsPass from "./pages/work/EasySportsPass";
 import ArtNDirt from "./pages/work/ArtNDirt";
 import Scholar from "./pages/work/Scholar";
+import TaskFlow from "./pages/work/TaskFlow";
+import ShopSnap from "./pages/work/ShopSnap";
 import Footer from "./components/Footer";
 import CustomCursor from "./widgets/CustomCursor";
 import SmoothScroll from "./components/SmoothScroll";
@@ -68,6 +70,8 @@ const App = () => {
             <Route path="/work/easysportspass" element={<EasySportsPass />} />
             <Route path="/work/artndirt" element={<ArtNDirt />} />
             <Route path="/work/scholar" element={<Scholar />} />
+            <Route path="/work/taskflow" element={<TaskFlow />} />
+            <Route path="/work/shopsnap" element={<ShopSnap />} />
           </Routes>
         </AnimatePresence>
         <Footer />
