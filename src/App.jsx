@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import Index from "./pages/Index";
 import EasySportsPass from "./pages/work/EasySportsPass";
 import ArtNDirt from "./pages/work/ArtNDirt";
+import Scholar from "./pages/work/Scholar";
 import Footer from "./components/Footer";
 import CustomCursor from "./widgets/CustomCursor";
 import SmoothScroll from "./components/SmoothScroll";
@@ -66,6 +67,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/work/easysportspass" element={<EasySportsPass />} />
             <Route path="/work/artndirt" element={<ArtNDirt />} />
+            <Route path="/work/scholar" element={<Scholar />} />
           </Routes>
         </AnimatePresence>
         <Footer />

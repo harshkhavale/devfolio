@@ -229,14 +229,14 @@ const ArtNDirt = () => {
             {/* Offset shadow */}
             <div className="absolute inset-0 translate-x-3 translate-y-3 bg-black dark:bg-white" />
             {/* Image frame */}
-            <div className="relative w-full overflow-hidden border-2 border-black dark:border-white" style={{ height: 'min(55vw, 580px)' }}>
+            <div className="relative w-full overflow-hidden border-2 border-black dark:border-white bg-black" style={{ height: 'min(55vw, 580px)' }}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeShot}
-                  initial={{ opacity: 0, x: 40 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -40 }}
-                  transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
                   className="absolute inset-0"
                 >
                   <img
